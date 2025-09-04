@@ -747,7 +747,7 @@ static lean_object* l___private_Lean_Linter_UnusedVariables_0__Lean_Linter_initF
 LEAN_EXPORT lean_object* l_Lean_throwAttrDeclNotOfExpectedType___at_____private_Lean_Linter_UnusedVariables_0__Lean_Linter_initFn____x40_Lean_Linter_UnusedVariables_1681096836____hygCtx___hyg_2__spec__9(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l___private_Lean_Linter_UnusedVariables_0__Lean_Linter_initFn____x40_Lean_Linter_UnusedVariables_1110682914____hygCtx___hyg_2_(lean_object*);
 LEAN_EXPORT lean_object* l_Std_DHashMap_Internal_AssocList_foldlM___at_____private_Std_Data_DHashMap_Internal_Defs_0__Std_DHashMap_Internal_Raw_u2080_expand_go___at___Std_DHashMap_Internal_Raw_u2080_expand___at___Std_DHashMap_Internal_Raw_u2080_insertIfNew___at_____private_Lean_Linter_UnusedVariables_0__Lean_Linter_UnusedVariables_visitAssignments_visitExpr_spec__0_spec__1_spec__1_spec__1(lean_object*, lean_object*, lean_object*);
-uint8_t l_Substring_beq(lean_object*, lean_object*);
+uint8_t lean_substring_beq(lean_object*, lean_object*);
 size_t lean_usize_add(size_t, size_t);
 lean_object* l_mkPanicMessageWithDecl(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 static lean_object* l_Lean_throwAttrDeclNotOfExpectedType___at_____private_Lean_Linter_UnusedVariables_0__Lean_Linter_initFn____x40_Lean_Linter_UnusedVariables_1681096836____hygCtx___hyg_2__spec__9___redArg___closed__9;
@@ -12907,7 +12907,7 @@ lean_ctor_set(x_177, 0, x_171);
 lean_ctor_set(x_177, 1, x_172);
 lean_ctor_set(x_177, 2, x_176);
 x_178 = l___private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at_____private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at_____private_Lean_Linter_UnusedVariables_0__Lean_Linter_UnusedVariables_collectReferences_go_spec__25_spec__25___redArg___lam__0___closed__3;
-x_179 = l_Substring_beq(x_177, x_178);
+x_179 = lean_substring_beq(x_177, x_178);
 if (x_179 == 0)
 {
 x_63 = x_169;
@@ -13031,7 +13031,7 @@ lean_ctor_set(x_201, 0, x_195);
 lean_ctor_set(x_201, 1, x_196);
 lean_ctor_set(x_201, 2, x_200);
 x_202 = l___private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at_____private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at_____private_Lean_Linter_UnusedVariables_0__Lean_Linter_UnusedVariables_collectReferences_go_spec__25_spec__25___redArg___lam__0___closed__3;
-x_203 = l_Substring_beq(x_201, x_202);
+x_203 = lean_substring_beq(x_201, x_202);
 if (x_203 == 0)
 {
 x_63 = x_193;
@@ -14594,7 +14594,7 @@ lean_ctor_set(x_177, 0, x_171);
 lean_ctor_set(x_177, 1, x_172);
 lean_ctor_set(x_177, 2, x_176);
 x_178 = l___private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at_____private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at_____private_Lean_Linter_UnusedVariables_0__Lean_Linter_UnusedVariables_collectReferences_go_spec__25_spec__25___redArg___lam__0___closed__3;
-x_179 = l_Substring_beq(x_177, x_178);
+x_179 = lean_substring_beq(x_177, x_178);
 if (x_179 == 0)
 {
 x_63 = x_161;
@@ -14718,7 +14718,7 @@ lean_ctor_set(x_201, 0, x_195);
 lean_ctor_set(x_201, 1, x_196);
 lean_ctor_set(x_201, 2, x_200);
 x_202 = l___private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at_____private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at_____private_Lean_Linter_UnusedVariables_0__Lean_Linter_UnusedVariables_collectReferences_go_spec__25_spec__25___redArg___lam__0___closed__3;
-x_203 = l_Substring_beq(x_201, x_202);
+x_203 = lean_substring_beq(x_201, x_202);
 if (x_203 == 0)
 {
 x_63 = x_187;

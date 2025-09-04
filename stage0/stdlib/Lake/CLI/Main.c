@@ -444,7 +444,7 @@ lean_object* lean_array_mk(lean_object*);
 static lean_object* l___private_Lake_CLI_Main_0__Lake_lake_scriptCli___closed__2;
 LEAN_EXPORT lean_object* l___private_Lake_CLI_Main_0__Lake_lake_build___boxed__const__1;
 uint8_t l_Lean_Name_quickCmp(lean_object*, lean_object*);
-uint8_t l_Substring_beq(lean_object*, lean_object*);
+uint8_t lean_substring_beq(lean_object*, lean_object*);
 static lean_object* l___private_Lake_CLI_Main_0__Lake_lakeShortOption___closed__3;
 LEAN_EXPORT lean_object* l___private_Lake_CLI_Main_0__Lake_lake_ReservoirConfig_ctorIdx___boxed(lean_object*);
 static lean_object* l___private_Lake_CLI_Main_0__Lake_lakeLongOption___closed__12;
@@ -35204,7 +35204,7 @@ lean_ctor_set(x_72, 0, x_1);
 lean_ctor_set(x_72, 1, x_67);
 lean_ctor_set(x_72, 2, x_71);
 x_73 = l___private_Lake_CLI_Main_0__Lake_lakeCli___closed__31;
-x_74 = l_Substring_beq(x_72, x_73);
+x_74 = lean_substring_beq(x_72, x_73);
 if (x_74 == 0)
 {
 lean_object* x_75; lean_object* x_76; lean_object* x_77; 

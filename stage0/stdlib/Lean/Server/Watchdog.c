@@ -976,7 +976,7 @@ static lean_object* l_Lean_Server_Watchdog_handleRename___closed__6;
 static lean_object* l_Lean_Server_Watchdog_initAndRunWatchdog___closed__11;
 static lean_object* l_Lean_Server_Watchdog_fromJsonCallHierarchyItemData___closed__7____x40_Lean_Server_Watchdog_348571832____hygCtx___hyg_21_;
 LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___Lean_Server_Watchdog_handleModuleHierarchyImports_spec__2___boxed(lean_object*, lean_object*, lean_object*);
-uint8_t l_String_isPrefixOf(lean_object*, lean_object*);
+uint8_t lean_string_isprefixof(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Server_Watchdog_ServerEvent_ctorIdx(lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Server_Watchdog_RequestData_clearWorkerRequestData___boxed(lean_object*, lean_object*);
 static lean_object* l_IO_FS_Stream_readNotificationAs___at___IO_FS_Stream_readLspNotificationAs___at___Lean_Server_Watchdog_initAndRunWatchdogAux_spec__1_spec__1___closed__49;
@@ -42943,7 +42943,8 @@ if (x_33 == 0)
 lean_object* x_34; uint8_t x_35; 
 lean_dec(x_2);
 x_34 = l_Lean_Server_Watchdog_handleNotification___closed__5;
-x_35 = l_String_isPrefixOf(x_34, x_1);
+lean_inc_ref(x_1);
+x_35 = lean_string_isprefixof(x_34, x_1);
 if (x_35 == 0)
 {
 lean_object* x_36; lean_object* x_37; lean_object* x_38; lean_object* x_39; 

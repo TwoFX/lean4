@@ -115,7 +115,7 @@ static lean_object* l_System_FilePath_normalize___closed__0;
 lean_object* lean_nat_sub(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_System_FilePath_instDiv;
 LEAN_EXPORT uint32_t l_System_SearchPath_separator;
-lean_object* l_String_intercalate(lean_object*, lean_object*);
+lean_object* lean_string_intercalate(lean_object*, lean_object*);
 static lean_object* l_System_FilePath_extension___closed__0;
 LEAN_EXPORT lean_object* l_Option_beqOption____x40_Init_Data_Option_Basic_3000094388____hygCtx___hyg_3____at___System_FilePath_parent_spec__0___boxed(lean_object*, lean_object*);
 LEAN_EXPORT uint8_t l_List_elem___at___System_FilePath_normalize_spec__0(uint32_t, lean_object*);
@@ -1539,7 +1539,7 @@ _start:
 {
 lean_object* x_2; lean_object* x_3; 
 x_2 = l_System_FilePath_join___closed__0;
-x_3 = l_String_intercalate(x_2, x_1);
+x_3 = lean_string_intercalate(x_2, x_1);
 return x_3;
 }
 }
@@ -1788,7 +1788,7 @@ lean_object* x_2; lean_object* x_3; lean_object* x_4; lean_object* x_5;
 x_2 = l_System_SearchPath_toString___closed__0;
 x_3 = lean_box(0);
 x_4 = l_List_mapTR_loop___at___System_SearchPath_toString_spec__0(x_1, x_3);
-x_5 = l_String_intercalate(x_2, x_4);
+x_5 = lean_string_intercalate(x_2, x_4);
 return x_5;
 }
 }

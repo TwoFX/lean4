@@ -534,7 +534,7 @@ static lean_object* l___private_Lean_Server_FileWorker_RequestHandling_0__Lean_S
 LEAN_EXPORT lean_object* l_Lean_PersistentHashMap_insertAux___at___Lean_PersistentHashMap_insert___at___Lean_Server_registerLspRequestHandler___at_____private_Lean_Server_FileWorker_RequestHandling_0__Lean_Server_FileWorker_initFn____x40_Lean_Server_FileWorker_RequestHandling_1405291318____hygCtx___hyg_2__spec__0_spec__5_spec__5___redArg___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Server_FileWorker_handleHover___lam__4___boxed(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Server_registerLspRequestHandler___at_____private_Lean_Server_FileWorker_RequestHandling_0__Lean_Server_FileWorker_initFn____x40_Lean_Server_FileWorker_RequestHandling_1405291318____hygCtx___hyg_2__spec__31(lean_object*, lean_object*, lean_object*);
-lean_object* l_String_intercalate(lean_object*, lean_object*);
+lean_object* lean_string_intercalate(lean_object*, lean_object*);
 size_t lean_usize_sub(size_t, size_t);
 static lean_object* l_Lean_Server_FileWorker_getInteractiveGoals___lam__0___closed__0;
 lean_object* lean_array_mk(lean_object*);
@@ -7354,7 +7354,7 @@ lean_inc_ref(x_15);
 x_17 = l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___Lean_Server_FileWorker_handlePlainGoal_spec__1(x_16, x_14, x_15);
 x_18 = l_Lean_Server_FileWorker_handlePlainGoal___lam__0___closed__1;
 x_19 = lean_array_to_list(x_17);
-x_20 = l_String_intercalate(x_18, x_19);
+x_20 = lean_string_intercalate(x_18, x_19);
 x_21 = lean_alloc_ctor(0, 2, 0);
 lean_ctor_set(x_21, 0, x_20);
 lean_ctor_set(x_21, 1, x_15);

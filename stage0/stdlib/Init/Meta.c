@@ -1058,7 +1058,7 @@ static lean_object* l_List_repr_x27___at___Lean_Syntax_reprPreresolved____x40_In
 LEAN_EXPORT lean_object* l_Lean_Syntax_findAux(lean_object*, lean_object*);
 static lean_object* l_Lean_Parser_Tactic_simpArithBang___closed__5;
 LEAN_EXPORT lean_object* l_Lean_mkSepArray(lean_object*, lean_object*);
-uint8_t l_String_isPrefixOf(lean_object*, lean_object*);
+uint8_t lean_string_isprefixof(lean_object*, lean_object*);
 static lean_object* l_Lean_Parser_Tactic_simpAutoUnfold___closed__21;
 LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_findSomeRevM_x3f_find___at___Lean_Syntax_getTailInfo_x3f_spec__0(lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Syntax_isCharLit_x3f(lean_object*);
@@ -1175,7 +1175,7 @@ static lean_object* l_Lean_Parser_Tactic___aux__Init__Meta______macroRules__Lean
 static lean_object* l_Lean_Parser_Tactic___aux__Init__Meta______macroRules__Lean__Parser__Tactic__declareSimpLikeTactic__1___lam__2___closed__58;
 static lean_object* l_Lean_Parser_Tactic_declareSimpLikeTactic___closed__4;
 static lean_object* l_Lean_Meta_reprConfig___redArg___closed__4____x40_Init_Meta_3676166311____hygCtx___hyg_19_;
-lean_object* l_String_intercalate(lean_object*, lean_object*);
+lean_object* lean_string_intercalate(lean_object*, lean_object*);
 static lean_object* l_Lean_Parser_Tactic___aux__Init__Meta______macroRules__Lean__Parser__Tactic__declareSimpLikeTactic__1___closed__3;
 LEAN_EXPORT lean_object* l_Std_Format_joinSep___at___List_repr_x27___at___Lean_Syntax_reprPreresolved____x40_Init_Meta_2398338311____hygCtx___hyg_3__spec__0_spec__0(lean_object*, lean_object*);
 static lean_object* l_Lean_Parser_Tactic___aux__Init__Meta______macroRules__Lean__Parser__Tactic__declareSimpLikeTactic__1___lam__2___closed__33;
@@ -1193,7 +1193,7 @@ LEAN_EXPORT uint8_t l_Lean_Meta_Occurrences_isAll(lean_object*);
 static lean_object* l_Lean_Parser_Tactic_dsimpAutoUnfold___closed__7;
 uint8_t lean_internal_has_llvm_backend(lean_object*);
 static lean_object* l_Lean_versionStringCore___closed__5;
-uint8_t l_Substring_beq(lean_object*, lean_object*);
+uint8_t lean_substring_beq(lean_object*, lean_object*);
 size_t lean_usize_add(size_t, size_t);
 LEAN_EXPORT lean_object* l_Lean_Meta_Omega_OmegaConfig_ctorIdx___boxed(lean_object*);
 lean_object* l_mkPanicMessageWithDecl(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
@@ -3796,13 +3796,13 @@ x_6 = lean_ctor_get(x_5, 1);
 lean_inc_ref(x_6);
 lean_dec_ref(x_5);
 x_7 = l___private_Init_Meta_0__Lean_Name_toStringWithToken_maybePseudoSyntax___closed__2;
-x_8 = l_String_isPrefixOf(x_7, x_6);
+lean_inc_ref(x_6);
+x_8 = lean_string_isprefixof(x_7, x_6);
 if (x_8 == 0)
 {
 lean_object* x_9; uint8_t x_10; 
 x_9 = l___private_Init_Meta_0__Lean_Name_toStringWithToken_maybePseudoSyntax___closed__3;
-x_10 = l_String_isPrefixOf(x_9, x_6);
-lean_dec_ref(x_6);
+x_10 = lean_string_isprefixof(x_9, x_6);
 return x_10;
 }
 else
@@ -7281,7 +7281,7 @@ lean_inc(x_23);
 x_24 = lean_ctor_get(x_2, 3);
 lean_inc(x_24);
 lean_dec_ref(x_2);
-x_28 = l_Substring_beq(x_19, x_22);
+x_28 = lean_substring_beq(x_19, x_22);
 if (x_28 == 0)
 {
 lean_dec(x_23);
@@ -16113,7 +16113,7 @@ lean_dec_ref(x_3);
 x_6 = l_Lean_instQuoteNameMkStr1___private__1___closed__1;
 x_7 = l_Lean_Name_reprPrec___closed__2;
 x_8 = l_Lean_versionStringCore___closed__1;
-x_9 = l_String_intercalate(x_8, x_5);
+x_9 = lean_string_intercalate(x_8, x_5);
 x_10 = lean_string_append(x_7, x_9);
 lean_dec_ref(x_9);
 x_11 = lean_box(2);

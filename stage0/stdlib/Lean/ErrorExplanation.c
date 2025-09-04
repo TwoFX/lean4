@@ -368,7 +368,7 @@ lean_object* l___private_Std_Internal_Parsec_String_0__Std_Internal_Parsec_Strin
 static lean_object* l_Option_fromJson_x3f___at___Lean_Json_getObjValAs_x3f___at___Lean_ErrorExplanation_fromJsonMetadata____x40_Lean_ErrorExplanation_4223505767____hygCtx___hyg_40__spec__2_spec__2___closed__0;
 LEAN_EXPORT lean_object* l_Lean_getErrorExplanation_x3f(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 static lean_object* l_Std_Internal_Parsec_manyCore___at_____private_Lean_ErrorExplanation_0__Lean_ErrorExplanation_CodeInfo_parse_stringContents_spec__0___closed__0;
-uint8_t l_Substring_beq(lean_object*, lean_object*);
+uint8_t lean_substring_beq(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Substring_takeWhileAux___at_____private_Lean_ErrorExplanation_0__Lean_ErrorExplanation_parseExplanation_fence_spec__0___boxed(lean_object*, lean_object*, lean_object*);
 size_t lean_usize_add(size_t, size_t);
 LEAN_EXPORT lean_object* l_Std_DTreeMap_Internal_Impl_foldlM___at___Std_DTreeMap_Internal_Impl_foldl___at___Lean_getErrorExplanationsRaw_spec__0_spec__0___boxed(lean_object*, lean_object*);
@@ -7834,7 +7834,7 @@ lean_ctor_set(x_15, 0, x_9);
 lean_ctor_set(x_15, 1, x_10);
 lean_ctor_set(x_15, 2, x_14);
 x_16 = l___private_Lean_ErrorExplanation_0__Lean_ErrorExplanation_parseExplanation_fence___closed__2;
-x_17 = l_Substring_beq(x_15, x_16);
+x_17 = lean_substring_beq(x_15, x_16);
 if (x_17 == 0)
 {
 lean_object* x_18; lean_object* x_19; lean_object* x_20; 

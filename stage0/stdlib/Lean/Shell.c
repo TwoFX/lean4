@@ -207,7 +207,7 @@ lean_object* lean_array_mk(lean_object*);
 static lean_object* l___private_Lean_Shell_0__Lean_displayHelp___closed__28;
 LEAN_EXPORT lean_object* l___private_Lean_Shell_0__Lean_ShellComponent_watchdog_elim___redArg(lean_object*);
 LEAN_EXPORT lean_object* l___private_Lean_Shell_0__Lean_ShellComponent_worker_elim___boxed(lean_object*, lean_object*, lean_object*, lean_object*);
-uint8_t l_Substring_beq(lean_object*, lean_object*);
+uint8_t lean_substring_beq(lean_object*, lean_object*);
 lean_object* lean_display_cumulative_profiling_times(lean_object*);
 LEAN_EXPORT lean_object* l___private_Lean_Shell_0__Lean_ShellComponent_noConfusion___redArg(uint8_t, uint8_t);
 uint8_t lean_internal_has_address_sanitizer(lean_object*);
@@ -3735,7 +3735,7 @@ lean_ctor_set(x_175, 0, x_169);
 lean_ctor_set(x_175, 1, x_170);
 lean_ctor_set(x_175, 2, x_174);
 x_176 = l___private_Lean_Shell_0__Lean_shellMain___closed__9;
-x_177 = l_Substring_beq(x_175, x_176);
+x_177 = lean_substring_beq(x_175, x_176);
 if (x_177 == 0)
 {
 lean_dec(x_171);

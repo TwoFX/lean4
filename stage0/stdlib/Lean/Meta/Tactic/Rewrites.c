@@ -371,7 +371,7 @@ LEAN_EXPORT lean_object* l_Lean_Meta_Rewrites_rwLemma___lam__0___boxed(lean_obje
 LEAN_EXPORT lean_object* l_Lean_Meta_Rewrites_RwDirection_noConfusion___redArg___lam__0(lean_object*);
 lean_object* l_Lean_instantiateMVarsCore(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Meta_Rewrites_getSubexpressionMatches(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
-uint8_t l_Substring_beq(lean_object*, lean_object*);
+uint8_t lean_substring_beq(lean_object*, lean_object*);
 static lean_object* l_List_mapTR_loop___at___Lean_Meta_Rewrites_rewriteCandidates_spec__5___closed__4;
 LEAN_EXPORT lean_object* l_List_mapTR_loop___at___Lean_Meta_Rewrites_rewriteCandidates_spec__5(lean_object*, lean_object*);
 size_t lean_usize_add(size_t, size_t);
@@ -2243,7 +2243,7 @@ lean_ctor_set(x_47, 0, x_37);
 lean_ctor_set(x_47, 1, x_46);
 lean_ctor_set(x_47, 2, x_43);
 x_48 = l___private_Lean_Meta_Tactic_Rewrites_0__Lean_Meta_Rewrites_addImport___closed__4;
-x_49 = l_Substring_beq(x_47, x_48);
+x_49 = lean_substring_beq(x_47, x_48);
 if (x_49 == 0)
 {
 lean_object* x_50; lean_object* x_51; lean_object* x_52; lean_object* x_53; uint8_t x_54; 
@@ -2257,7 +2257,7 @@ lean_ctor_set(x_52, 0, x_37);
 lean_ctor_set(x_52, 1, x_51);
 lean_ctor_set(x_52, 2, x_43);
 x_53 = l___private_Lean_Meta_Tactic_Rewrites_0__Lean_Meta_Rewrites_addImport___closed__7;
-x_54 = l_Substring_beq(x_52, x_53);
+x_54 = lean_substring_beq(x_52, x_53);
 if (x_54 == 0)
 {
 x_22 = x_3;

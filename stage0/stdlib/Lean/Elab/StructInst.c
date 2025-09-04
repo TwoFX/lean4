@@ -1383,7 +1383,7 @@ LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_m
 LEAN_EXPORT lean_object* l_Lean_Elab_Term_StructInst_FieldLHS_fieldName_elim___redArg(lean_object*, lean_object*);
 static lean_object* l_Lean_Elab_Term_StructInst_defaultExplicitSourceView___closed__0____x40_Lean_Elab_StructInst_1610966221____hygCtx___hyg_30_;
 static lean_object* l___private_Lean_Elab_StructInst_0__Lean_Elab_Term_StructInst_expandNonAtomicExplicitSources_go___lam__0___closed__12;
-lean_object* l_String_intercalate(lean_object*, lean_object*);
+lean_object* lean_string_intercalate(lean_object*, lean_object*);
 static lean_object* l___private_Lean_Elab_StructInst_0__Lean_Elab_Term_StructInst_instToMessageDataExpandedFieldVal___lam__2___closed__16;
 size_t lean_usize_sub(size_t, size_t);
 lean_object* lean_array_mk(lean_object*);
@@ -47357,7 +47357,7 @@ x_69 = l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at_____privat
 x_70 = lean_array_to_list(x_69);
 x_71 = l___private_Init_While_0__Lean_Loop_forIn_loop___at_____private_Init_While_0__Lean_Loop_forIn_loop___at_____private_Lean_Elab_StructInst_0__Lean_Elab_Term_StructInst_synthOptParamFields_spec__35_spec__35___closed__1;
 x_72 = l_Lean_Elab_Term_StructInst_expandStructInstFields___closed__0;
-x_73 = l_String_intercalate(x_72, x_70);
+x_73 = lean_string_intercalate(x_72, x_70);
 x_74 = l_Lean_stringToMessageData(x_73);
 lean_dec_ref(x_73);
 lean_ctor_set_tag(x_60, 7);
@@ -47604,7 +47604,7 @@ x_117 = l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at_____priva
 x_118 = lean_array_to_list(x_117);
 x_119 = l___private_Init_While_0__Lean_Loop_forIn_loop___at_____private_Init_While_0__Lean_Loop_forIn_loop___at_____private_Lean_Elab_StructInst_0__Lean_Elab_Term_StructInst_synthOptParamFields_spec__35_spec__35___closed__1;
 x_120 = l_Lean_Elab_Term_StructInst_expandStructInstFields___closed__0;
-x_121 = l_String_intercalate(x_120, x_118);
+x_121 = lean_string_intercalate(x_120, x_118);
 x_122 = l_Lean_stringToMessageData(x_121);
 lean_dec_ref(x_121);
 x_123 = lean_alloc_ctor(7, 2, 0);
@@ -48808,7 +48808,7 @@ x_69 = l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at_____privat
 x_70 = lean_array_to_list(x_69);
 x_71 = l___private_Init_While_0__Lean_Loop_forIn_loop___at_____private_Init_While_0__Lean_Loop_forIn_loop___at_____private_Lean_Elab_StructInst_0__Lean_Elab_Term_StructInst_synthOptParamFields_spec__35_spec__35___closed__1;
 x_72 = l_Lean_Elab_Term_StructInst_expandStructInstFields___closed__0;
-x_73 = l_String_intercalate(x_72, x_70);
+x_73 = lean_string_intercalate(x_72, x_70);
 x_74 = l_Lean_stringToMessageData(x_73);
 lean_dec_ref(x_73);
 lean_ctor_set_tag(x_60, 7);
@@ -49055,7 +49055,7 @@ x_117 = l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at_____priva
 x_118 = lean_array_to_list(x_117);
 x_119 = l___private_Init_While_0__Lean_Loop_forIn_loop___at_____private_Init_While_0__Lean_Loop_forIn_loop___at_____private_Lean_Elab_StructInst_0__Lean_Elab_Term_StructInst_synthOptParamFields_spec__35_spec__35___closed__1;
 x_120 = l_Lean_Elab_Term_StructInst_expandStructInstFields___closed__0;
-x_121 = l_String_intercalate(x_120, x_118);
+x_121 = lean_string_intercalate(x_120, x_118);
 x_122 = l_Lean_stringToMessageData(x_121);
 lean_dec_ref(x_121);
 x_123 = lean_alloc_ctor(7, 2, 0);

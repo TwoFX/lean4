@@ -124,7 +124,7 @@ uint8_t lean_uint8_of_nat(lean_object*);
 LEAN_EXPORT lean_object* l_panic___at___System_Uri_UriEscape_decodeUri_spec__1(lean_object*);
 static lean_object* l_System_Uri_UriEscape_rfc3986ReservedChars___closed__9;
 lean_object* lean_uint8_to_nat(uint8_t);
-uint8_t l_Substring_beq(lean_object*, lean_object*);
+uint8_t lean_substring_beq(lean_object*, lean_object*);
 size_t lean_usize_add(size_t, size_t);
 lean_object* l_mkPanicMessageWithDecl(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 uint8_t lean_uint32_dec_lt(uint32_t, uint32_t);
@@ -1530,7 +1530,7 @@ lean_ctor_set(x_11, 0, x_6);
 lean_ctor_set(x_11, 1, x_5);
 lean_ctor_set(x_11, 2, x_10);
 x_12 = l_System_Uri_pathToUri___lam__0___closed__2;
-x_13 = l_Substring_beq(x_11, x_12);
+x_13 = lean_substring_beq(x_11, x_12);
 if (x_13 == 0)
 {
 lean_object* x_14; lean_object* x_15; 
@@ -1751,7 +1751,7 @@ lean_ctor_set(x_7, 0, x_1);
 lean_ctor_set(x_7, 1, x_2);
 lean_ctor_set(x_7, 2, x_6);
 x_8 = l_System_Uri_fileUriToPath_x3f___closed__1;
-x_9 = l_Substring_beq(x_7, x_8);
+x_9 = lean_substring_beq(x_7, x_8);
 if (x_9 == 0)
 {
 lean_object* x_10; 
