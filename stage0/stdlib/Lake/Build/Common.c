@@ -166,7 +166,6 @@ LEAN_EXPORT lean_object* l_Lake_readTraceFile_x3f(lean_object*, lean_object*, le
 lean_object* l_Lake_Dynlib_dir_x3f(lean_object*);
 lean_object* lean_string_utf8_byte_size(lean_object*);
 lean_object* l_Lake_BuildTrace_mix(lean_object*, lean_object*);
-lean_object* lean_string_push(lean_object*, uint32_t);
 lean_object* l_Lean_Json_getBool_x3f(lean_object*);
 uint8_t lean_string_validate_utf8(lean_object*);
 lean_object* l_ReaderT_instMonad___redArg(lean_object*);
@@ -309,6 +308,7 @@ lean_object* l_Lake_CacheMap_get_x3f(uint64_t, lean_object*);
 LEAN_EXPORT lean_object* l___private_Init_Data_Array_QSort_Basic_0__Array_qsort_sort___at___Lake_inputDir_spec__2___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* lean_io_map_task(lean_object*, lean_object*, lean_object*, uint8_t, lean_object*);
 LEAN_EXPORT lean_object* l___private_Init_Data_Array_QSort_Basic_0__Array_qsort_sort___at___Lake_inputDir_spec__2___redArg___boxed(lean_object*, lean_object*, lean_object*);
+lean_object* lean_string_push(lean_object*, uint32_t);
 lean_object* l_instBEqOfDecidableEq___redArg(lean_object*);
 LEAN_EXPORT lean_object* l_Lake_Job_bindM___at___Lake_inputDir_spec__4___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lake_buildUnlessUpToDate_x3f___redArg(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, uint8_t, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
@@ -510,6 +510,7 @@ LEAN_EXPORT lean_object* l_Lake_buildFileAfterDep___redArg___lam__0___boxed(lean
 static lean_object* l_Lake_BuildMetadata_fromJson_x3f___closed__5;
 LEAN_EXPORT lean_object* l___private_Lake_Build_Common_0__Lake_mkLinkOrder(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 static lean_object* l_Lake_instMonadWorkspaceJobM___closed__18;
+lean_object* lean_string_append(lean_object*, lean_object*);
 lean_object* l_Lake_LeanInstall_ccLinkFlags(uint8_t, lean_object*);
 LEAN_EXPORT lean_object* l_Lake_writeTraceFile___redArg___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 static lean_object* l___private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at_____private_Lake_Build_Common_0__Lake_mkLinkObjArgs_spec__1___closed__1;

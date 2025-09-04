@@ -64,7 +64,6 @@ static lean_object* l_List_toString___at___Lake_buildLeanSharedLibOfStatic_spec_
 lean_object* l_Lake_buildFileUnlessUpToDate_x27(lean_object*, lean_object*, uint8_t, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* lean_string_utf8_byte_size(lean_object*);
 lean_object* l_Lake_BuildTrace_mix(lean_object*, lean_object*);
-lean_object* lean_string_push(lean_object*, uint32_t);
 uint8_t lean_string_validate_utf8(lean_object*);
 static lean_object* l_List_toString___at___Lake_buildLeanSharedLibOfStatic_spec__0___closed__2;
 LEAN_EXPORT lean_object* l_Lake_ensureJob___at_____private_Lake_Build_ExternLib_0__Lake_ExternLib_recBuildStatic_spec__0___lam__1(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
@@ -110,6 +109,7 @@ static lean_object* l_panic___at___IO_FS_withIsolatedStreams___at___Lake_ensureJ
 LEAN_EXPORT lean_object* l_IO_withStdin___at___IO_FS_withIsolatedStreams___at___Lake_ensureJob___at_____private_Lake_Build_ExternLib_0__Lake_ExternLib_recBuildStatic_spec__0_spec__0_spec__1(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l___private_Lake_Build_ExternLib_0__Lake_computeDynlibOfShared(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* lean_io_map_task(lean_object*, lean_object*, lean_object*, uint8_t, lean_object*);
+lean_object* lean_string_push(lean_object*, uint32_t);
 LEAN_EXPORT lean_object* l_IO_FS_withIsolatedStreams___at___Lake_ensureJob___at_____private_Lake_Build_ExternLib_0__Lake_ExternLib_recBuildStatic_spec__0_spec__0(lean_object*, lean_object*, uint8_t, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 static lean_object* l_Lake_buildLeanSharedLibOfStatic___lam__0___closed__9;
 lean_object* l_System_FilePath_fileStem(lean_object*);
@@ -179,6 +179,7 @@ lean_object* l_Array_append___redArg(lean_object*, lean_object*);
 lean_object* lean_nat_mul(lean_object*, lean_object*);
 lean_object* lean_get_set_stdin(lean_object*, lean_object*);
 static lean_object* l___private_Lake_Build_ExternLib_0__Lake_computeDynlibOfShared___lam__0___closed__6;
+lean_object* lean_string_append(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lake_formatQuery___at___Lake_ExternLib_staticFacetConfig_spec__0___boxed(lean_object*, lean_object*);
 lean_object* l_Lake_Job_toOpaque___redArg(lean_object*);
 LEAN_EXPORT lean_object* l_Lake_Job_mapM___at___Lake_buildLeanSharedLibOfStatic_spec__3___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);

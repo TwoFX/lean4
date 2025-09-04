@@ -11212,7 +11212,6 @@ x_14 = l___private_Lean_Server_InfoUtils_0__Lean_Elab_InfoTree_goalsAt_x3f_isEmp
 x_15 = lean_unsigned_to_nat(0u);
 x_16 = l_Lean_Syntax_getArg(x_1, x_15);
 x_17 = l_Lean_Syntax_isToken(x_14, x_16);
-lean_dec(x_16);
 x_2 = x_17;
 goto block_10;
 }

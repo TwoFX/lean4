@@ -1,6 +1,6 @@
 // Lean compiler output
 // Module: Std.Internal.Parsec.Basic
-// Imports: Init.NotationExtra Init.Data.ToString.Macro
+// Imports: Init.NotationExtra Init.Data.ToString.Macro Init.Data.String.Basic
 #include <lean/lean.h>
 #if defined(__clang__)
 #pragma clang diagnostic ignored "-Wunused-parameter"
@@ -451,7 +451,6 @@ x_35 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_35, 0, x_34);
 lean_ctor_set(x_35, 1, x_30);
 x_36 = l_String_quote(x_27);
-lean_dec_ref(x_27);
 x_37 = lean_alloc_ctor(3, 1, 0);
 lean_ctor_set(x_37, 0, x_36);
 x_38 = lean_alloc_ctor(5, 2, 0);
@@ -2926,6 +2925,7 @@ return x_9;
 }
 lean_object* initialize_Init_NotationExtra(uint8_t builtin, lean_object*);
 lean_object* initialize_Init_Data_ToString_Macro(uint8_t builtin, lean_object*);
+lean_object* initialize_Init_Data_String_Basic(uint8_t builtin, lean_object*);
 static bool _G_initialized = false;
 LEAN_EXPORT lean_object* initialize_Std_Internal_Parsec_Basic(uint8_t builtin, lean_object* w) {
 lean_object * res;
@@ -2935,6 +2935,9 @@ res = initialize_Init_NotationExtra(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 res = initialize_Init_Data_ToString_Macro(builtin, lean_io_mk_world());
+if (lean_io_result_is_error(res)) return res;
+lean_dec_ref(res);
+res = initialize_Init_Data_String_Basic(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 l_Std_Internal_Parsec_reprParseResult___redArg___closed__0____x40_Std_Internal_Parsec_Basic_1356375387____hygCtx___hyg_55_ = _init_l_Std_Internal_Parsec_reprParseResult___redArg___closed__0____x40_Std_Internal_Parsec_Basic_1356375387____hygCtx___hyg_55_();

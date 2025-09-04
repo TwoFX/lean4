@@ -104,6 +104,7 @@ LEAN_EXPORT lean_object* l_Std_Tactic_BVDecide_BVBinOp_add_elim___redArg___boxed
 LEAN_EXPORT lean_object* l_Std_Tactic_BVDecide_instHashableBVBinOp;
 LEAN_EXPORT lean_object* l_Std_Tactic_BVDecide_instDecidableEqBVBinOp___boxed(lean_object*, lean_object*);
 LEAN_EXPORT uint8_t l_Std_Tactic_BVDecide_BVExpr_decEq___redArg(lean_object*, lean_object*);
+lean_object* lean_string_length(lean_object*);
 LEAN_EXPORT lean_object* l_Std_Tactic_BVDecide_BVBinPred_eval___boxed(lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* l_BitVec_shiftLeft(lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Std_Tactic_BVDecide_BVExpr_ctorIdx(lean_object*, lean_object*);
@@ -328,6 +329,7 @@ static lean_object* l_Std_Tactic_BVDecide_BVExpr_toString___closed__3;
 lean_object* lean_nat_lor(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Std_Tactic_BVDecide_BVPred_instToString;
 LEAN_EXPORT lean_object* l_Std_Tactic_BVDecide_BVBinPred_toCtorIdx(uint8_t);
+static lean_object* l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__19____x40_Std_Tactic_BVDecide_Bitblast_BVExpr_Basic_2882245921____hygCtx___hyg_61_;
 LEAN_EXPORT lean_object* l_Std_Tactic_BVDecide_BVExpr_arithShiftRight___override(lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Std_Tactic_BVDecide_BVBit_ctorIdx(lean_object* x_1) {
 _start:
@@ -611,12 +613,21 @@ static lean_object* _init_l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__16_
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
-x_1 = lean_unsigned_to_nat(2u);
-x_2 = lean_nat_to_int(x_1);
+x_1 = l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__0____x40_Std_Tactic_BVDecide_Bitblast_BVExpr_Basic_2882245921____hygCtx___hyg_61_;
+x_2 = lean_string_length(x_1);
 return x_2;
 }
 }
 static lean_object* _init_l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__17____x40_Std_Tactic_BVDecide_Bitblast_BVExpr_Basic_2882245921____hygCtx___hyg_61_() {
+_start:
+{
+lean_object* x_1; lean_object* x_2; 
+x_1 = l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__16____x40_Std_Tactic_BVDecide_Bitblast_BVExpr_Basic_2882245921____hygCtx___hyg_61_;
+x_2 = lean_nat_to_int(x_1);
+return x_2;
+}
+}
+static lean_object* _init_l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__18____x40_Std_Tactic_BVDecide_Bitblast_BVExpr_Basic_2882245921____hygCtx___hyg_61_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -626,7 +637,7 @@ lean_ctor_set(x_2, 0, x_1);
 return x_2;
 }
 }
-static lean_object* _init_l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__18____x40_Std_Tactic_BVDecide_Bitblast_BVExpr_Basic_2882245921____hygCtx___hyg_61_() {
+static lean_object* _init_l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__19____x40_Std_Tactic_BVDecide_Bitblast_BVExpr_Basic_2882245921____hygCtx___hyg_61_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -716,12 +727,12 @@ lean_ctor_set_uint8(x_35, sizeof(void*)*1, x_11);
 x_36 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_36, 0, x_31);
 lean_ctor_set(x_36, 1, x_35);
-x_37 = l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__16____x40_Std_Tactic_BVDecide_Bitblast_BVExpr_Basic_2882245921____hygCtx___hyg_61_;
-x_38 = l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__17____x40_Std_Tactic_BVDecide_Bitblast_BVExpr_Basic_2882245921____hygCtx___hyg_61_;
+x_37 = l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__17____x40_Std_Tactic_BVDecide_Bitblast_BVExpr_Basic_2882245921____hygCtx___hyg_61_;
+x_38 = l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__18____x40_Std_Tactic_BVDecide_Bitblast_BVExpr_Basic_2882245921____hygCtx___hyg_61_;
 x_39 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_39, 0, x_38);
 lean_ctor_set(x_39, 1, x_36);
-x_40 = l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__18____x40_Std_Tactic_BVDecide_Bitblast_BVExpr_Basic_2882245921____hygCtx___hyg_61_;
+x_40 = l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__19____x40_Std_Tactic_BVDecide_Bitblast_BVExpr_Basic_2882245921____hygCtx___hyg_61_;
 x_41 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_41, 0, x_39);
 lean_ctor_set(x_41, 1, x_40);
@@ -6176,6 +6187,8 @@ l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__17____x40_Std_Tactic_BVDecide
 lean_mark_persistent(l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__17____x40_Std_Tactic_BVDecide_Bitblast_BVExpr_Basic_2882245921____hygCtx___hyg_61_);
 l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__18____x40_Std_Tactic_BVDecide_Bitblast_BVExpr_Basic_2882245921____hygCtx___hyg_61_ = _init_l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__18____x40_Std_Tactic_BVDecide_Bitblast_BVExpr_Basic_2882245921____hygCtx___hyg_61_();
 lean_mark_persistent(l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__18____x40_Std_Tactic_BVDecide_Bitblast_BVExpr_Basic_2882245921____hygCtx___hyg_61_);
+l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__19____x40_Std_Tactic_BVDecide_Bitblast_BVExpr_Basic_2882245921____hygCtx___hyg_61_ = _init_l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__19____x40_Std_Tactic_BVDecide_Bitblast_BVExpr_Basic_2882245921____hygCtx___hyg_61_();
+lean_mark_persistent(l_Std_Tactic_BVDecide_reprBVBit___redArg___closed__19____x40_Std_Tactic_BVDecide_Bitblast_BVExpr_Basic_2882245921____hygCtx___hyg_61_);
 l_Std_Tactic_BVDecide_instReprBVBit___closed__0 = _init_l_Std_Tactic_BVDecide_instReprBVBit___closed__0();
 lean_mark_persistent(l_Std_Tactic_BVDecide_instReprBVBit___closed__0);
 l_Std_Tactic_BVDecide_instReprBVBit = _init_l_Std_Tactic_BVDecide_instReprBVBit();

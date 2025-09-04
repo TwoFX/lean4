@@ -51,10 +51,12 @@ LEAN_EXPORT lean_object* l_Lake_Module_depsFacet;
 LEAN_EXPORT lean_object* l_Lake_LeanLib_extraDepFacet;
 static lean_object* l_Lake_Module_oFacet___closed__0;
 static lean_object* l_Lake_reprModuleFacet___redArg___closed__10____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_;
+lean_object* lean_string_length(lean_object*);
 static lean_object* l_Lake_reprModuleFacet___redArg___closed__14____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_;
 static lean_object* l_Lake_Module_importInfoFacet___closed__1;
 static lean_object* l_Lake_Module_ileanFacet___closed__1;
 static lean_object* l_Lake_reprModuleFacet___redArg___closed__4____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_;
+static lean_object* l_Lake_reprModuleFacet___redArg___closed__18____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_;
 LEAN_EXPORT lean_object* l_Lake_Module_headerFacet;
 LEAN_EXPORT lean_object* l_Lake_Package_gitHubReleaseFacet;
 static lean_object* l_Lake_Module_setupFacet___closed__0;
@@ -338,12 +340,21 @@ static lean_object* _init_l_Lake_reprModuleFacet___redArg___closed__15____x40_La
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
-x_1 = lean_unsigned_to_nat(2u);
-x_2 = l_instNatCastInt___lam__0(x_1);
+x_1 = l_Lake_reprModuleFacet___redArg___closed__0____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_;
+x_2 = lean_string_length(x_1);
 return x_2;
 }
 }
 static lean_object* _init_l_Lake_reprModuleFacet___redArg___closed__16____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_() {
+_start:
+{
+lean_object* x_1; lean_object* x_2; 
+x_1 = l_Lake_reprModuleFacet___redArg___closed__15____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_;
+x_2 = l_instNatCastInt___lam__0(x_1);
+return x_2;
+}
+}
+static lean_object* _init_l_Lake_reprModuleFacet___redArg___closed__17____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -353,7 +364,7 @@ lean_ctor_set(x_2, 0, x_1);
 return x_2;
 }
 }
-static lean_object* _init_l_Lake_reprModuleFacet___redArg___closed__17____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_() {
+static lean_object* _init_l_Lake_reprModuleFacet___redArg___closed__18____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -401,12 +412,12 @@ x_18 = l_Lake_reprModuleFacet___redArg___closed__13____x40_Lake_Build_Facets_419
 x_19 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_19, 0, x_17);
 lean_ctor_set(x_19, 1, x_18);
-x_20 = l_Lake_reprModuleFacet___redArg___closed__15____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_;
-x_21 = l_Lake_reprModuleFacet___redArg___closed__16____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_;
+x_20 = l_Lake_reprModuleFacet___redArg___closed__16____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_;
+x_21 = l_Lake_reprModuleFacet___redArg___closed__17____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_;
 x_22 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_22, 0, x_21);
 lean_ctor_set(x_22, 1, x_19);
-x_23 = l_Lake_reprModuleFacet___redArg___closed__17____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_;
+x_23 = l_Lake_reprModuleFacet___redArg___closed__18____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_;
 x_24 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_24, 0, x_22);
 lean_ctor_set(x_24, 1, x_23);
@@ -1691,6 +1702,8 @@ l_Lake_reprModuleFacet___redArg___closed__16____x40_Lake_Build_Facets_4191832764
 lean_mark_persistent(l_Lake_reprModuleFacet___redArg___closed__16____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_);
 l_Lake_reprModuleFacet___redArg___closed__17____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_ = _init_l_Lake_reprModuleFacet___redArg___closed__17____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_();
 lean_mark_persistent(l_Lake_reprModuleFacet___redArg___closed__17____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_);
+l_Lake_reprModuleFacet___redArg___closed__18____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_ = _init_l_Lake_reprModuleFacet___redArg___closed__18____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_();
+lean_mark_persistent(l_Lake_reprModuleFacet___redArg___closed__18____x40_Lake_Build_Facets_4191832764____hygCtx___hyg_29_);
 l_Lake_Module_leanFacet___closed__0 = _init_l_Lake_Module_leanFacet___closed__0();
 lean_mark_persistent(l_Lake_Module_leanFacet___closed__0);
 l_Lake_Module_leanFacet___closed__1 = _init_l_Lake_Module_leanFacet___closed__1();

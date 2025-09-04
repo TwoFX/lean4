@@ -149,6 +149,7 @@ LEAN_EXPORT lean_object* l_instInhabitedRat;
 lean_object* lean_nat_sub(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Rat_zpow(lean_object*, lean_object*);
 lean_object* lean_nat_mul(lean_object*, lean_object*);
+lean_object* lean_string_append(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Rat_instMin___lam__0(lean_object*, lean_object*);
 static lean_object* l_Rat_term___x2f_x2e_____closed__1;
 static lean_object* l_hashRat___closed__0____x40_Init_Data_Rat_Basic_3597219815____hygCtx___hyg_52_;

@@ -10225,7 +10225,6 @@ x_67 = l_Lean_Syntax_getArg(x_2, x_66);
 x_68 = lean_unsigned_to_nat(0u);
 x_69 = l_Lean_Syntax_getArg(x_67, x_68);
 x_70 = l_Lean_Syntax_isToken(x_65, x_69);
-lean_dec(x_69);
 if (x_70 == 0)
 {
 lean_dec(x_67);

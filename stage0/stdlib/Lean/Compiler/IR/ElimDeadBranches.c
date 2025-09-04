@@ -76,6 +76,7 @@ LEAN_EXPORT lean_object* l_Lean_PersistentHashMap_findAux___at___Lean_Persistent
 LEAN_EXPORT lean_object* l_Lean_PersistentHashMap_findAtAux___at___Lean_PersistentHashMap_findAux___at___Lean_PersistentHashMap_find_x3f___at___Lean_IR_UnreachableBranches_getFunctionSummary_x3f_spec__0_spec__0_spec__0___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* l_Array_qpartition___redArg(lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* lean_array_push(lean_object*, lean_object*);
+static lean_object* l_Lean_IR_UnreachableBranches_Value_toFormat___closed__10;
 LEAN_EXPORT lean_object* l_Std_DHashMap_Internal_Raw_u2080_expand___at___Std_DHashMap_Internal_Raw_u2080_insertIfNew___at___Lean_IR_UnreachableBranches_markJPVisited_spec__0_spec__1(lean_object*, lean_object*);
 static lean_object* l___private_Lean_Compiler_IR_ElimDeadBranches_0__Lean_IR_initFn___closed__18____x40_Lean_Compiler_IR_ElimDeadBranches_3649329548____hygCtx___hyg_2_;
 size_t lean_usize_mul(size_t, size_t);
@@ -127,6 +128,7 @@ LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_m
 LEAN_EXPORT lean_object* l_Lean_PersistentHashMap_foldl___at___Lean_PersistentHashMap_toArray___at___Lean_IR_UnreachableBranches_initFn____x40_Lean_Compiler_IR_ElimDeadBranches_1943122557____hygCtx___hyg_2__spec__3_spec__3___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 extern lean_object* l_Lean_IR_defaultArg____x40_Lean_Compiler_IR_Basic_2209090454____hygCtx___hyg_18_;
 LEAN_EXPORT lean_object* l_Lean_PersistentHashMap_findAtAux___at___Lean_PersistentHashMap_findAux___at___Lean_PersistentHashMap_find_x3f___at___Lean_IR_UnreachableBranches_getFunctionSummary_x3f_spec__0_spec__0_spec__0___redArg(lean_object*, lean_object*, lean_object*, lean_object*);
+lean_object* lean_string_length(lean_object*);
 LEAN_EXPORT lean_object* l_Lean_PersistentHashMap_foldlM___at___Lean_PersistentHashMap_foldl___at___Lean_PersistentHashMap_toArray___at___Lean_IR_UnreachableBranches_initFn____x40_Lean_Compiler_IR_ElimDeadBranches_1943122557____hygCtx___hyg_2__spec__3_spec__3_spec__3___redArg___boxed(lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_PersistentHashMap_foldlMAux___at___Lean_PersistentHashMap_foldlM___at___Lean_PersistentHashMap_foldl___at___Lean_PersistentHashMap_toArray___at___Lean_IR_UnreachableBranches_initFn____x40_Lean_Compiler_IR_ElimDeadBranches_1943122557____hygCtx___hyg_2__spec__3_spec__3_spec__3_spec__3(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_IR_UnreachableBranches_functionSummariesExt;
@@ -170,6 +172,7 @@ LEAN_EXPORT lean_object* l_Lean_PersistentHashMap_contains___at___Lean_IR_Unreac
 static lean_object* l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__5;
 LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at___Lean_IR_UnreachableBranches_interpFnBody_spec__0___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Std_DHashMap_Internal_Raw_u2080_insertIfNew___at___Lean_IR_UnreachableBranches_markJPVisited_spec__0___redArg(lean_object*, lean_object*, lean_object*);
+static lean_object* l_Lean_IR_UnreachableBranches_reprValue___closed__10____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
 LEAN_EXPORT lean_object* l_Lean_IR_elimDeadBranches(lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_IR_UnreachableBranches_findArgValue___boxed(lean_object*, lean_object*, lean_object*);
 static lean_object* l_Lean_IR_UnreachableBranches_Value_addChoice___closed__0;
@@ -234,6 +237,7 @@ LEAN_EXPORT lean_object* l_List_mapTR_loop___at___Lean_IR_UnreachableBranches_Va
 LEAN_EXPORT lean_object* l___private_Lean_Compiler_IR_ElimDeadBranches_0__Lean_IR_UnreachableBranches_resetNestedJPParams___boxed(lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg(lean_object*);
 static lean_object* l_Lean_PersistentHashMap_insertAux___at___Lean_PersistentHashMap_insert___at___Lean_IR_UnreachableBranches_initFn____x40_Lean_Compiler_IR_ElimDeadBranches_1943122557____hygCtx___hyg_2__spec__10_spec__10___redArg___closed__0;
+static lean_object* l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__5;
 static lean_object* l_Lean_IR_UnreachableBranches_instBEqValue___closed__0;
 LEAN_EXPORT lean_object* l_Lean_IR_UnreachableBranches_instToStringValue;
 static lean_object* l___private_Lean_Compiler_IR_ElimDeadBranches_0__Lean_IR_initFn___closed__9____x40_Lean_Compiler_IR_ElimDeadBranches_3649329548____hygCtx___hyg_2_;
@@ -258,6 +262,7 @@ static lean_object* l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___
 LEAN_EXPORT lean_object* l___private_Init_Data_Nat_Fold_0__Nat_foldTR_loop___at___Lean_IR_UnreachableBranches_Value_merge_spec__0___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_IR_UnreachableBranches_interpFnBody(lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_IR_UnreachableBranches_addFunctionSummary(lean_object*, lean_object*, lean_object*);
+static lean_object* l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__10;
 LEAN_EXPORT lean_object* l_Lean_IR_UnreachableBranches_Value_addChoice(lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Std_DHashMap_Internal_AssocList_getD___at___Std_DHashMap_Internal_Raw_u2080_Const_getD___at___Lean_IR_UnreachableBranches_findVarValue_spec__0_spec__0(lean_object*, lean_object*, lean_object*, lean_object*);
 static lean_object* l_Lean_IR_UnreachableBranches_findVarValue___closed__0;
@@ -442,6 +447,7 @@ lean_object* l_Lean_IR_hashJoinPointId____x40_Lean_Compiler_IR_Basic_3731510614_
 lean_object* lean_array_uget(lean_object*, size_t);
 size_t lean_array_size(lean_object*);
 LEAN_EXPORT lean_object* l_Lean_PersistentHashMap_toArray___at___Lean_IR_UnreachableBranches_initFn____x40_Lean_Compiler_IR_ElimDeadBranches_1943122557____hygCtx___hyg_2__spec__3___redArg___boxed(lean_object*);
+static lean_object* l_Lean_IR_UnreachableBranches_reprValue___closed__11____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
 LEAN_EXPORT lean_object* l_Lean_IR_UnreachableBranches_findArgValue(lean_object*, lean_object*, lean_object*);
 static lean_object* l_Lean_IR_UnreachableBranches_markJPVisited___closed__2;
 lean_object* lean_st_ref_set(lean_object*, lean_object*, lean_object*);
@@ -495,6 +501,7 @@ static lean_object* l___private_Lean_Compiler_IR_ElimDeadBranches_0__Lean_IR_ini
 LEAN_EXPORT lean_object* l_Std_DHashMap_Internal_AssocList_contains___at___Std_DHashMap_Internal_Raw_u2080_insert___at___Lean_IR_UnreachableBranches_updateVarAssignment_spec__0_spec__0___boxed(lean_object*, lean_object*, lean_object*);
 lean_object* lean_array_uset(lean_object*, size_t, lean_object*);
 static lean_object* l_Lean_IR_UnreachableBranches_reprValue___closed__3____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
+static lean_object* l_Lean_IR_UnreachableBranches_Value_toFormat___closed__11;
 LEAN_EXPORT lean_object* l_Lean_IR_UnreachableBranches_Value_ctorElim(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* l_Lean_Name_hash___override___boxed(lean_object*);
 LEAN_EXPORT lean_object* l_Array_mapFinIdxM_map___at___Lean_IR_elimDeadBranches_spec__1___redArg___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
@@ -1145,12 +1152,21 @@ static lean_object* _init_l_Array_Array_repr___at___Lean_IR_UnreachableBranches_
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
-x_1 = lean_unsigned_to_nat(2u);
-x_2 = lean_nat_to_int(x_1);
+x_1 = l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__0;
+x_2 = lean_string_length(x_1);
 return x_2;
 }
 }
 static lean_object* _init_l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__6() {
+_start:
+{
+lean_object* x_1; lean_object* x_2; 
+x_1 = l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__5;
+x_2 = lean_nat_to_int(x_1);
+return x_2;
+}
+}
+static lean_object* _init_l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__7() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -1160,7 +1176,7 @@ lean_ctor_set(x_2, 0, x_1);
 return x_2;
 }
 }
-static lean_object* _init_l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__7() {
+static lean_object* _init_l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__8() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -1170,7 +1186,7 @@ lean_ctor_set(x_2, 0, x_1);
 return x_2;
 }
 }
-static lean_object* _init_l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__8() {
+static lean_object* _init_l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__9() {
 _start:
 {
 lean_object* x_1; 
@@ -1178,11 +1194,11 @@ x_1 = lean_mk_string_unchecked("#[]", 3, 3);
 return x_1;
 }
 }
-static lean_object* _init_l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__9() {
+static lean_object* _init_l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__10() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
-x_1 = l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__8;
+x_1 = l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__9;
 x_2 = lean_alloc_ctor(3, 1, 0);
 lean_ctor_set(x_2, 0, x_1);
 return x_2;
@@ -1202,12 +1218,12 @@ lean_object* x_5; lean_object* x_6; lean_object* x_7; lean_object* x_8; lean_obj
 x_5 = lean_array_to_list(x_1);
 x_6 = l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__3;
 x_7 = l_Std_Format_joinSep___at___Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0_spec__0(x_5, x_6);
-x_8 = l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__5;
-x_9 = l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__6;
+x_8 = l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__6;
+x_9 = l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__7;
 x_10 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_10, 0, x_9);
 lean_ctor_set(x_10, 1, x_7);
-x_11 = l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__7;
+x_11 = l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__8;
 x_12 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_12, 0, x_10);
 lean_ctor_set(x_12, 1, x_11);
@@ -1221,7 +1237,7 @@ else
 {
 lean_object* x_15; 
 lean_dec_ref(x_1);
-x_15 = l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__9;
+x_15 = l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__10;
 return x_15;
 }
 }
@@ -1256,12 +1272,21 @@ static lean_object* _init_l_List_repr___at___Lean_IR_UnreachableBranches_reprVal
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
-x_1 = lean_unsigned_to_nat(1u);
-x_2 = lean_nat_to_int(x_1);
+x_1 = l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__2;
+x_2 = lean_string_length(x_1);
 return x_2;
 }
 }
 static lean_object* _init_l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__4() {
+_start:
+{
+lean_object* x_1; lean_object* x_2; 
+x_1 = l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__3;
+x_2 = lean_nat_to_int(x_1);
+return x_2;
+}
+}
+static lean_object* _init_l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__5() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -1285,12 +1310,12 @@ else
 lean_object* x_3; lean_object* x_4; lean_object* x_5; lean_object* x_6; lean_object* x_7; lean_object* x_8; lean_object* x_9; lean_object* x_10; uint8_t x_11; lean_object* x_12; 
 x_3 = l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__3;
 x_4 = l_Std_Format_joinSep___at___Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0_spec__0(x_1, x_3);
-x_5 = l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__3;
-x_6 = l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__4;
+x_5 = l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__4;
+x_6 = l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__5;
 x_7 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_7, 0, x_6);
 lean_ctor_set(x_7, 1, x_4);
-x_8 = l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__7;
+x_8 = l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__8;
 x_9 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_9, 0, x_7);
 lean_ctor_set(x_9, 1, x_8);
@@ -1352,34 +1377,52 @@ return x_2;
 static lean_object* _init_l_Lean_IR_UnreachableBranches_reprValue___closed__4____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_() {
 _start:
 {
-lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("Lean.IR.UnreachableBranches.Value.ctor", 38, 38);
-return x_1;
+lean_object* x_1; lean_object* x_2; 
+x_1 = lean_unsigned_to_nat(2u);
+x_2 = lean_nat_to_int(x_1);
+return x_2;
 }
 }
 static lean_object* _init_l_Lean_IR_UnreachableBranches_reprValue___closed__5____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
-x_1 = l_Lean_IR_UnreachableBranches_reprValue___closed__4____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
-x_2 = lean_alloc_ctor(3, 1, 0);
-lean_ctor_set(x_2, 0, x_1);
+x_1 = lean_unsigned_to_nat(1u);
+x_2 = lean_nat_to_int(x_1);
 return x_2;
 }
 }
 static lean_object* _init_l_Lean_IR_UnreachableBranches_reprValue___closed__6____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_() {
 _start:
 {
+lean_object* x_1; 
+x_1 = lean_mk_string_unchecked("Lean.IR.UnreachableBranches.Value.ctor", 38, 38);
+return x_1;
+}
+}
+static lean_object* _init_l_Lean_IR_UnreachableBranches_reprValue___closed__7____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_() {
+_start:
+{
+lean_object* x_1; lean_object* x_2; 
+x_1 = l_Lean_IR_UnreachableBranches_reprValue___closed__6____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
+x_2 = lean_alloc_ctor(3, 1, 0);
+lean_ctor_set(x_2, 0, x_1);
+return x_2;
+}
+}
+static lean_object* _init_l_Lean_IR_UnreachableBranches_reprValue___closed__8____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_() {
+_start:
+{
 lean_object* x_1; lean_object* x_2; lean_object* x_3; 
 x_1 = lean_box(1);
-x_2 = l_Lean_IR_UnreachableBranches_reprValue___closed__5____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
+x_2 = l_Lean_IR_UnreachableBranches_reprValue___closed__7____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
 x_3 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_3, 0, x_2);
 lean_ctor_set(x_3, 1, x_1);
 return x_3;
 }
 }
-static lean_object* _init_l_Lean_IR_UnreachableBranches_reprValue___closed__7____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_() {
+static lean_object* _init_l_Lean_IR_UnreachableBranches_reprValue___closed__9____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_() {
 _start:
 {
 lean_object* x_1; 
@@ -1387,22 +1430,22 @@ x_1 = lean_mk_string_unchecked("Lean.IR.UnreachableBranches.Value.choice", 40, 4
 return x_1;
 }
 }
-static lean_object* _init_l_Lean_IR_UnreachableBranches_reprValue___closed__8____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_() {
+static lean_object* _init_l_Lean_IR_UnreachableBranches_reprValue___closed__10____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
-x_1 = l_Lean_IR_UnreachableBranches_reprValue___closed__7____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
+x_1 = l_Lean_IR_UnreachableBranches_reprValue___closed__9____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
 x_2 = lean_alloc_ctor(3, 1, 0);
 lean_ctor_set(x_2, 0, x_1);
 return x_2;
 }
 }
-static lean_object* _init_l_Lean_IR_UnreachableBranches_reprValue___closed__9____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_() {
+static lean_object* _init_l_Lean_IR_UnreachableBranches_reprValue___closed__11____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; lean_object* x_3; 
 x_1 = lean_box(1);
-x_2 = l_Lean_IR_UnreachableBranches_reprValue___closed__8____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
+x_2 = l_Lean_IR_UnreachableBranches_reprValue___closed__10____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
 x_3 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_3, 0, x_2);
 lean_ctor_set(x_3, 1, x_1);
@@ -1422,14 +1465,14 @@ x_18 = lean_nat_dec_le(x_17, x_2);
 if (x_18 == 0)
 {
 lean_object* x_19; 
-x_19 = l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__5;
+x_19 = l_Lean_IR_UnreachableBranches_reprValue___closed__4____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
 x_3 = x_19;
 goto block_9;
 }
 else
 {
 lean_object* x_20; 
-x_20 = l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__3;
+x_20 = l_Lean_IR_UnreachableBranches_reprValue___closed__5____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
 x_3 = x_20;
 goto block_9;
 }
@@ -1442,14 +1485,14 @@ x_22 = lean_nat_dec_le(x_21, x_2);
 if (x_22 == 0)
 {
 lean_object* x_23; 
-x_23 = l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__5;
+x_23 = l_Lean_IR_UnreachableBranches_reprValue___closed__4____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
 x_10 = x_23;
 goto block_16;
 }
 else
 {
 lean_object* x_24; 
-x_24 = l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__3;
+x_24 = l_Lean_IR_UnreachableBranches_reprValue___closed__5____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
 x_10 = x_24;
 goto block_16;
 }
@@ -1474,14 +1517,14 @@ x_42 = lean_nat_dec_le(x_41, x_2);
 if (x_42 == 0)
 {
 lean_object* x_43; 
-x_43 = l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__5;
+x_43 = l_Lean_IR_UnreachableBranches_reprValue___closed__4____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
 x_28 = x_43;
 goto block_40;
 }
 else
 {
 lean_object* x_44; 
-x_44 = l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__3;
+x_44 = l_Lean_IR_UnreachableBranches_reprValue___closed__5____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
 x_28 = x_44;
 goto block_40;
 }
@@ -1489,7 +1532,7 @@ block_40:
 {
 lean_object* x_29; lean_object* x_30; lean_object* x_31; lean_object* x_32; lean_object* x_33; lean_object* x_34; lean_object* x_35; lean_object* x_36; uint8_t x_37; lean_object* x_38; lean_object* x_39; 
 x_29 = lean_box(1);
-x_30 = l_Lean_IR_UnreachableBranches_reprValue___closed__6____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
+x_30 = l_Lean_IR_UnreachableBranches_reprValue___closed__8____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
 x_31 = l_Lean_IR_reprCtorInfo___redArg____x40_Lean_Compiler_IR_Basic_3867985991____hygCtx___hyg_77_(x_25);
 if (lean_is_scalar(x_27)) {
  x_32 = lean_alloc_ctor(5, 2, 0);
@@ -1528,21 +1571,21 @@ x_56 = lean_nat_dec_le(x_55, x_2);
 if (x_56 == 0)
 {
 lean_object* x_57; 
-x_57 = l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__5;
+x_57 = l_Lean_IR_UnreachableBranches_reprValue___closed__4____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
 x_46 = x_57;
 goto block_54;
 }
 else
 {
 lean_object* x_58; 
-x_58 = l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__3;
+x_58 = l_Lean_IR_UnreachableBranches_reprValue___closed__5____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
 x_46 = x_58;
 goto block_54;
 }
 block_54:
 {
 lean_object* x_47; lean_object* x_48; lean_object* x_49; lean_object* x_50; uint8_t x_51; lean_object* x_52; lean_object* x_53; 
-x_47 = l_Lean_IR_UnreachableBranches_reprValue___closed__9____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
+x_47 = l_Lean_IR_UnreachableBranches_reprValue___closed__11____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_;
 x_48 = l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg(x_45);
 x_49 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_49, 0, x_47);
@@ -1888,12 +1931,30 @@ _start:
 {
 lean_object* x_1; lean_object* x_2; 
 x_1 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__4;
+x_2 = lean_string_length(x_1);
+return x_2;
+}
+}
+static lean_object* _init_l_Lean_IR_UnreachableBranches_Value_toFormat___closed__7() {
+_start:
+{
+lean_object* x_1; lean_object* x_2; 
+x_1 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__6;
+x_2 = lean_nat_to_int(x_1);
+return x_2;
+}
+}
+static lean_object* _init_l_Lean_IR_UnreachableBranches_Value_toFormat___closed__8() {
+_start:
+{
+lean_object* x_1; lean_object* x_2; 
+x_1 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__4;
 x_2 = lean_alloc_ctor(3, 1, 0);
 lean_ctor_set(x_2, 0, x_1);
 return x_2;
 }
 }
-static lean_object* _init_l_Lean_IR_UnreachableBranches_Value_toFormat___closed__7() {
+static lean_object* _init_l_Lean_IR_UnreachableBranches_Value_toFormat___closed__9() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -1903,7 +1964,7 @@ lean_ctor_set(x_2, 0, x_1);
 return x_2;
 }
 }
-static lean_object* _init_l_Lean_IR_UnreachableBranches_Value_toFormat___closed__8() {
+static lean_object* _init_l_Lean_IR_UnreachableBranches_Value_toFormat___closed__10() {
 _start:
 {
 lean_object* x_1; 
@@ -1911,11 +1972,11 @@ x_1 = lean_mk_string_unchecked(" | ", 3, 3);
 return x_1;
 }
 }
-static lean_object* _init_l_Lean_IR_UnreachableBranches_Value_toFormat___closed__9() {
+static lean_object* _init_l_Lean_IR_UnreachableBranches_Value_toFormat___closed__11() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
-x_1 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__8;
+x_1 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__10;
 x_2 = lean_alloc_ctor(3, 1, 0);
 lean_ctor_set(x_2, 0, x_1);
 return x_2;
@@ -1964,12 +2025,12 @@ x_15 = l_Std_Format_join(x_14);
 lean_ctor_set_tag(x_1, 5);
 lean_ctor_set(x_1, 1, x_15);
 lean_ctor_set(x_1, 0, x_11);
-x_16 = l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__3;
-x_17 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__6;
+x_16 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__7;
+x_17 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__8;
 x_18 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_18, 0, x_17);
 lean_ctor_set(x_18, 1, x_1);
-x_19 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__7;
+x_19 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__9;
 x_20 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_20, 0, x_18);
 lean_ctor_set(x_20, 1, x_19);
@@ -2022,12 +2083,12 @@ x_37 = l_Std_Format_join(x_36);
 x_38 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_38, 0, x_33);
 lean_ctor_set(x_38, 1, x_37);
-x_39 = l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__3;
-x_40 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__6;
+x_39 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__7;
+x_40 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__8;
 x_41 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_41, 0, x_40);
 lean_ctor_set(x_41, 1, x_38);
-x_42 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__7;
+x_42 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__9;
 x_43 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_43, 0, x_41);
 lean_ctor_set(x_43, 1, x_42);
@@ -2062,14 +2123,14 @@ lean_inc(x_50);
 lean_dec_ref(x_1);
 x_51 = lean_box(0);
 x_52 = l_List_mapTR_loop___at___Lean_IR_UnreachableBranches_Value_toFormat_spec__1(x_50, x_51);
-x_53 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__9;
+x_53 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__11;
 x_54 = l_Std_Format_joinSep___at___Lean_IR_UnreachableBranches_Value_toFormat_spec__2(x_52, x_53);
-x_55 = l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__3;
-x_56 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__6;
+x_55 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__7;
+x_56 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__8;
 x_57 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_57, 0, x_56);
 lean_ctor_set(x_57, 1, x_54);
-x_58 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__7;
+x_58 = l_Lean_IR_UnreachableBranches_Value_toFormat___closed__9;
 x_59 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_59, 0, x_57);
 lean_ctor_set(x_59, 1, x_58);
@@ -9961,6 +10022,8 @@ l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Comp
 lean_mark_persistent(l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__8);
 l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__9 = _init_l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__9();
 lean_mark_persistent(l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__9);
+l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__10 = _init_l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__10();
+lean_mark_persistent(l_Array_Array_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__0___closed__10);
 l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__0 = _init_l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__0();
 lean_mark_persistent(l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__0);
 l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__1 = _init_l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__1();
@@ -9971,6 +10034,8 @@ l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR
 lean_mark_persistent(l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__3);
 l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__4 = _init_l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__4();
 lean_mark_persistent(l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__4);
+l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__5 = _init_l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__5();
+lean_mark_persistent(l_List_repr___at___Lean_IR_UnreachableBranches_reprValue____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69__spec__5___redArg___closed__5);
 l_Lean_IR_UnreachableBranches_reprValue___closed__0____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_ = _init_l_Lean_IR_UnreachableBranches_reprValue___closed__0____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_();
 lean_mark_persistent(l_Lean_IR_UnreachableBranches_reprValue___closed__0____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_);
 l_Lean_IR_UnreachableBranches_reprValue___closed__1____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_ = _init_l_Lean_IR_UnreachableBranches_reprValue___closed__1____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_();
@@ -9991,6 +10056,10 @@ l_Lean_IR_UnreachableBranches_reprValue___closed__8____x40_Lean_Compiler_IR_Elim
 lean_mark_persistent(l_Lean_IR_UnreachableBranches_reprValue___closed__8____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_);
 l_Lean_IR_UnreachableBranches_reprValue___closed__9____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_ = _init_l_Lean_IR_UnreachableBranches_reprValue___closed__9____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_();
 lean_mark_persistent(l_Lean_IR_UnreachableBranches_reprValue___closed__9____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_);
+l_Lean_IR_UnreachableBranches_reprValue___closed__10____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_ = _init_l_Lean_IR_UnreachableBranches_reprValue___closed__10____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_();
+lean_mark_persistent(l_Lean_IR_UnreachableBranches_reprValue___closed__10____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_);
+l_Lean_IR_UnreachableBranches_reprValue___closed__11____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_ = _init_l_Lean_IR_UnreachableBranches_reprValue___closed__11____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_();
+lean_mark_persistent(l_Lean_IR_UnreachableBranches_reprValue___closed__11____x40_Lean_Compiler_IR_ElimDeadBranches_1953721060____hygCtx___hyg_69_);
 l_Lean_IR_UnreachableBranches_instReprValue___closed__0 = _init_l_Lean_IR_UnreachableBranches_instReprValue___closed__0();
 lean_mark_persistent(l_Lean_IR_UnreachableBranches_instReprValue___closed__0);
 l_Lean_IR_UnreachableBranches_instReprValue = _init_l_Lean_IR_UnreachableBranches_instReprValue();
@@ -10019,6 +10088,10 @@ l_Lean_IR_UnreachableBranches_Value_toFormat___closed__8 = _init_l_Lean_IR_Unrea
 lean_mark_persistent(l_Lean_IR_UnreachableBranches_Value_toFormat___closed__8);
 l_Lean_IR_UnreachableBranches_Value_toFormat___closed__9 = _init_l_Lean_IR_UnreachableBranches_Value_toFormat___closed__9();
 lean_mark_persistent(l_Lean_IR_UnreachableBranches_Value_toFormat___closed__9);
+l_Lean_IR_UnreachableBranches_Value_toFormat___closed__10 = _init_l_Lean_IR_UnreachableBranches_Value_toFormat___closed__10();
+lean_mark_persistent(l_Lean_IR_UnreachableBranches_Value_toFormat___closed__10);
+l_Lean_IR_UnreachableBranches_Value_toFormat___closed__11 = _init_l_Lean_IR_UnreachableBranches_Value_toFormat___closed__11();
+lean_mark_persistent(l_Lean_IR_UnreachableBranches_Value_toFormat___closed__11);
 l_Lean_IR_UnreachableBranches_instToFormatValue___closed__0 = _init_l_Lean_IR_UnreachableBranches_instToFormatValue___closed__0();
 lean_mark_persistent(l_Lean_IR_UnreachableBranches_instToFormatValue___closed__0);
 l_Lean_IR_UnreachableBranches_instToFormatValue = _init_l_Lean_IR_UnreachableBranches_instToFormatValue();

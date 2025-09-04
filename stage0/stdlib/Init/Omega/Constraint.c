@@ -43,6 +43,7 @@ LEAN_EXPORT lean_object* l_Lean_Omega_Constraint_isExact___boxed(lean_object*);
 LEAN_EXPORT lean_object* l_List_mapTR_loop___at___Lean_Omega_bmod__coeffs_spec__0(lean_object*, lean_object*, lean_object*);
 static lean_object* l_Lean_Omega_Constraint_instToString___lam__0___closed__6;
 LEAN_EXPORT lean_object* l_Lean_Omega_Constraint_flip(lean_object*);
+lean_object* lean_string_length(lean_object*);
 static lean_object* l_Lean_Omega_Constraint_instToString___lam__0___closed__3;
 uint8_t lean_int_dec_le(lean_object*, lean_object*);
 static lean_object* l_Lean_Omega_positivize_x3f___closed__0;
@@ -54,6 +55,7 @@ LEAN_EXPORT uint8_t l_Lean_Omega_Constraint_sat(lean_object*, lean_object*);
 lean_object* l_Nat_reprFast(lean_object*);
 static lean_object* l_Lean_Omega_Constraint_instToString___lam__0___closed__8;
 lean_object* l_instNatCastInt___lam__0(lean_object*);
+static lean_object* l_Lean_Omega_reprConstraint___redArg___closed__16____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_;
 LEAN_EXPORT lean_object* l_Lean_Omega_instDecidableEqConstraint___boxed(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Omega_Constraint_neg___lam__0___boxed(lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Omega_Constraint_translate___lam__0(lean_object*, lean_object*);
@@ -125,6 +127,7 @@ static lean_object* l_Lean_Omega_Constraint_scale___closed__0;
 lean_object* lean_nat_sub(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Omega_bmod__div__term(lean_object*, lean_object*, lean_object*);
 lean_object* l_Lean_Omega_IntList_smul(lean_object*, lean_object*);
+lean_object* lean_string_append(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Omega_Constraint_combine___lam__0(lean_object*, lean_object*);
 static lean_object* l_Lean_Omega_reprConstraint___redArg___closed__15____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_;
 LEAN_EXPORT lean_object* l_Lean_Omega_Constraint_map(lean_object*, lean_object*);
@@ -660,12 +663,21 @@ static lean_object* _init_l_Lean_Omega_reprConstraint___redArg___closed__13____x
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
-x_1 = lean_unsigned_to_nat(2u);
-x_2 = lean_nat_to_int(x_1);
+x_1 = l_Lean_Omega_reprConstraint___redArg___closed__0____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_;
+x_2 = lean_string_length(x_1);
 return x_2;
 }
 }
 static lean_object* _init_l_Lean_Omega_reprConstraint___redArg___closed__14____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_() {
+_start:
+{
+lean_object* x_1; lean_object* x_2; 
+x_1 = l_Lean_Omega_reprConstraint___redArg___closed__13____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_;
+x_2 = lean_nat_to_int(x_1);
+return x_2;
+}
+}
+static lean_object* _init_l_Lean_Omega_reprConstraint___redArg___closed__15____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -675,7 +687,7 @@ lean_ctor_set(x_2, 0, x_1);
 return x_2;
 }
 }
-static lean_object* _init_l_Lean_Omega_reprConstraint___redArg___closed__15____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_() {
+static lean_object* _init_l_Lean_Omega_reprConstraint___redArg___closed__16____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -735,12 +747,12 @@ lean_ctor_set_uint8(x_22, sizeof(void*)*1, x_10);
 x_23 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_23, 0, x_19);
 lean_ctor_set(x_23, 1, x_22);
-x_24 = l_Lean_Omega_reprConstraint___redArg___closed__13____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_;
-x_25 = l_Lean_Omega_reprConstraint___redArg___closed__14____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_;
+x_24 = l_Lean_Omega_reprConstraint___redArg___closed__14____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_;
+x_25 = l_Lean_Omega_reprConstraint___redArg___closed__15____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_;
 x_26 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_26, 0, x_25);
 lean_ctor_set(x_26, 1, x_23);
-x_27 = l_Lean_Omega_reprConstraint___redArg___closed__15____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_;
+x_27 = l_Lean_Omega_reprConstraint___redArg___closed__16____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_;
 x_28 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_28, 0, x_26);
 lean_ctor_set(x_28, 1, x_27);
@@ -800,12 +812,12 @@ lean_ctor_set_uint8(x_51, sizeof(void*)*1, x_39);
 x_52 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_52, 0, x_48);
 lean_ctor_set(x_52, 1, x_51);
-x_53 = l_Lean_Omega_reprConstraint___redArg___closed__13____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_;
-x_54 = l_Lean_Omega_reprConstraint___redArg___closed__14____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_;
+x_53 = l_Lean_Omega_reprConstraint___redArg___closed__14____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_;
+x_54 = l_Lean_Omega_reprConstraint___redArg___closed__15____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_;
 x_55 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_55, 0, x_54);
 lean_ctor_set(x_55, 1, x_52);
-x_56 = l_Lean_Omega_reprConstraint___redArg___closed__15____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_;
+x_56 = l_Lean_Omega_reprConstraint___redArg___closed__16____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_;
 x_57 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_57, 0, x_55);
 lean_ctor_set(x_57, 1, x_56);
@@ -2736,6 +2748,8 @@ l_Lean_Omega_reprConstraint___redArg___closed__14____x40_Init_Omega_Constraint_6
 lean_mark_persistent(l_Lean_Omega_reprConstraint___redArg___closed__14____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_);
 l_Lean_Omega_reprConstraint___redArg___closed__15____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_ = _init_l_Lean_Omega_reprConstraint___redArg___closed__15____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_();
 lean_mark_persistent(l_Lean_Omega_reprConstraint___redArg___closed__15____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_);
+l_Lean_Omega_reprConstraint___redArg___closed__16____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_ = _init_l_Lean_Omega_reprConstraint___redArg___closed__16____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_();
+lean_mark_persistent(l_Lean_Omega_reprConstraint___redArg___closed__16____x40_Init_Omega_Constraint_671019870____hygCtx___hyg_55_);
 l_Lean_Omega_instReprConstraint___closed__0 = _init_l_Lean_Omega_instReprConstraint___closed__0();
 lean_mark_persistent(l_Lean_Omega_instReprConstraint___closed__0);
 l_Lean_Omega_instReprConstraint = _init_l_Lean_Omega_instReprConstraint();

@@ -201,6 +201,7 @@ LEAN_EXPORT lean_object* l___private_Lean_Meta_Tactic_Grind_EMatchTheorem_0__Lea
 LEAN_EXPORT lean_object* l___private_Lean_Meta_Tactic_Grind_EMatchTheorem_0__Lean_Meta_Grind_normConfig;
 static lean_object* l___private_Lean_Meta_Tactic_Grind_EMatchTheorem_0__Lean_Meta_Grind_NormalizePattern_go___closed__2;
 lean_object* lean_array_push(lean_object*, lean_object*);
+static lean_object* l_Lean_Meta_Grind_reprOrigin___closed__13____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 LEAN_EXPORT lean_object* l___private_Lean_Meta_Tactic_Grind_EMatchTheorem_0__Lean_Meta_Grind_collect(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_PersistentHashMap_erase___at___Lean_Meta_Grind_EMatchTheorems_insert_spec__6___boxed(lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Meta_Grind_EMatchTheoremKind_bwd_elim___boxed(lean_object*, lean_object*, lean_object*, lean_object*);
@@ -223,6 +224,7 @@ LEAN_EXPORT lean_object* l_Lean_Meta_Grind_EMatchTheoremKind_fwd_elim(lean_objec
 LEAN_EXPORT lean_object* l_Lean_PersistentHashMap_eraseAux___at___Lean_PersistentHashMap_erase___at___Lean_Meta_Grind_SymbolPriorities_erase_spec__0_spec__0(lean_object*, lean_object*, size_t, lean_object*);
 uint8_t lean_usize_dec_eq(size_t, size_t);
 lean_object* l_Lean_KVMap_find(lean_object*, lean_object*);
+static lean_object* l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__19____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
 uint8_t l_Lean_Name_isAnonymous(lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Meta_Grind_instHashableEMatchTheoremKind;
 lean_object* l_ReaderT_instFunctorOfMonad___redArg___lam__1(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
@@ -376,6 +378,7 @@ LEAN_EXPORT lean_object* l_Lean_Meta_forallBoundedTelescope___at___Lean_Meta_Gri
 uint8_t lean_string_dec_eq(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at_____private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at_____private_Lean_Meta_Tactic_Grind_EMatchTheorem_0__Lean_Meta_Grind_addGrindEqAttr_spec__0_spec__0___redArg___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT uint8_t l_Lean_Meta_Grind_EMatchTheorems_containsWithSamePatterns(lean_object*, lean_object*, lean_object*);
+lean_object* lean_string_length(lean_object*);
 LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at_____private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at_____private_Lean_Meta_Tactic_Grind_EMatchTheorem_0__Lean_Meta_Grind_checkCoverage_spec__7_spec__7(lean_object*, uint8_t, uint8_t, lean_object*, size_t, size_t, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Meta_Grind_NormalizePattern_PatternArgKind_relevant_elim___boxed(lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Meta_Grind_instInhabitedEMatchTheorem;
@@ -10231,12 +10234,21 @@ static lean_object* _init_l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
-x_1 = lean_unsigned_to_nat(2u);
-x_2 = lean_nat_to_int(x_1);
+x_1 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__0____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_2 = lean_string_length(x_1);
 return x_2;
 }
 }
 static lean_object* _init_l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__17____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_() {
+_start:
+{
+lean_object* x_1; lean_object* x_2; 
+x_1 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__16____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_2 = lean_nat_to_int(x_1);
+return x_2;
+}
+}
+static lean_object* _init_l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__18____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -10246,7 +10258,7 @@ lean_ctor_set(x_2, 0, x_1);
 return x_2;
 }
 }
-static lean_object* _init_l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__18____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_() {
+static lean_object* _init_l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__19____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -10333,12 +10345,12 @@ lean_ctor_set_uint8(x_34, sizeof(void*)*1, x_10);
 x_35 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_35, 0, x_30);
 lean_ctor_set(x_35, 1, x_34);
-x_36 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__16____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
-x_37 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__17____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_36 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__17____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_37 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__18____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
 x_38 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_38, 0, x_37);
 lean_ctor_set(x_38, 1, x_35);
-x_39 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__18____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_39 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__19____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
 x_40 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_40, 0, x_38);
 lean_ctor_set(x_40, 1, x_39);
@@ -13581,7 +13593,7 @@ static lean_object* _init_l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_M
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
-x_1 = lean_unsigned_to_nat(1u);
+x_1 = lean_unsigned_to_nat(2u);
 x_2 = lean_nat_to_int(x_1);
 return x_2;
 }
@@ -13589,34 +13601,43 @@ return x_2;
 static lean_object* _init_l_Lean_Meta_Grind_reprOrigin___closed__4____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_() {
 _start:
 {
-lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("Lean.Meta.Grind.Origin.fvar", 27, 27);
-return x_1;
+lean_object* x_1; lean_object* x_2; 
+x_1 = lean_unsigned_to_nat(1u);
+x_2 = lean_nat_to_int(x_1);
+return x_2;
 }
 }
 static lean_object* _init_l_Lean_Meta_Grind_reprOrigin___closed__5____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_() {
 _start:
 {
-lean_object* x_1; lean_object* x_2; 
-x_1 = l_Lean_Meta_Grind_reprOrigin___closed__4____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
-x_2 = lean_alloc_ctor(3, 1, 0);
-lean_ctor_set(x_2, 0, x_1);
-return x_2;
+lean_object* x_1; 
+x_1 = lean_mk_string_unchecked("Lean.Meta.Grind.Origin.fvar", 27, 27);
+return x_1;
 }
 }
 static lean_object* _init_l_Lean_Meta_Grind_reprOrigin___closed__6____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_() {
 _start:
 {
+lean_object* x_1; lean_object* x_2; 
+x_1 = l_Lean_Meta_Grind_reprOrigin___closed__5____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_2 = lean_alloc_ctor(3, 1, 0);
+lean_ctor_set(x_2, 0, x_1);
+return x_2;
+}
+}
+static lean_object* _init_l_Lean_Meta_Grind_reprOrigin___closed__7____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_() {
+_start:
+{
 lean_object* x_1; lean_object* x_2; lean_object* x_3; 
 x_1 = lean_box(1);
-x_2 = l_Lean_Meta_Grind_reprOrigin___closed__5____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_2 = l_Lean_Meta_Grind_reprOrigin___closed__6____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_3 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_3, 0, x_2);
 lean_ctor_set(x_3, 1, x_1);
 return x_3;
 }
 }
-static lean_object* _init_l_Lean_Meta_Grind_reprOrigin___closed__7____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_() {
+static lean_object* _init_l_Lean_Meta_Grind_reprOrigin___closed__8____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_() {
 _start:
 {
 lean_object* x_1; 
@@ -13624,29 +13645,29 @@ x_1 = lean_mk_string_unchecked("Lean.Meta.Grind.Origin.stx", 26, 26);
 return x_1;
 }
 }
-static lean_object* _init_l_Lean_Meta_Grind_reprOrigin___closed__8____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_() {
+static lean_object* _init_l_Lean_Meta_Grind_reprOrigin___closed__9____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
-x_1 = l_Lean_Meta_Grind_reprOrigin___closed__7____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_1 = l_Lean_Meta_Grind_reprOrigin___closed__8____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_2 = lean_alloc_ctor(3, 1, 0);
 lean_ctor_set(x_2, 0, x_1);
 return x_2;
 }
 }
-static lean_object* _init_l_Lean_Meta_Grind_reprOrigin___closed__9____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_() {
+static lean_object* _init_l_Lean_Meta_Grind_reprOrigin___closed__10____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; lean_object* x_3; 
 x_1 = lean_box(1);
-x_2 = l_Lean_Meta_Grind_reprOrigin___closed__8____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_2 = l_Lean_Meta_Grind_reprOrigin___closed__9____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_3 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_3, 0, x_2);
 lean_ctor_set(x_3, 1, x_1);
 return x_3;
 }
 }
-static lean_object* _init_l_Lean_Meta_Grind_reprOrigin___closed__10____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_() {
+static lean_object* _init_l_Lean_Meta_Grind_reprOrigin___closed__11____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_() {
 _start:
 {
 lean_object* x_1; 
@@ -13654,22 +13675,22 @@ x_1 = lean_mk_string_unchecked("Lean.Meta.Grind.Origin.local", 28, 28);
 return x_1;
 }
 }
-static lean_object* _init_l_Lean_Meta_Grind_reprOrigin___closed__11____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_() {
+static lean_object* _init_l_Lean_Meta_Grind_reprOrigin___closed__12____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
-x_1 = l_Lean_Meta_Grind_reprOrigin___closed__10____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_1 = l_Lean_Meta_Grind_reprOrigin___closed__11____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_2 = lean_alloc_ctor(3, 1, 0);
 lean_ctor_set(x_2, 0, x_1);
 return x_2;
 }
 }
-static lean_object* _init_l_Lean_Meta_Grind_reprOrigin___closed__12____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_() {
+static lean_object* _init_l_Lean_Meta_Grind_reprOrigin___closed__13____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; lean_object* x_3; 
 x_1 = lean_box(1);
-x_2 = l_Lean_Meta_Grind_reprOrigin___closed__11____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_2 = l_Lean_Meta_Grind_reprOrigin___closed__12____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_3 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_3, 0, x_2);
 lean_ctor_set(x_3, 1, x_1);
@@ -13691,14 +13712,14 @@ x_15 = lean_nat_dec_le(x_14, x_2);
 if (x_15 == 0)
 {
 lean_object* x_16; 
-x_16 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__16____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_16 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_4 = x_16;
 goto block_13;
 }
 else
 {
 lean_object* x_17; 
-x_17 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_17 = l_Lean_Meta_Grind_reprOrigin___closed__4____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_4 = x_17;
 goto block_13;
 }
@@ -13733,21 +13754,21 @@ x_30 = lean_nat_dec_le(x_29, x_2);
 if (x_30 == 0)
 {
 lean_object* x_31; 
-x_31 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__16____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_31 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_19 = x_31;
 goto block_28;
 }
 else
 {
 lean_object* x_32; 
-x_32 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_32 = l_Lean_Meta_Grind_reprOrigin___closed__4____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_19 = x_32;
 goto block_28;
 }
 block_28:
 {
 lean_object* x_20; lean_object* x_21; lean_object* x_22; lean_object* x_23; lean_object* x_24; uint8_t x_25; lean_object* x_26; lean_object* x_27; 
-x_20 = l_Lean_Meta_Grind_reprOrigin___closed__6____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_20 = l_Lean_Meta_Grind_reprOrigin___closed__7____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_21 = lean_unsigned_to_nat(1024u);
 x_22 = l_Lean_Name_reprPrec(x_18, x_21);
 x_23 = lean_alloc_ctor(5, 2, 0);
@@ -13784,14 +13805,14 @@ x_51 = lean_nat_dec_le(x_50, x_2);
 if (x_51 == 0)
 {
 lean_object* x_52; 
-x_52 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__16____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_52 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_36 = x_52;
 goto block_49;
 }
 else
 {
 lean_object* x_53; 
-x_53 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_53 = l_Lean_Meta_Grind_reprOrigin___closed__4____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_36 = x_53;
 goto block_49;
 }
@@ -13799,7 +13820,7 @@ block_49:
 {
 lean_object* x_37; lean_object* x_38; lean_object* x_39; lean_object* x_40; lean_object* x_41; lean_object* x_42; lean_object* x_43; lean_object* x_44; lean_object* x_45; uint8_t x_46; lean_object* x_47; lean_object* x_48; 
 x_37 = lean_box(1);
-x_38 = l_Lean_Meta_Grind_reprOrigin___closed__9____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_38 = l_Lean_Meta_Grind_reprOrigin___closed__10____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_39 = lean_unsigned_to_nat(1024u);
 x_40 = l_Lean_Name_reprPrec(x_33, x_39);
 if (lean_is_scalar(x_35)) {
@@ -13839,21 +13860,21 @@ x_66 = lean_nat_dec_le(x_65, x_2);
 if (x_66 == 0)
 {
 lean_object* x_67; 
-x_67 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__16____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_67 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_55 = x_67;
 goto block_64;
 }
 else
 {
 lean_object* x_68; 
-x_68 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_68 = l_Lean_Meta_Grind_reprOrigin___closed__4____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_55 = x_68;
 goto block_64;
 }
 block_64:
 {
 lean_object* x_56; lean_object* x_57; lean_object* x_58; lean_object* x_59; lean_object* x_60; uint8_t x_61; lean_object* x_62; lean_object* x_63; 
-x_56 = l_Lean_Meta_Grind_reprOrigin___closed__12____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_56 = l_Lean_Meta_Grind_reprOrigin___closed__13____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_57 = lean_unsigned_to_nat(1024u);
 x_58 = l_Lean_Name_reprPrec(x_54, x_57);
 x_59 = lean_alloc_ctor(5, 2, 0);
@@ -15017,14 +15038,14 @@ x_49 = lean_nat_dec_le(x_48, x_2);
 if (x_49 == 0)
 {
 lean_object* x_50; 
-x_50 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__16____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_50 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_39 = x_50;
 goto block_47;
 }
 else
 {
 lean_object* x_51; 
-x_51 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_51 = l_Lean_Meta_Grind_reprOrigin___closed__4____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_39 = x_51;
 goto block_47;
 }
@@ -15056,14 +15077,14 @@ x_63 = lean_nat_dec_le(x_62, x_2);
 if (x_63 == 0)
 {
 lean_object* x_64; 
-x_64 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__16____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_64 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_53 = x_64;
 goto block_61;
 }
 else
 {
 lean_object* x_65; 
-x_65 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_65 = l_Lean_Meta_Grind_reprOrigin___closed__4____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_53 = x_65;
 goto block_61;
 }
@@ -15095,14 +15116,14 @@ x_77 = lean_nat_dec_le(x_76, x_2);
 if (x_77 == 0)
 {
 lean_object* x_78; 
-x_78 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__16____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_78 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_67 = x_78;
 goto block_75;
 }
 else
 {
 lean_object* x_79; 
-x_79 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_79 = l_Lean_Meta_Grind_reprOrigin___closed__4____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_67 = x_79;
 goto block_75;
 }
@@ -15133,14 +15154,14 @@ x_81 = lean_nat_dec_le(x_80, x_2);
 if (x_81 == 0)
 {
 lean_object* x_82; 
-x_82 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__16____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_82 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_17 = x_82;
 goto block_23;
 }
 else
 {
 lean_object* x_83; 
-x_83 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_83 = l_Lean_Meta_Grind_reprOrigin___closed__4____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_17 = x_83;
 goto block_23;
 }
@@ -15153,14 +15174,14 @@ x_85 = lean_nat_dec_le(x_84, x_2);
 if (x_85 == 0)
 {
 lean_object* x_86; 
-x_86 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__16____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_86 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_24 = x_86;
 goto block_30;
 }
 else
 {
 lean_object* x_87; 
-x_87 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_87 = l_Lean_Meta_Grind_reprOrigin___closed__4____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_24 = x_87;
 goto block_30;
 }
@@ -15174,14 +15195,14 @@ x_99 = lean_nat_dec_le(x_98, x_2);
 if (x_99 == 0)
 {
 lean_object* x_100; 
-x_100 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__16____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_100 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_89 = x_100;
 goto block_97;
 }
 else
 {
 lean_object* x_101; 
-x_101 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_101 = l_Lean_Meta_Grind_reprOrigin___closed__4____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_89 = x_101;
 goto block_97;
 }
@@ -15212,14 +15233,14 @@ x_103 = lean_nat_dec_le(x_102, x_2);
 if (x_103 == 0)
 {
 lean_object* x_104; 
-x_104 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__16____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_104 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_10 = x_104;
 goto block_16;
 }
 else
 {
 lean_object* x_105; 
-x_105 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_105 = l_Lean_Meta_Grind_reprOrigin___closed__4____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_10 = x_105;
 goto block_16;
 }
@@ -15232,14 +15253,14 @@ x_107 = lean_nat_dec_le(x_106, x_2);
 if (x_107 == 0)
 {
 lean_object* x_108; 
-x_108 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__16____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_108 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_3 = x_108;
 goto block_9;
 }
 else
 {
 lean_object* x_109; 
-x_109 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_109 = l_Lean_Meta_Grind_reprOrigin___closed__4____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_3 = x_109;
 goto block_9;
 }
@@ -15253,14 +15274,14 @@ x_121 = lean_nat_dec_le(x_120, x_2);
 if (x_121 == 0)
 {
 lean_object* x_122; 
-x_122 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__16____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_122 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_111 = x_122;
 goto block_119;
 }
 else
 {
 lean_object* x_123; 
-x_123 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_123 = l_Lean_Meta_Grind_reprOrigin___closed__4____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_111 = x_123;
 goto block_119;
 }
@@ -15291,14 +15312,14 @@ x_125 = lean_nat_dec_le(x_124, x_2);
 if (x_125 == 0)
 {
 lean_object* x_126; 
-x_126 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__16____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_126 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_31 = x_126;
 goto block_37;
 }
 else
 {
 lean_object* x_127; 
-x_127 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_127 = l_Lean_Meta_Grind_reprOrigin___closed__4____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_31 = x_127;
 goto block_37;
 }
@@ -22973,14 +22994,14 @@ x_32 = lean_nat_dec_le(x_31, x_2);
 if (x_32 == 0)
 {
 lean_object* x_33; 
-x_33 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__16____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_33 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_3 = x_33;
 goto block_9;
 }
 else
 {
 lean_object* x_34; 
-x_34 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_34 = l_Lean_Meta_Grind_reprOrigin___closed__4____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_3 = x_34;
 goto block_9;
 }
@@ -22993,14 +23014,14 @@ x_36 = lean_nat_dec_le(x_35, x_2);
 if (x_36 == 0)
 {
 lean_object* x_37; 
-x_37 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__16____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_37 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_10 = x_37;
 goto block_16;
 }
 else
 {
 lean_object* x_38; 
-x_38 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_38 = l_Lean_Meta_Grind_reprOrigin___closed__4____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_10 = x_38;
 goto block_16;
 }
@@ -23013,14 +23034,14 @@ x_40 = lean_nat_dec_le(x_39, x_2);
 if (x_40 == 0)
 {
 lean_object* x_41; 
-x_41 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__16____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_41 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_17 = x_41;
 goto block_23;
 }
 else
 {
 lean_object* x_42; 
-x_42 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_42 = l_Lean_Meta_Grind_reprOrigin___closed__4____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_17 = x_42;
 goto block_23;
 }
@@ -23033,14 +23054,14 @@ x_44 = lean_nat_dec_le(x_43, x_2);
 if (x_44 == 0)
 {
 lean_object* x_45; 
-x_45 = l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__16____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_;
+x_45 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_24 = x_45;
 goto block_30;
 }
 else
 {
 lean_object* x_46; 
-x_46 = l_Lean_Meta_Grind_reprOrigin___closed__3____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
+x_46 = l_Lean_Meta_Grind_reprOrigin___closed__4____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_;
 x_24 = x_46;
 goto block_30;
 }
@@ -56061,6 +56082,8 @@ l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__17____x40_Lean_Meta_Tact
 lean_mark_persistent(l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__17____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_);
 l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__18____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_ = _init_l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__18____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_();
 lean_mark_persistent(l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__18____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_);
+l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__19____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_ = _init_l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__19____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_();
+lean_mark_persistent(l_Lean_Meta_Grind_reprGenPatternInfo___redArg___closed__19____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_1304798822____hygCtx___hyg_29_);
 l_Lean_Meta_Grind_instReprGenPatternInfo___closed__0 = _init_l_Lean_Meta_Grind_instReprGenPatternInfo___closed__0();
 lean_mark_persistent(l_Lean_Meta_Grind_instReprGenPatternInfo___closed__0);
 l_Lean_Meta_Grind_instReprGenPatternInfo = _init_l_Lean_Meta_Grind_instReprGenPatternInfo();
@@ -56139,6 +56162,8 @@ l_Lean_Meta_Grind_reprOrigin___closed__11____x40_Lean_Meta_Tactic_Grind_EMatchTh
 lean_mark_persistent(l_Lean_Meta_Grind_reprOrigin___closed__11____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_);
 l_Lean_Meta_Grind_reprOrigin___closed__12____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_ = _init_l_Lean_Meta_Grind_reprOrigin___closed__12____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_();
 lean_mark_persistent(l_Lean_Meta_Grind_reprOrigin___closed__12____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_);
+l_Lean_Meta_Grind_reprOrigin___closed__13____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_ = _init_l_Lean_Meta_Grind_reprOrigin___closed__13____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_();
+lean_mark_persistent(l_Lean_Meta_Grind_reprOrigin___closed__13____x40_Lean_Meta_Tactic_Grind_EMatchTheorem_3954727000____hygCtx___hyg_65_);
 l_Lean_Meta_Grind_instReprOrigin___closed__0 = _init_l_Lean_Meta_Grind_instReprOrigin___closed__0();
 lean_mark_persistent(l_Lean_Meta_Grind_instReprOrigin___closed__0);
 l_Lean_Meta_Grind_instReprOrigin = _init_l_Lean_Meta_Grind_instReprOrigin();

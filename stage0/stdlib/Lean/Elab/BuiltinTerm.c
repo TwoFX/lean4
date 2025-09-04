@@ -368,7 +368,6 @@ static lean_object* l___private_Lean_Elab_BuiltinTerm_0__Lean_Elab_Term_elabType
 static lean_object* l_Lean_Elab_OpenDecl_elabOpenDecl___at___Lean_Elab_Term_elabOpen_spec__4___closed__8;
 static lean_object* l_Lean_localDeclDependsOn___at___Lean_Elab_Term_elabClear_spec__0___redArg___closed__2;
 LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at___Lean_PersistentArray_forInAux___at___Lean_PersistentArray_forIn___at___Lean_Elab_Term_elabClear_spec__1_spec__1_spec__1___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
-lean_object* lean_string_push(lean_object*, uint32_t);
 LEAN_EXPORT lean_object* l___private_Lean_ResolveName_0__Lean_resolveGlobalConstCore___at___Lean_resolveGlobalConstNoOverloadCore___at___Lean_Elab_OpenDecl_resolveId___at___Lean_Elab_OpenDecl_elabOpenDecl___at___Lean_Elab_Term_elabOpen_spec__4_spec__16_spec__16_spec__16___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 static lean_object* l_Lean_Elab_throwErrorWithNestedErrors___at_____private_Lean_Elab_Open_0__Lean_Elab_OpenDecl_resolveNameUsingNamespacesCore___at___Lean_Elab_OpenDecl_elabOpenDecl___at___Lean_Elab_Term_elabOpen_spec__4_spec__45_spec__47___redArg___closed__1;
 static lean_object* l___private_Lean_Elab_BuiltinTerm_0__Lean_Elab_Term_elabClear___regBuiltin_Lean_Elab_Term_elabClear__1___closed__2;
@@ -641,6 +640,7 @@ LEAN_EXPORT lean_object* l___private_Lean_Elab_BuiltinTerm_0__Lean_Elab_Term_ela
 LEAN_EXPORT lean_object* l_Lean_Elab_throwUnsupportedSyntax___at___Lean_Elab_Term_elabLetMVar_spec__0(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 static lean_object* l_Lean_Elab_OpenDecl_elabOpenDecl___at___Lean_Elab_Term_elabOpen_spec__4___closed__1;
 lean_object* l_System_FilePath_parent(lean_object*);
+lean_object* lean_string_push(lean_object*, uint32_t);
 lean_object* l_Lean_instToExprName___private__1(lean_object*);
 static lean_object* l_Lean_Elab_Term_elabValueOf___redArg___closed__1;
 static lean_object* l___private_Lean_Elab_BuiltinTerm_0__Lean_Elab_Term_elabDeclName___regBuiltin_Lean_Elab_Term_elabDeclName__1___closed__1;
@@ -1058,6 +1058,7 @@ LEAN_EXPORT lean_object* l___private_Lean_Elab_BuiltinTerm_0__Lean_Elab_Term_get
 static lean_object* l___private_Lean_Elab_BuiltinTerm_0__Lean_Elab_Term_elabBadCDot___regBuiltin_Lean_Elab_Term_elabBadCDot_declRange__3___closed__4;
 uint8_t l_Lean_isPrivateName(lean_object*);
 uint8_t l_Lean_DataValue_sameCtor(lean_object*, lean_object*);
+lean_object* lean_string_append(lean_object*, lean_object*);
 static lean_object* l___private_Lean_Elab_BuiltinTerm_0__Lean_Elab_Term_elabCompletion___regBuiltin_Lean_Elab_Term_elabCompletion_declRange__3___closed__6;
 LEAN_EXPORT lean_object* l_Lean_throwErrorAt___at___Lean_resolveNamespace___at___Lean_resolveUniqueNamespace___at___Lean_Elab_OpenDecl_elabOpenDecl___at___Lean_Elab_Term_elabOpen_spec__4_spec__8_spec__8_spec__11___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_PersistentArray_forIn___at___Lean_Elab_Term_elabClear_spec__1___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
@@ -30880,7 +30881,6 @@ if (x_39 == 0)
 lean_object* x_40; lean_object* x_41; 
 x_40 = lean_ctor_get(x_2, 0);
 x_41 = l_String_quote(x_40);
-lean_dec_ref(x_40);
 lean_ctor_set_tag(x_2, 3);
 lean_ctor_set(x_2, 0, x_41);
 x_14 = x_38;
@@ -30895,7 +30895,6 @@ x_42 = lean_ctor_get(x_2, 0);
 lean_inc(x_42);
 lean_dec(x_2);
 x_43 = l_String_quote(x_42);
-lean_dec_ref(x_42);
 x_44 = lean_alloc_ctor(3, 1, 0);
 lean_ctor_set(x_44, 0, x_43);
 x_14 = x_38;

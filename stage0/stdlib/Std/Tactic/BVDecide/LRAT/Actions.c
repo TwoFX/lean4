@@ -89,6 +89,7 @@ lean_object* l_List_toString___redArg(lean_object*, lean_object*);
 static lean_object* l_Std_Tactic_BVDecide_LRAT_Action_toString___redArg___closed__10;
 LEAN_EXPORT uint8_t l_Std_Tactic_BVDecide_LRAT_beqAction___redArg____x40_Std_Tactic_BVDecide_LRAT_Actions_2880791090____hygCtx___hyg_150_(lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Std_Tactic_BVDecide_LRAT_Action_ctorIdx(lean_object*, lean_object*, lean_object*);
+lean_object* lean_string_append(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Std_Tactic_BVDecide_LRAT_instBEqAction(lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Std_Tactic_BVDecide_LRAT_reprAction___redArg____x40_Std_Tactic_BVDecide_LRAT_Actions_2880791090____hygCtx___hyg_191_(lean_object*, lean_object*, lean_object*, lean_object*);
 static lean_object* l_Std_Tactic_BVDecide_LRAT_Action_toString___redArg___closed__6;

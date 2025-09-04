@@ -101,7 +101,6 @@ LEAN_EXPORT lean_object* l_Lake_Toml_dynamicNode_formatter___redArg(lean_object*
 LEAN_EXPORT lean_object* l_Lake_Toml_epsilon_parenthesizer(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* lean_string_utf8_byte_size(lean_object*);
 lean_object* l_Lean_Parser_sepByNoAntiquot(lean_object*, lean_object*, uint8_t);
-lean_object* lean_string_push(lean_object*, uint32_t);
 LEAN_EXPORT lean_object* l_Lake_Toml_lit_formatter___redArg(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* l_Lean_PrettyPrinter_Formatter_withMaybeTag(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lake_Toml_recNodeWithAntiquot_formatter___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
@@ -168,6 +167,7 @@ static lean_object* l_Lake_Toml_sepBy1Linebreak_parenthesizer___redArg___closed_
 uint8_t l_Lean_checkTraceOption(lean_object*, lean_object*, lean_object*);
 lean_object* l_Lean_Parser_symbol_formatter(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 uint8_t lean_string_utf8_at_end(lean_object*, lean_object*);
+static lean_object* l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__2;
 lean_object* l_Lean_PrettyPrinter_Parenthesizer_checkLinebreakBefore_parenthesizer___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lake_Toml_recNodeWithAntiquot(lean_object*, lean_object*, lean_object*, uint8_t);
 LEAN_EXPORT lean_object* l_Lake_Toml_mkUnexpectedCharError___boxed(lean_object*, lean_object*, lean_object*, lean_object*);
@@ -252,6 +252,7 @@ LEAN_EXPORT lean_object* l_Lake_Toml_dynamicNode_parenthesizer___boxed(lean_obje
 static lean_object* l_Lean_addMessageContextPartial___at___Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3_spec__3___closed__3;
 LEAN_EXPORT lean_object* l_Lake_Toml_litWithAntiquot(lean_object*, lean_object*, lean_object*, lean_object*, uint8_t);
 LEAN_EXPORT lean_object* l_Lake_Toml_skipInsideQuotFn(lean_object*, lean_object*, lean_object*);
+lean_object* lean_char_tostring(uint32_t);
 lean_object* lean_nat_sub(lean_object*, lean_object*);
 static lean_object* l_Lake_Toml_sepByLinebreak___closed__3;
 LEAN_EXPORT lean_object* l_Lake_Toml_chAtom_parenthesizer___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
@@ -315,7 +316,6 @@ LEAN_EXPORT lean_object* l___private_Lake_Toml_ParserUtil_0__Lake_Toml_modifyTai
 LEAN_EXPORT lean_object* l_Lake_Toml_sepBy1Linebreak_parenthesizer___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 static lean_object* l_Lean_addMessageContextPartial___at___Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3_spec__3___closed__5;
 LEAN_EXPORT lean_object* l_Option_beqOption____x40_Init_Data_Option_Basic_3000094388____hygCtx___hyg_3____at___Lake_Toml_optFn_spec__0___boxed(lean_object*, lean_object*);
-static lean_object* l_Lake_Toml_mkUnexpectedCharError___closed__2;
 lean_object* l_Lean_Parser_SyntaxStack_back(lean_object*);
 LEAN_EXPORT lean_object* l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lake_Toml_litWithAntiquot_formatter___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
@@ -711,14 +711,6 @@ static lean_object* _init_l_Lake_Toml_mkUnexpectedCharError___closed__1() {
 _start:
 {
 lean_object* x_1; 
-x_1 = lean_mk_string_unchecked("", 0, 0);
-return x_1;
-}
-}
-static lean_object* _init_l_Lake_Toml_mkUnexpectedCharError___closed__2() {
-_start:
-{
-lean_object* x_1; 
 x_1 = lean_mk_string_unchecked("'", 1, 1);
 return x_1;
 }
@@ -726,16 +718,15 @@ return x_1;
 LEAN_EXPORT lean_object* l_Lake_Toml_mkUnexpectedCharError(lean_object* x_1, uint32_t x_2, lean_object* x_3, uint8_t x_4) {
 _start:
 {
-lean_object* x_5; lean_object* x_6; lean_object* x_7; lean_object* x_8; lean_object* x_9; lean_object* x_10; lean_object* x_11; 
+lean_object* x_5; lean_object* x_6; lean_object* x_7; lean_object* x_8; lean_object* x_9; lean_object* x_10; 
 x_5 = l_Lake_Toml_mkUnexpectedCharError___closed__0;
-x_6 = l_Lake_Toml_mkUnexpectedCharError___closed__1;
-x_7 = lean_string_push(x_6, x_2);
-x_8 = lean_string_append(x_5, x_7);
-lean_dec_ref(x_7);
-x_9 = l_Lake_Toml_mkUnexpectedCharError___closed__2;
-x_10 = lean_string_append(x_8, x_9);
-x_11 = l_Lean_Parser_ParserState_mkUnexpectedError(x_1, x_10, x_3, x_4);
-return x_11;
+x_6 = lean_char_tostring(x_2);
+x_7 = lean_string_append(x_5, x_6);
+lean_dec_ref(x_6);
+x_8 = l_Lake_Toml_mkUnexpectedCharError___closed__1;
+x_9 = lean_string_append(x_7, x_8);
+x_10 = l_Lean_Parser_ParserState_mkUnexpectedError(x_1, x_9, x_3, x_4);
+return x_10;
 }
 }
 LEAN_EXPORT lean_object* l_Lake_Toml_mkUnexpectedCharError___boxed(lean_object* x_1, lean_object* x_2, lean_object* x_3, lean_object* x_4) {
@@ -1182,23 +1173,22 @@ return x_17;
 }
 else
 {
-lean_object* x_18; lean_object* x_19; lean_object* x_20; lean_object* x_21; lean_object* x_22; lean_object* x_23; lean_object* x_24; 
+lean_object* x_18; lean_object* x_19; lean_object* x_20; lean_object* x_21; lean_object* x_22; lean_object* x_23; 
 x_18 = l_Lake_Toml_sepByChar1Fn___closed__0;
-x_19 = l_Lake_Toml_mkUnexpectedCharError___closed__1;
-x_20 = lean_string_push(x_19, x_10);
-x_21 = lean_string_append(x_18, x_20);
-lean_dec_ref(x_20);
-x_22 = l_Lake_Toml_mkUnexpectedCharError___closed__2;
-x_23 = lean_string_append(x_21, x_22);
-x_24 = l_Lean_Parser_ParserState_mkUnexpectedError(x_11, x_23, x_3, x_15);
-return x_24;
+x_19 = lean_char_tostring(x_10);
+x_20 = lean_string_append(x_18, x_19);
+lean_dec_ref(x_19);
+x_21 = l_Lake_Toml_mkUnexpectedCharError___closed__1;
+x_22 = lean_string_append(x_20, x_21);
+x_23 = l_Lean_Parser_ParserState_mkUnexpectedError(x_11, x_22, x_3, x_15);
+return x_23;
 }
 }
 else
 {
-lean_object* x_25; 
-x_25 = l_Lake_Toml_sepByChar1AuxFn(x_1, x_2, x_3, x_4, x_11);
-return x_25;
+lean_object* x_24; 
+x_24 = l_Lake_Toml_sepByChar1AuxFn(x_1, x_2, x_3, x_4, x_11);
+return x_24;
 }
 }
 else
@@ -1706,6 +1696,14 @@ return x_2;
 static lean_object* _init_l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__1() {
 _start:
 {
+lean_object* x_1; 
+x_1 = lean_mk_string_unchecked("", 0, 0);
+return x_1;
+}
+}
+static lean_object* _init_l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__2() {
+_start:
+{
 lean_object* x_1; lean_object* x_2; 
 x_1 = lean_unsigned_to_nat(0u);
 x_2 = lean_mk_empty_array_with_capacity(x_1);
@@ -1748,14 +1746,14 @@ lean_object* x_19; double x_20; uint8_t x_21; lean_object* x_22; lean_object* x_
 x_19 = lean_ctor_get(x_12, 0);
 x_20 = l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__0;
 x_21 = 0;
-x_22 = l_Lake_Toml_mkUnexpectedCharError___closed__1;
+x_22 = l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__1;
 x_23 = lean_alloc_ctor(0, 2, 17);
 lean_ctor_set(x_23, 0, x_1);
 lean_ctor_set(x_23, 1, x_22);
 lean_ctor_set_float(x_23, sizeof(void*)*2, x_20);
 lean_ctor_set_float(x_23, sizeof(void*)*2 + 8, x_20);
 lean_ctor_set_uint8(x_23, sizeof(void*)*2 + 16, x_21);
-x_24 = l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__1;
+x_24 = l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__2;
 x_25 = lean_alloc_ctor(9, 3, 0);
 lean_ctor_set(x_25, 0, x_23);
 lean_ctor_set(x_25, 1, x_8);
@@ -1798,14 +1796,14 @@ lean_inc(x_35);
 lean_dec(x_12);
 x_36 = l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__0;
 x_37 = 0;
-x_38 = l_Lake_Toml_mkUnexpectedCharError___closed__1;
+x_38 = l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__1;
 x_39 = lean_alloc_ctor(0, 2, 17);
 lean_ctor_set(x_39, 0, x_1);
 lean_ctor_set(x_39, 1, x_38);
 lean_ctor_set_float(x_39, sizeof(void*)*2, x_36);
 lean_ctor_set_float(x_39, sizeof(void*)*2 + 8, x_36);
 lean_ctor_set_uint8(x_39, sizeof(void*)*2 + 16, x_37);
-x_40 = l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__1;
+x_40 = l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__2;
 x_41 = lean_alloc_ctor(9, 3, 0);
 lean_ctor_set(x_41, 0, x_39);
 lean_ctor_set(x_41, 1, x_8);
@@ -1872,14 +1870,14 @@ if (lean_is_exclusive(x_12)) {
 }
 x_60 = l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__0;
 x_61 = 0;
-x_62 = l_Lake_Toml_mkUnexpectedCharError___closed__1;
+x_62 = l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__1;
 x_63 = lean_alloc_ctor(0, 2, 17);
 lean_ctor_set(x_63, 0, x_1);
 lean_ctor_set(x_63, 1, x_62);
 lean_ctor_set_float(x_63, sizeof(void*)*2, x_60);
 lean_ctor_set_float(x_63, sizeof(void*)*2 + 8, x_60);
 lean_ctor_set_uint8(x_63, sizeof(void*)*2 + 16, x_61);
-x_64 = l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__1;
+x_64 = l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__2;
 x_65 = lean_alloc_ctor(9, 3, 0);
 lean_ctor_set(x_65, 0, x_63);
 lean_ctor_set(x_65, 1, x_8);
@@ -1976,14 +1974,14 @@ if (lean_is_exclusive(x_12)) {
 }
 x_87 = l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__0;
 x_88 = 0;
-x_89 = l_Lake_Toml_mkUnexpectedCharError___closed__1;
+x_89 = l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__1;
 x_90 = lean_alloc_ctor(0, 2, 17);
 lean_ctor_set(x_90, 0, x_1);
 lean_ctor_set(x_90, 1, x_89);
 lean_ctor_set_float(x_90, sizeof(void*)*2, x_87);
 lean_ctor_set_float(x_90, sizeof(void*)*2 + 8, x_87);
 lean_ctor_set_uint8(x_90, sizeof(void*)*2 + 16, x_88);
-x_91 = l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__1;
+x_91 = l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__2;
 x_92 = lean_alloc_ctor(9, 3, 0);
 lean_ctor_set(x_92, 0, x_90);
 lean_ctor_set(x_92, 1, x_8);
@@ -4489,8 +4487,6 @@ l_Lake_Toml_mkUnexpectedCharError___closed__0 = _init_l_Lake_Toml_mkUnexpectedCh
 lean_mark_persistent(l_Lake_Toml_mkUnexpectedCharError___closed__0);
 l_Lake_Toml_mkUnexpectedCharError___closed__1 = _init_l_Lake_Toml_mkUnexpectedCharError___closed__1();
 lean_mark_persistent(l_Lake_Toml_mkUnexpectedCharError___closed__1);
-l_Lake_Toml_mkUnexpectedCharError___closed__2 = _init_l_Lake_Toml_mkUnexpectedCharError___closed__2();
-lean_mark_persistent(l_Lake_Toml_mkUnexpectedCharError___closed__2);
 l_Lake_Toml_sepByChar1Fn___closed__0 = _init_l_Lake_Toml_sepByChar1Fn___closed__0();
 lean_mark_persistent(l_Lake_Toml_sepByChar1Fn___closed__0);
 l_Lean_addMessageContextPartial___at___Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3_spec__3___closed__0 = _init_l_Lean_addMessageContextPartial___at___Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3_spec__3___closed__0();
@@ -4510,6 +4506,8 @@ lean_mark_persistent(l_Lean_addMessageContextPartial___at___Lean_addTrace___at__
 l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__0 = _init_l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__0();
 l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__1 = _init_l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__1();
 lean_mark_persistent(l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__1);
+l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__2 = _init_l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__2();
+lean_mark_persistent(l_Lean_addTrace___at___Lake_Toml_atom_formatter_spec__3___redArg___closed__2);
 l_Lake_Toml_atom_formatter___redArg___closed__0 = _init_l_Lake_Toml_atom_formatter___redArg___closed__0();
 lean_mark_persistent(l_Lake_Toml_atom_formatter___redArg___closed__0);
 l_Lake_Toml_atom_formatter___redArg___closed__1 = _init_l_Lake_Toml_atom_formatter___redArg___closed__1();

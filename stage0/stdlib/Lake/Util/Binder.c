@@ -62,6 +62,7 @@ static lean_object* l_Lake_BinderSyntaxView_mkBinder___closed__3;
 static lean_object* l_Lake_BinderSyntaxView_mkDepArrow___closed__2;
 static lean_object* l_Lake_BinderSyntaxView_mkBinder___closed__9;
 static lean_object* l_Lake_reprBinderSyntaxView___redArg___closed__15____x40_Lake_Util_Binder_3162287471____hygCtx___hyg_54_;
+lean_object* lean_string_length(lean_object*);
 static lean_object* l_Lake_BinderSyntaxView_mkFunBinder___closed__12;
 static lean_object* l_Lake_BinderSyntaxView_mkDepArrow___closed__1;
 lean_object* l_Array_mkArray0(lean_object*);
@@ -85,6 +86,7 @@ static lean_object* l_Lake_BinderSyntaxView_mkBinder___closed__0;
 size_t lean_usize_of_nat(lean_object*);
 lean_object* l_Array_mkArray1___redArg(lean_object*);
 LEAN_EXPORT lean_object* l_Lake_instCoeNamedArgumentArgument;
+static lean_object* l_Lake_reprBinderSyntaxView___redArg___closed__25____x40_Lake_Util_Binder_3162287471____hygCtx___hyg_54_;
 LEAN_EXPORT lean_object* l_Lake_instCoeBinderIdentFunBinder;
 LEAN_EXPORT lean_object* l_Lake_instCoeTermArgument___lam__0___boxed(lean_object*);
 LEAN_EXPORT lean_object* l_Lake_expandBinderCore(lean_object*, lean_object*, lean_object*, lean_object*);
@@ -878,12 +880,21 @@ static lean_object* _init_l_Lake_reprBinderSyntaxView___redArg___closed__22____x
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
-x_1 = lean_unsigned_to_nat(2u);
-x_2 = lean_nat_to_int(x_1);
+x_1 = l_Lake_reprBinderSyntaxView___redArg___closed__0____x40_Lake_Util_Binder_3162287471____hygCtx___hyg_54_;
+x_2 = lean_string_length(x_1);
 return x_2;
 }
 }
 static lean_object* _init_l_Lake_reprBinderSyntaxView___redArg___closed__23____x40_Lake_Util_Binder_3162287471____hygCtx___hyg_54_() {
+_start:
+{
+lean_object* x_1; lean_object* x_2; 
+x_1 = l_Lake_reprBinderSyntaxView___redArg___closed__22____x40_Lake_Util_Binder_3162287471____hygCtx___hyg_54_;
+x_2 = lean_nat_to_int(x_1);
+return x_2;
+}
+}
+static lean_object* _init_l_Lake_reprBinderSyntaxView___redArg___closed__24____x40_Lake_Util_Binder_3162287471____hygCtx___hyg_54_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -893,7 +904,7 @@ lean_ctor_set(x_2, 0, x_1);
 return x_2;
 }
 }
-static lean_object* _init_l_Lake_reprBinderSyntaxView___redArg___closed__24____x40_Lake_Util_Binder_3162287471____hygCtx___hyg_54_() {
+static lean_object* _init_l_Lake_reprBinderSyntaxView___redArg___closed__25____x40_Lake_Util_Binder_3162287471____hygCtx___hyg_54_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -1029,12 +1040,12 @@ lean_ctor_set_uint8(x_55, sizeof(void*)*1, x_13);
 x_56 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_56, 0, x_51);
 lean_ctor_set(x_56, 1, x_55);
-x_57 = l_Lake_reprBinderSyntaxView___redArg___closed__22____x40_Lake_Util_Binder_3162287471____hygCtx___hyg_54_;
-x_58 = l_Lake_reprBinderSyntaxView___redArg___closed__23____x40_Lake_Util_Binder_3162287471____hygCtx___hyg_54_;
+x_57 = l_Lake_reprBinderSyntaxView___redArg___closed__23____x40_Lake_Util_Binder_3162287471____hygCtx___hyg_54_;
+x_58 = l_Lake_reprBinderSyntaxView___redArg___closed__24____x40_Lake_Util_Binder_3162287471____hygCtx___hyg_54_;
 x_59 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_59, 0, x_58);
 lean_ctor_set(x_59, 1, x_56);
-x_60 = l_Lake_reprBinderSyntaxView___redArg___closed__24____x40_Lake_Util_Binder_3162287471____hygCtx___hyg_54_;
+x_60 = l_Lake_reprBinderSyntaxView___redArg___closed__25____x40_Lake_Util_Binder_3162287471____hygCtx___hyg_54_;
 x_61 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_61, 0, x_59);
 lean_ctor_set(x_61, 1, x_60);
@@ -3423,6 +3434,8 @@ l_Lake_reprBinderSyntaxView___redArg___closed__23____x40_Lake_Util_Binder_316228
 lean_mark_persistent(l_Lake_reprBinderSyntaxView___redArg___closed__23____x40_Lake_Util_Binder_3162287471____hygCtx___hyg_54_);
 l_Lake_reprBinderSyntaxView___redArg___closed__24____x40_Lake_Util_Binder_3162287471____hygCtx___hyg_54_ = _init_l_Lake_reprBinderSyntaxView___redArg___closed__24____x40_Lake_Util_Binder_3162287471____hygCtx___hyg_54_();
 lean_mark_persistent(l_Lake_reprBinderSyntaxView___redArg___closed__24____x40_Lake_Util_Binder_3162287471____hygCtx___hyg_54_);
+l_Lake_reprBinderSyntaxView___redArg___closed__25____x40_Lake_Util_Binder_3162287471____hygCtx___hyg_54_ = _init_l_Lake_reprBinderSyntaxView___redArg___closed__25____x40_Lake_Util_Binder_3162287471____hygCtx___hyg_54_();
+lean_mark_persistent(l_Lake_reprBinderSyntaxView___redArg___closed__25____x40_Lake_Util_Binder_3162287471____hygCtx___hyg_54_);
 l_Lake_instReprBinderSyntaxView___closed__0 = _init_l_Lake_instReprBinderSyntaxView___closed__0();
 lean_mark_persistent(l_Lake_instReprBinderSyntaxView___closed__0);
 l_Lake_instReprBinderSyntaxView = _init_l_Lake_instReprBinderSyntaxView();

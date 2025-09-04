@@ -1,6 +1,6 @@
 // Lean compiler output
 // Module: Lean.Data.FuzzyMatching
-// Imports: Init.Data.Range.Polymorphic.Iterators Init.Data.Range.Polymorphic.Nat Init.Data.OfScientific Init.Data.Option.Coe Init.Data.Range Init.Data.SInt.Basic
+// Imports: Init.Data.Range.Polymorphic.Iterators Init.Data.Range.Polymorphic.Nat Init.Data.OfScientific Init.Data.Option.Coe Init.Data.Range Init.Data.SInt.Basic Init.Data.String.Basic
 #include <lean/lean.h>
 #if defined(__clang__)
 #pragma clang diagnostic ignored "-Wunused-parameter"
@@ -2041,7 +2041,7 @@ _start:
 lean_object* x_1; lean_object* x_2; lean_object* x_3; lean_object* x_4; lean_object* x_5; lean_object* x_6; 
 x_1 = l___private_Lean_Data_FuzzyMatching_0__Lean_FuzzyMatching_Score_ofInt16_x21___closed__2;
 x_2 = lean_unsigned_to_nat(2u);
-x_3 = lean_unsigned_to_nat(124u);
+x_3 = lean_unsigned_to_nat(125u);
 x_4 = l___private_Lean_Data_FuzzyMatching_0__Lean_FuzzyMatching_Score_ofInt16_x21___closed__1;
 x_5 = l___private_Lean_Data_FuzzyMatching_0__Lean_FuzzyMatching_Score_ofInt16_x21___closed__0;
 x_6 = l_mkPanicMessageWithDecl(x_5, x_4, x_3, x_2, x_1);
@@ -4188,6 +4188,7 @@ lean_object* initialize_Init_Data_OfScientific(uint8_t builtin, lean_object*);
 lean_object* initialize_Init_Data_Option_Coe(uint8_t builtin, lean_object*);
 lean_object* initialize_Init_Data_Range(uint8_t builtin, lean_object*);
 lean_object* initialize_Init_Data_SInt_Basic(uint8_t builtin, lean_object*);
+lean_object* initialize_Init_Data_String_Basic(uint8_t builtin, lean_object*);
 static bool _G_initialized = false;
 LEAN_EXPORT lean_object* initialize_Lean_Data_FuzzyMatching(uint8_t builtin, lean_object* w) {
 lean_object * res;
@@ -4209,6 +4210,9 @@ res = initialize_Init_Data_Range(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 res = initialize_Init_Data_SInt_Basic(builtin, lean_io_mk_world());
+if (lean_io_result_is_error(res)) return res;
+lean_dec_ref(res);
+res = initialize_Init_Data_String_Basic(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 l___private_Lean_Data_FuzzyMatching_0__Lean_FuzzyMatching_iterateLookaround___redArg___closed__0 = _init_l___private_Lean_Data_FuzzyMatching_0__Lean_FuzzyMatching_iterateLookaround___redArg___closed__0();

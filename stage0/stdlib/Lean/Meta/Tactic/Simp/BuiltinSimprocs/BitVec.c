@@ -171,6 +171,7 @@ static lean_object* l___private_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_0__
 LEAN_EXPORT lean_object* l_BitVec_reduceULE___redArg___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_BitVec_reduceShift___redArg(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_BitVec_reduceHShiftRight(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
+static lean_object* l_BitVec_reprLiteral___redArg___closed__17____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_;
 LEAN_EXPORT lean_object* l___private_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_0__BitVec_reduceULE___regBuiltin_BitVec_reduceULE_declare__1____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_2455180700____hygCtx___hyg_18_(lean_object*);
 uint8_t l_Lean_Expr_isApp(lean_object*);
 static lean_object* l___private_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_0____regBuiltin_BitVec_reduceHShiftLeft_declare__173___closed__2____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_1321491985____hygCtx___hyg_20_;
@@ -316,6 +317,7 @@ LEAN_EXPORT lean_object* l_BitVec_reduceXOr___boxed(lean_object*, lean_object*, 
 static lean_object* l_BitVec_reduceToInt___redArg___closed__7;
 static lean_object* l___private_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_0____regBuiltin_BitVec_reduceDiv_declare__93___closed__9____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_258729848____hygCtx___hyg_20_;
 static lean_object* l___private_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_0____regBuiltin_BitVec_reduceNe_declare__238___closed__4____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_2237023881____hygCtx___hyg_21_;
+lean_object* lean_string_length(lean_object*);
 static lean_object* l___private_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_0____regBuiltin_BitVec_reduceExtractLsb_x27_declare__303___closed__2____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_3865625001____hygCtx___hyg_15_;
 LEAN_EXPORT lean_object* l_BitVec_reduceShiftShift(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* l_BitVec_shiftLeft(lean_object*, lean_object*, lean_object*);
@@ -1555,12 +1557,21 @@ static lean_object* _init_l_BitVec_reprLiteral___redArg___closed__14____x40_Lean
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
-x_1 = lean_unsigned_to_nat(2u);
-x_2 = lean_nat_to_int(x_1);
+x_1 = l_BitVec_reprLiteral___redArg___closed__0____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_;
+x_2 = lean_string_length(x_1);
 return x_2;
 }
 }
 static lean_object* _init_l_BitVec_reprLiteral___redArg___closed__15____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_() {
+_start:
+{
+lean_object* x_1; lean_object* x_2; 
+x_1 = l_BitVec_reprLiteral___redArg___closed__14____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_;
+x_2 = lean_nat_to_int(x_1);
+return x_2;
+}
+}
+static lean_object* _init_l_BitVec_reprLiteral___redArg___closed__16____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -1570,7 +1581,7 @@ lean_ctor_set(x_2, 0, x_1);
 return x_2;
 }
 }
-static lean_object* _init_l_BitVec_reprLiteral___redArg___closed__16____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_() {
+static lean_object* _init_l_BitVec_reprLiteral___redArg___closed__17____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -1633,12 +1644,12 @@ lean_ctor_set_uint8(x_23, sizeof(void*)*1, x_10);
 x_24 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_24, 0, x_19);
 lean_ctor_set(x_24, 1, x_23);
-x_25 = l_BitVec_reprLiteral___redArg___closed__14____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_;
-x_26 = l_BitVec_reprLiteral___redArg___closed__15____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_;
+x_25 = l_BitVec_reprLiteral___redArg___closed__15____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_;
+x_26 = l_BitVec_reprLiteral___redArg___closed__16____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_;
 x_27 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_27, 0, x_26);
 lean_ctor_set(x_27, 1, x_24);
-x_28 = l_BitVec_reprLiteral___redArg___closed__16____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_;
+x_28 = l_BitVec_reprLiteral___redArg___closed__17____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_;
 x_29 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_29, 0, x_27);
 lean_ctor_set(x_29, 1, x_28);
@@ -1701,12 +1712,12 @@ lean_ctor_set_uint8(x_53, sizeof(void*)*1, x_40);
 x_54 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_54, 0, x_49);
 lean_ctor_set(x_54, 1, x_53);
-x_55 = l_BitVec_reprLiteral___redArg___closed__14____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_;
-x_56 = l_BitVec_reprLiteral___redArg___closed__15____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_;
+x_55 = l_BitVec_reprLiteral___redArg___closed__15____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_;
+x_56 = l_BitVec_reprLiteral___redArg___closed__16____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_;
 x_57 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_57, 0, x_56);
 lean_ctor_set(x_57, 1, x_54);
-x_58 = l_BitVec_reprLiteral___redArg___closed__16____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_;
+x_58 = l_BitVec_reprLiteral___redArg___closed__17____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_;
 x_59 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_59, 0, x_57);
 lean_ctor_set(x_59, 1, x_58);
@@ -45801,6 +45812,8 @@ l_BitVec_reprLiteral___redArg___closed__15____x40_Lean_Meta_Tactic_Simp_BuiltinS
 lean_mark_persistent(l_BitVec_reprLiteral___redArg___closed__15____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_);
 l_BitVec_reprLiteral___redArg___closed__16____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_ = _init_l_BitVec_reprLiteral___redArg___closed__16____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_();
 lean_mark_persistent(l_BitVec_reprLiteral___redArg___closed__16____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_);
+l_BitVec_reprLiteral___redArg___closed__17____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_ = _init_l_BitVec_reprLiteral___redArg___closed__17____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_();
+lean_mark_persistent(l_BitVec_reprLiteral___redArg___closed__17____x40_Lean_Meta_Tactic_Simp_BuiltinSimprocs_BitVec_566217582____hygCtx___hyg_39_);
 l_BitVec_instReprLiteral___closed__0 = _init_l_BitVec_instReprLiteral___closed__0();
 lean_mark_persistent(l_BitVec_instReprLiteral___closed__0);
 l_BitVec_instReprLiteral = _init_l_BitVec_instReprLiteral();

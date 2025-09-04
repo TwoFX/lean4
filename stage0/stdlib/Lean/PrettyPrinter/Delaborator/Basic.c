@@ -1,6 +1,6 @@
 // Lean compiler output
 // Module: Lean.PrettyPrinter.Delaborator.Basic
-// Imports: Lean.KeyedDeclsAttribute Lean.PrettyPrinter.Delaborator.Options Lean.PrettyPrinter.Delaborator.SubExpr Lean.PrettyPrinter.Delaborator.TopDownAnalyze Lean.Elab.InfoTree.Main
+// Imports: Lean.KeyedDeclsAttribute Lean.PrettyPrinter.Delaborator.Options Lean.PrettyPrinter.Delaborator.SubExpr Lean.PrettyPrinter.Delaborator.TopDownAnalyze Lean.Elab.InfoTree.Main Init.Data.String.Basic
 #include <lean/lean.h>
 #if defined(__clang__)
 #pragma clang diagnostic ignored "-Wunused-parameter"
@@ -4324,7 +4324,7 @@ _start:
 {
 lean_object* x_1; lean_object* x_2; lean_object* x_3; 
 x_1 = lean_unsigned_to_nat(0u);
-x_2 = lean_unsigned_to_nat(99u);
+x_2 = lean_unsigned_to_nat(100u);
 x_3 = lean_alloc_ctor(0, 2, 0);
 lean_ctor_set(x_3, 0, x_2);
 lean_ctor_set(x_3, 1, x_1);
@@ -4336,7 +4336,7 @@ _start:
 {
 lean_object* x_1; lean_object* x_2; lean_object* x_3; 
 x_1 = lean_unsigned_to_nat(3u);
-x_2 = lean_unsigned_to_nat(123u);
+x_2 = lean_unsigned_to_nat(124u);
 x_3 = lean_alloc_ctor(0, 2, 0);
 lean_ctor_set(x_3, 0, x_2);
 lean_ctor_set(x_3, 1, x_1);
@@ -4364,7 +4364,7 @@ _start:
 {
 lean_object* x_1; lean_object* x_2; lean_object* x_3; 
 x_1 = lean_unsigned_to_nat(26u);
-x_2 = lean_unsigned_to_nat(109u);
+x_2 = lean_unsigned_to_nat(110u);
 x_3 = lean_alloc_ctor(0, 2, 0);
 lean_ctor_set(x_3, 0, x_2);
 lean_ctor_set(x_3, 1, x_1);
@@ -4376,7 +4376,7 @@ _start:
 {
 lean_object* x_1; lean_object* x_2; lean_object* x_3; 
 x_1 = lean_unsigned_to_nat(40u);
-x_2 = lean_unsigned_to_nat(109u);
+x_2 = lean_unsigned_to_nat(110u);
 x_3 = lean_alloc_ctor(0, 2, 0);
 lean_ctor_set(x_3, 0, x_2);
 lean_ctor_set(x_3, 1, x_1);
@@ -13148,7 +13148,7 @@ _start:
 {
 lean_object* x_1; lean_object* x_2; lean_object* x_3; 
 x_1 = lean_unsigned_to_nat(0u);
-x_2 = lean_unsigned_to_nat(447u);
+x_2 = lean_unsigned_to_nat(448u);
 x_3 = lean_alloc_ctor(0, 2, 0);
 lean_ctor_set(x_3, 0, x_2);
 lean_ctor_set(x_3, 1, x_1);
@@ -13160,7 +13160,7 @@ _start:
 {
 lean_object* x_1; lean_object* x_2; lean_object* x_3; 
 x_1 = lean_unsigned_to_nat(3u);
-x_2 = lean_unsigned_to_nat(467u);
+x_2 = lean_unsigned_to_nat(468u);
 x_3 = lean_alloc_ctor(0, 2, 0);
 lean_ctor_set(x_3, 0, x_2);
 lean_ctor_set(x_3, 1, x_1);
@@ -13188,7 +13188,7 @@ _start:
 {
 lean_object* x_1; lean_object* x_2; lean_object* x_3; 
 x_1 = lean_unsigned_to_nat(26u);
-x_2 = lean_unsigned_to_nat(460u);
+x_2 = lean_unsigned_to_nat(461u);
 x_3 = lean_alloc_ctor(0, 2, 0);
 lean_ctor_set(x_3, 0, x_2);
 lean_ctor_set(x_3, 1, x_1);
@@ -13200,7 +13200,7 @@ _start:
 {
 lean_object* x_1; lean_object* x_2; lean_object* x_3; 
 x_1 = lean_unsigned_to_nat(48u);
-x_2 = lean_unsigned_to_nat(460u);
+x_2 = lean_unsigned_to_nat(461u);
 x_3 = lean_alloc_ctor(0, 2, 0);
 lean_ctor_set(x_3, 0, x_2);
 lean_ctor_set(x_3, 1, x_1);
@@ -13990,7 +13990,7 @@ _start:
 lean_object* x_1; lean_object* x_2; lean_object* x_3; lean_object* x_4; lean_object* x_5; lean_object* x_6; 
 x_1 = l_Lean_PrettyPrinter_delabCore___redArg___closed__2;
 x_2 = lean_unsigned_to_nat(18u);
-x_3 = lean_unsigned_to_nat(503u);
+x_3 = lean_unsigned_to_nat(504u);
 x_4 = l_Lean_PrettyPrinter_delabCore___redArg___closed__1;
 x_5 = l_Lean_PrettyPrinter_delabCore___redArg___closed__0;
 x_6 = l_mkPanicMessageWithDecl(x_5, x_4, x_3, x_2, x_1);
@@ -15590,6 +15590,7 @@ lean_object* initialize_Lean_PrettyPrinter_Delaborator_Options(uint8_t builtin, 
 lean_object* initialize_Lean_PrettyPrinter_Delaborator_SubExpr(uint8_t builtin, lean_object*);
 lean_object* initialize_Lean_PrettyPrinter_Delaborator_TopDownAnalyze(uint8_t builtin, lean_object*);
 lean_object* initialize_Lean_Elab_InfoTree_Main(uint8_t builtin, lean_object*);
+lean_object* initialize_Init_Data_String_Basic(uint8_t builtin, lean_object*);
 static bool _G_initialized = false;
 LEAN_EXPORT lean_object* initialize_Lean_PrettyPrinter_Delaborator_Basic(uint8_t builtin, lean_object* w) {
 lean_object * res;
@@ -15608,6 +15609,9 @@ res = initialize_Lean_PrettyPrinter_Delaborator_TopDownAnalyze(builtin, lean_io_
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 res = initialize_Lean_Elab_InfoTree_Main(builtin, lean_io_mk_world());
+if (lean_io_result_is_error(res)) return res;
+lean_dec_ref(res);
+res = initialize_Init_Data_String_Basic(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 l_Lean_PrettyPrinter_Delaborator_initFn___closed__0____x40_Lean_PrettyPrinter_Delaborator_Basic_2007592451____hygCtx___hyg_2_ = _init_l_Lean_PrettyPrinter_Delaborator_initFn___closed__0____x40_Lean_PrettyPrinter_Delaborator_Basic_2007592451____hygCtx___hyg_2_();

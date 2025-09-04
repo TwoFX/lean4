@@ -178,6 +178,7 @@ LEAN_EXPORT lean_object* l_Vector_flatMap___redArg(lean_object*, lean_object*);
 static lean_object* l___auto___closed__3____x40_Init_Data_Vector_Basic_3103831426____hygCtx___hyg_12_;
 LEAN_EXPORT lean_object* l_Vector_tail___redArg(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Vector_any___boxed(lean_object*, lean_object*, lean_object*, lean_object*);
+lean_object* lean_string_length(lean_object*);
 static lean_object* l_Vector_singleton___redArg___closed__0;
 LEAN_EXPORT lean_object* l_Vector_ctorIdx(lean_object*, lean_object*, lean_object*);
 static lean_object* l___auto___closed__33____x40_Init_Data_Vector_Basic_1499792475____hygCtx___hyg_20_;
@@ -210,6 +211,7 @@ LEAN_EXPORT lean_object* l_Vector_cast___boxed(lean_object*, lean_object*, lean_
 LEAN_EXPORT lean_object* l_Vector_instForIn_x27InferInstanceMembership___lam__1(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 static lean_object* l_Vector_foldl___redArg___closed__7;
 LEAN_EXPORT lean_object* l_Vector_zip___redArg___boxed(lean_object*, lean_object*);
+static lean_object* l_reprVector___redArg___closed__18____x40_Init_Data_Vector_Basic_509770449____hygCtx___hyg_30_;
 lean_object* l_Nat_reprFast(lean_object*);
 static lean_object* l_Vector_insertIdx_x21___redArg___closed__0;
 LEAN_EXPORT lean_object* l_Vector_mkEmpty___redArg(lean_object*);
@@ -528,6 +530,7 @@ static lean_object* l_Vector_foldl___redArg___closed__9;
 LEAN_EXPORT lean_object* l_Vector_mapIdxM(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Vector_findRevM_x3f___redArg___lam__0___boxed(lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Vector_set___redArg(lean_object*, lean_object*, lean_object*);
+lean_object* lean_string_append(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Vector_findSomeRev_x3f___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Vector_map___redArg___lam__0(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Vector_cast___redArg(lean_object*);
@@ -598,7 +601,6 @@ static lean_object* l___auto___closed__10____x40_Init_Data_Vector_Basic_31038314
 LEAN_EXPORT lean_object* l_Vector_flatMapM(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Vector_set_x21___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Vector_drop(lean_object*, lean_object*, lean_object*, lean_object*);
-lean_object* lean_string_append(lean_object*, lean_object*);
 static lean_object* l___auto___closed__6____x40_Init_Data_Vector_Basic_1499792475____hygCtx___hyg_20_;
 LEAN_EXPORT lean_object* l_Vector_instForM___boxed(lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Vector_take___boxed(lean_object*, lean_object*, lean_object*, lean_object*);
@@ -829,12 +831,21 @@ static lean_object* _init_l_reprVector___redArg___closed__15____x40_Init_Data_Ve
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
-x_1 = lean_unsigned_to_nat(2u);
-x_2 = l_instNatCastInt___lam__0(x_1);
+x_1 = l_reprVector___redArg___closed__0____x40_Init_Data_Vector_Basic_509770449____hygCtx___hyg_30_;
+x_2 = lean_string_length(x_1);
 return x_2;
 }
 }
 static lean_object* _init_l_reprVector___redArg___closed__16____x40_Init_Data_Vector_Basic_509770449____hygCtx___hyg_30_() {
+_start:
+{
+lean_object* x_1; lean_object* x_2; 
+x_1 = l_reprVector___redArg___closed__15____x40_Init_Data_Vector_Basic_509770449____hygCtx___hyg_30_;
+x_2 = l_instNatCastInt___lam__0(x_1);
+return x_2;
+}
+}
+static lean_object* _init_l_reprVector___redArg___closed__17____x40_Init_Data_Vector_Basic_509770449____hygCtx___hyg_30_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -844,7 +855,7 @@ lean_ctor_set(x_2, 0, x_1);
 return x_2;
 }
 }
-static lean_object* _init_l_reprVector___redArg___closed__17____x40_Init_Data_Vector_Basic_509770449____hygCtx___hyg_30_() {
+static lean_object* _init_l_reprVector___redArg___closed__18____x40_Init_Data_Vector_Basic_509770449____hygCtx___hyg_30_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -891,12 +902,12 @@ x_18 = l_reprVector___redArg___closed__13____x40_Init_Data_Vector_Basic_50977044
 x_19 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_19, 0, x_17);
 lean_ctor_set(x_19, 1, x_18);
-x_20 = l_reprVector___redArg___closed__15____x40_Init_Data_Vector_Basic_509770449____hygCtx___hyg_30_;
-x_21 = l_reprVector___redArg___closed__16____x40_Init_Data_Vector_Basic_509770449____hygCtx___hyg_30_;
+x_20 = l_reprVector___redArg___closed__16____x40_Init_Data_Vector_Basic_509770449____hygCtx___hyg_30_;
+x_21 = l_reprVector___redArg___closed__17____x40_Init_Data_Vector_Basic_509770449____hygCtx___hyg_30_;
 x_22 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_22, 0, x_21);
 lean_ctor_set(x_22, 1, x_19);
-x_23 = l_reprVector___redArg___closed__17____x40_Init_Data_Vector_Basic_509770449____hygCtx___hyg_30_;
+x_23 = l_reprVector___redArg___closed__18____x40_Init_Data_Vector_Basic_509770449____hygCtx___hyg_30_;
 x_24 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_24, 0, x_22);
 lean_ctor_set(x_24, 1, x_23);
@@ -8264,6 +8275,8 @@ l_reprVector___redArg___closed__16____x40_Init_Data_Vector_Basic_509770449____hy
 lean_mark_persistent(l_reprVector___redArg___closed__16____x40_Init_Data_Vector_Basic_509770449____hygCtx___hyg_30_);
 l_reprVector___redArg___closed__17____x40_Init_Data_Vector_Basic_509770449____hygCtx___hyg_30_ = _init_l_reprVector___redArg___closed__17____x40_Init_Data_Vector_Basic_509770449____hygCtx___hyg_30_();
 lean_mark_persistent(l_reprVector___redArg___closed__17____x40_Init_Data_Vector_Basic_509770449____hygCtx___hyg_30_);
+l_reprVector___redArg___closed__18____x40_Init_Data_Vector_Basic_509770449____hygCtx___hyg_30_ = _init_l_reprVector___redArg___closed__18____x40_Init_Data_Vector_Basic_509770449____hygCtx___hyg_30_();
+lean_mark_persistent(l_reprVector___redArg___closed__18____x40_Init_Data_Vector_Basic_509770449____hygCtx___hyg_30_);
 l_Vector_term_x23v_x5b___x2c_x5d___closed__0 = _init_l_Vector_term_x23v_x5b___x2c_x5d___closed__0();
 lean_mark_persistent(l_Vector_term_x23v_x5b___x2c_x5d___closed__0);
 l_Vector_term_x23v_x5b___x2c_x5d___closed__1 = _init_l_Vector_term_x23v_x5b___x2c_x5d___closed__1();

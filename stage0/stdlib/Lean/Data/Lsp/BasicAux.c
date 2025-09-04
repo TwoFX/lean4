@@ -36,6 +36,7 @@ static lean_object* l_Lean_Lsp_reprPosition___redArg___closed__13____x40_Lean_Da
 static lean_object* l_Lean_Lsp_reprRange___redArg___closed__5____x40_Lean_Data_Lsp_BasicAux_2413389941____hygCtx___hyg_95_;
 static lean_object* l_Lean_Lsp_fromJsonRange___closed__6____x40_Lean_Data_Lsp_BasicAux_2413389941____hygCtx___hyg_67_;
 static lean_object* l_Lean_Lsp_instReprPosition___closed__0;
+static lean_object* l_Lean_Lsp_reprPosition___redArg___closed__15____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
 LEAN_EXPORT lean_object* l_Lean_Lsp_instOrdPosition;
 static lean_object* l_Lean_Lsp_fromJsonRange___closed__9____x40_Lean_Data_Lsp_BasicAux_2413389941____hygCtx___hyg_67_;
 static lean_object* l_Lean_Lsp_fromJsonPosition___closed__13____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_86_;
@@ -46,6 +47,7 @@ static lean_object* l_Lean_Lsp_defaultPosition___closed__0____x40_Lean_Data_Lsp_
 static lean_object* l_Lean_Lsp_fromJsonRange___closed__4____x40_Lean_Data_Lsp_BasicAux_2413389941____hygCtx___hyg_67_;
 static lean_object* l_Lean_Lsp_fromJsonPosition___closed__14____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_86_;
 static lean_object* l_Lean_Lsp_reprPosition___redArg___closed__1____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
+lean_object* lean_string_length(lean_object*);
 static lean_object* l_Lean_Lsp_instToStringPosition___lam__0___closed__0;
 LEAN_EXPORT lean_object* l_Lean_Lsp_toJsonPosition____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_76_(lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Lsp_instReprRange;
@@ -979,12 +981,21 @@ static lean_object* _init_l_Lean_Lsp_reprPosition___redArg___closed__12____x40_L
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
-x_1 = lean_unsigned_to_nat(2u);
-x_2 = lean_nat_to_int(x_1);
+x_1 = l_Lean_Lsp_reprPosition___redArg___closed__0____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
+x_2 = lean_string_length(x_1);
 return x_2;
 }
 }
 static lean_object* _init_l_Lean_Lsp_reprPosition___redArg___closed__13____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_() {
+_start:
+{
+lean_object* x_1; lean_object* x_2; 
+x_1 = l_Lean_Lsp_reprPosition___redArg___closed__12____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
+x_2 = lean_nat_to_int(x_1);
+return x_2;
+}
+}
+static lean_object* _init_l_Lean_Lsp_reprPosition___redArg___closed__14____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -994,7 +1005,7 @@ lean_ctor_set(x_2, 0, x_1);
 return x_2;
 }
 }
-static lean_object* _init_l_Lean_Lsp_reprPosition___redArg___closed__14____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_() {
+static lean_object* _init_l_Lean_Lsp_reprPosition___redArg___closed__15____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -1058,12 +1069,12 @@ lean_ctor_set_uint8(x_24, sizeof(void*)*1, x_10);
 x_25 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_25, 0, x_19);
 lean_ctor_set(x_25, 1, x_24);
-x_26 = l_Lean_Lsp_reprPosition___redArg___closed__12____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
-x_27 = l_Lean_Lsp_reprPosition___redArg___closed__13____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
+x_26 = l_Lean_Lsp_reprPosition___redArg___closed__13____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
+x_27 = l_Lean_Lsp_reprPosition___redArg___closed__14____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
 x_28 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_28, 0, x_27);
 lean_ctor_set(x_28, 1, x_25);
-x_29 = l_Lean_Lsp_reprPosition___redArg___closed__14____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
+x_29 = l_Lean_Lsp_reprPosition___redArg___closed__15____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
 x_30 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_30, 0, x_28);
 lean_ctor_set(x_30, 1, x_29);
@@ -1127,12 +1138,12 @@ lean_ctor_set_uint8(x_55, sizeof(void*)*1, x_41);
 x_56 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_56, 0, x_50);
 lean_ctor_set(x_56, 1, x_55);
-x_57 = l_Lean_Lsp_reprPosition___redArg___closed__12____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
-x_58 = l_Lean_Lsp_reprPosition___redArg___closed__13____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
+x_57 = l_Lean_Lsp_reprPosition___redArg___closed__13____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
+x_58 = l_Lean_Lsp_reprPosition___redArg___closed__14____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
 x_59 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_59, 0, x_58);
 lean_ctor_set(x_59, 1, x_56);
-x_60 = l_Lean_Lsp_reprPosition___redArg___closed__14____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
+x_60 = l_Lean_Lsp_reprPosition___redArg___closed__15____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
 x_61 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_61, 0, x_59);
 lean_ctor_set(x_61, 1, x_60);
@@ -1959,12 +1970,12 @@ lean_ctor_set_uint8(x_22, sizeof(void*)*1, x_9);
 x_23 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_23, 0, x_18);
 lean_ctor_set(x_23, 1, x_22);
-x_24 = l_Lean_Lsp_reprPosition___redArg___closed__12____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
-x_25 = l_Lean_Lsp_reprPosition___redArg___closed__13____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
+x_24 = l_Lean_Lsp_reprPosition___redArg___closed__13____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
+x_25 = l_Lean_Lsp_reprPosition___redArg___closed__14____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
 x_26 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_26, 0, x_25);
 lean_ctor_set(x_26, 1, x_23);
-x_27 = l_Lean_Lsp_reprPosition___redArg___closed__14____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
+x_27 = l_Lean_Lsp_reprPosition___redArg___closed__15____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
 x_28 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_28, 0, x_26);
 lean_ctor_set(x_28, 1, x_27);
@@ -2024,12 +2035,12 @@ lean_ctor_set_uint8(x_51, sizeof(void*)*1, x_38);
 x_52 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_52, 0, x_47);
 lean_ctor_set(x_52, 1, x_51);
-x_53 = l_Lean_Lsp_reprPosition___redArg___closed__12____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
-x_54 = l_Lean_Lsp_reprPosition___redArg___closed__13____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
+x_53 = l_Lean_Lsp_reprPosition___redArg___closed__13____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
+x_54 = l_Lean_Lsp_reprPosition___redArg___closed__14____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
 x_55 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_55, 0, x_54);
 lean_ctor_set(x_55, 1, x_52);
-x_56 = l_Lean_Lsp_reprPosition___redArg___closed__14____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
+x_56 = l_Lean_Lsp_reprPosition___redArg___closed__15____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_;
 x_57 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_57, 0, x_55);
 lean_ctor_set(x_57, 1, x_56);
@@ -2195,6 +2206,8 @@ l_Lean_Lsp_reprPosition___redArg___closed__13____x40_Lean_Data_Lsp_BasicAux_1632
 lean_mark_persistent(l_Lean_Lsp_reprPosition___redArg___closed__13____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_);
 l_Lean_Lsp_reprPosition___redArg___closed__14____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_ = _init_l_Lean_Lsp_reprPosition___redArg___closed__14____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_();
 lean_mark_persistent(l_Lean_Lsp_reprPosition___redArg___closed__14____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_);
+l_Lean_Lsp_reprPosition___redArg___closed__15____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_ = _init_l_Lean_Lsp_reprPosition___redArg___closed__15____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_();
+lean_mark_persistent(l_Lean_Lsp_reprPosition___redArg___closed__15____x40_Lean_Data_Lsp_BasicAux_1632782336____hygCtx___hyg_95_);
 l_Lean_Lsp_instReprPosition___closed__0 = _init_l_Lean_Lsp_instReprPosition___closed__0();
 lean_mark_persistent(l_Lean_Lsp_instReprPosition___closed__0);
 l_Lean_Lsp_instReprPosition = _init_l_Lean_Lsp_instReprPosition();

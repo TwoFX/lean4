@@ -29,12 +29,14 @@ LEAN_EXPORT lean_object* l_String_splitAux___at___String_split___at___Lake_Date_
 LEAN_EXPORT lean_object* l_Lake_reprDate____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lake_lpad(lean_object*, uint32_t, lean_object*);
 static lean_object* l_Lake_reprDate___redArg___closed__2____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_;
+lean_object* lean_string_length(lean_object*);
 lean_object* lean_string_push(lean_object*, uint32_t);
 static lean_object* l_Lake_reprDate___redArg___closed__19____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_;
 LEAN_EXPORT lean_object* l_String_split___at___Lake_Date_ofString_x3f_spec__0___boxed(lean_object*);
 lean_object* l_Nat_reprFast(lean_object*);
 static lean_object* l_Lake_reprDate___redArg___closed__3____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_;
 static lean_object* l_Lake_reprDate___redArg___closed__8____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_;
+static lean_object* l_Lake_reprDate___redArg___closed__20____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_;
 LEAN_EXPORT lean_object* l_Lake_Date_instMax___lam__0___boxed(lean_object*, lean_object*);
 static lean_object* l_Lake_reprDate___redArg___closed__18____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_;
 lean_object* lean_string_utf8_next(lean_object*, lean_object*);
@@ -593,12 +595,21 @@ static lean_object* _init_l_Lake_reprDate___redArg___closed__17____x40_Lake_Util
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
-x_1 = lean_unsigned_to_nat(2u);
-x_2 = lean_nat_to_int(x_1);
+x_1 = l_Lake_reprDate___redArg___closed__0____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_;
+x_2 = lean_string_length(x_1);
 return x_2;
 }
 }
 static lean_object* _init_l_Lake_reprDate___redArg___closed__18____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_() {
+_start:
+{
+lean_object* x_1; lean_object* x_2; 
+x_1 = l_Lake_reprDate___redArg___closed__17____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_;
+x_2 = lean_nat_to_int(x_1);
+return x_2;
+}
+}
+static lean_object* _init_l_Lake_reprDate___redArg___closed__19____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -608,7 +619,7 @@ lean_ctor_set(x_2, 0, x_1);
 return x_2;
 }
 }
-static lean_object* _init_l_Lake_reprDate___redArg___closed__19____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_() {
+static lean_object* _init_l_Lake_reprDate___redArg___closed__20____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -699,12 +710,12 @@ lean_ctor_set_uint8(x_36, sizeof(void*)*1, x_11);
 x_37 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_37, 0, x_31);
 lean_ctor_set(x_37, 1, x_36);
-x_38 = l_Lake_reprDate___redArg___closed__17____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_;
-x_39 = l_Lake_reprDate___redArg___closed__18____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_;
+x_38 = l_Lake_reprDate___redArg___closed__18____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_;
+x_39 = l_Lake_reprDate___redArg___closed__19____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_;
 x_40 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_40, 0, x_39);
 lean_ctor_set(x_40, 1, x_37);
-x_41 = l_Lake_reprDate___redArg___closed__19____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_;
+x_41 = l_Lake_reprDate___redArg___closed__20____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_;
 x_42 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_42, 0, x_40);
 lean_ctor_set(x_42, 1, x_41);
@@ -1319,6 +1330,8 @@ l_Lake_reprDate___redArg___closed__18____x40_Lake_Util_Date_3979656006____hygCtx
 lean_mark_persistent(l_Lake_reprDate___redArg___closed__18____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_);
 l_Lake_reprDate___redArg___closed__19____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_ = _init_l_Lake_reprDate___redArg___closed__19____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_();
 lean_mark_persistent(l_Lake_reprDate___redArg___closed__19____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_);
+l_Lake_reprDate___redArg___closed__20____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_ = _init_l_Lake_reprDate___redArg___closed__20____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_();
+lean_mark_persistent(l_Lake_reprDate___redArg___closed__20____x40_Lake_Util_Date_3979656006____hygCtx___hyg_75_);
 l_Lake_instReprDate___closed__0 = _init_l_Lake_instReprDate___closed__0();
 lean_mark_persistent(l_Lake_instReprDate___closed__0);
 l_Lake_instReprDate = _init_l_Lake_instReprDate();

@@ -7803,7 +7803,6 @@ lean_object* x_5; lean_object* x_6; lean_object* x_7; lean_object* x_8; lean_obj
 x_5 = lean_ctor_get(x_1, 0);
 x_6 = l_Option_format___at___Lean_Elab_CompletionInfo_format_spec__0___closed__3;
 x_7 = l_String_quote(x_5);
-lean_dec(x_5);
 lean_ctor_set_tag(x_1, 3);
 lean_ctor_set(x_1, 0, x_7);
 x_8 = lean_alloc_ctor(5, 2, 0);
@@ -7820,7 +7819,6 @@ lean_inc(x_10);
 lean_dec(x_1);
 x_11 = l_Option_format___at___Lean_Elab_CompletionInfo_format_spec__0___closed__3;
 x_12 = l_String_quote(x_10);
-lean_dec(x_10);
 x_13 = lean_alloc_ctor(3, 1, 0);
 lean_ctor_set(x_13, 0, x_12);
 x_14 = lean_alloc_ctor(5, 2, 0);

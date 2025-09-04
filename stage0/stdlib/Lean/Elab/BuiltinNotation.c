@@ -11458,7 +11458,6 @@ lean_ctor_set(x_54, 2, x_52);
 lean_ctor_set(x_54, 3, x_53);
 x_55 = lean_box(2);
 x_56 = l_Lean_Syntax_mkStrLit(x_25, x_55);
-lean_dec_ref(x_25);
 if (x_3 == 0)
 {
 lean_object* x_87; 
@@ -11650,7 +11649,6 @@ lean_ctor_set(x_122, 2, x_120);
 lean_ctor_set(x_122, 3, x_121);
 x_123 = lean_box(2);
 x_124 = l_Lean_Syntax_mkStrLit(x_92, x_123);
-lean_dec_ref(x_92);
 if (x_3 == 0)
 {
 lean_object* x_155; 
@@ -13201,7 +13199,6 @@ lean_dec_ref(x_35);
 x_53 = l_Lean_Name_toStringWithToken___at___Lean_Name_toString_spec__0(x_52, x_11);
 x_54 = lean_box(2);
 x_55 = l_Lean_Syntax_mkStrLit(x_53, x_54);
-lean_dec_ref(x_53);
 x_56 = l_Nat_reprFast(x_41);
 x_57 = l_Lean_Syntax_mkNumLit(x_56, x_54);
 x_58 = l_Nat_reprFast(x_42);
@@ -13254,10 +13251,8 @@ lean_dec_ref(x_35);
 x_78 = l_Lean_Name_toStringWithToken___at___Lean_Name_toString_spec__0(x_77, x_11);
 x_79 = lean_box(2);
 x_80 = l_Lean_Syntax_mkStrLit(x_78, x_79);
-lean_dec_ref(x_78);
 x_81 = l_Lean_Name_toStringWithToken___at___Lean_Name_toString_spec__0(x_62, x_11);
 x_82 = l_Lean_Syntax_mkStrLit(x_81, x_79);
-lean_dec_ref(x_81);
 x_83 = l_Nat_reprFast(x_66);
 x_84 = l_Lean_Syntax_mkNumLit(x_83, x_79);
 x_85 = l_Nat_reprFast(x_67);
@@ -14043,7 +14038,6 @@ lean_ctor_set(x_83, 0, x_54);
 lean_ctor_set(x_83, 1, x_82);
 x_84 = lean_box(2);
 x_85 = l_Lean_Syntax_mkStrLit(x_49, x_84);
-lean_dec(x_49);
 lean_inc(x_54);
 x_86 = l_Lean_Syntax_node3(x_54, x_77, x_81, x_83, x_85);
 x_87 = l___private_Lean_Elab_BuiltinNotation_0__Lean_Elab_Term_elabParserMacroAux___closed__32;

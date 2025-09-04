@@ -96,6 +96,7 @@ lean_object* lean_nat_sub(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Std_Time_Internal_UnitVal_instAdd(lean_object*);
 LEAN_EXPORT lean_object* l_Std_Time_Internal_UnitVal_ofNat___redArg(lean_object*);
 LEAN_EXPORT lean_object* l_Std_Time_Internal_UnitVal_tdiv(lean_object*, lean_object*, lean_object*);
+lean_object* lean_string_append(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Std_Time_Internal_UnitVal_div(lean_object*, lean_object*, lean_object*);
 lean_object* l_Rat_div(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Std_Time_Internal_UnitVal_instLT___boxed(lean_object*);
@@ -107,7 +108,6 @@ LEAN_EXPORT lean_object* l_Std_Time_Internal_UnitVal_instToString___lam__0(lean_
 lean_object* lean_int_add(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Std_Time_Internal_UnitVal_cast(lean_object*, lean_object*, lean_object*, lean_object*);
 uint8_t lean_int_dec_eq(lean_object*, lean_object*);
-lean_object* lean_string_append(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Std_Time_Internal_UnitVal_tdiv___redArg(lean_object*, lean_object*);
 lean_object* lean_int_ediv(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Std_Time_Internal_UnitVal_toInt___redArg(lean_object*);

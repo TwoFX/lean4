@@ -1,6 +1,6 @@
 // Lean compiler output
 // Module: Init.System.FilePath
-// Imports: Init.System.Platform Init.Data.ToString.Basic
+// Imports: Init.System.Platform Init.Data.ToString.Basic Init.Data.String.Basic
 #include <lean/lean.h>
 #if defined(__clang__)
 #pragma clang diagnostic ignored "-Wunused-parameter"
@@ -295,7 +295,6 @@ _start:
 lean_object* x_3; 
 x_3 = l_System_instReprFilePath___lam__0(x_1, x_2);
 lean_dec(x_2);
-lean_dec_ref(x_1);
 return x_3;
 }
 }
@@ -1794,6 +1793,7 @@ return x_5;
 }
 lean_object* initialize_Init_System_Platform(uint8_t builtin, lean_object*);
 lean_object* initialize_Init_Data_ToString_Basic(uint8_t builtin, lean_object*);
+lean_object* initialize_Init_Data_String_Basic(uint8_t builtin, lean_object*);
 static bool _G_initialized = false;
 LEAN_EXPORT lean_object* initialize_Init_System_FilePath(uint8_t builtin, lean_object* w) {
 lean_object * res;
@@ -1803,6 +1803,9 @@ res = initialize_Init_System_Platform(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 res = initialize_Init_Data_ToString_Basic(builtin, lean_io_mk_world());
+if (lean_io_result_is_error(res)) return res;
+lean_dec_ref(res);
+res = initialize_Init_Data_String_Basic(builtin, lean_io_mk_world());
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 l_System_defaultFilePath___closed__0____x40_Init_System_FilePath_3398306____hygCtx___hyg_14_ = _init_l_System_defaultFilePath___closed__0____x40_Init_System_FilePath_3398306____hygCtx___hyg_14_();

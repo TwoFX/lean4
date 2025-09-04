@@ -178,6 +178,7 @@ LEAN_EXPORT lean_object* l_Lean_Meta_DiscrTree_format___redArg___lam__0(lean_obj
 static lean_object* l___private_Lean_Meta_DiscrTree_0__Lean_Meta_DiscrTree_keysAsPattern_go___closed__8;
 static lean_object* l_Lean_Meta_DiscrTree_mkNoindexAnnotation___closed__1;
 LEAN_EXPORT lean_object* l_Lean_Meta_DiscrTree_mkPath___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
+lean_object* lean_string_length(lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Meta_DiscrTree_Trie_size___redArg(lean_object*);
 LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at_____private_Lean_Meta_DiscrTree_0__Lean_Meta_DiscrTree_getUnify_process_spec__0(lean_object*, lean_object*, lean_object*, size_t, size_t, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Meta_DiscrTree_mapArraysM___redArg___lam__1(lean_object*, lean_object*);
@@ -437,6 +438,7 @@ LEAN_EXPORT lean_object* l_Lean_Meta_DiscrTree_size___redArg___lam__0___boxed(le
 static lean_object* l___private_Lean_Meta_DiscrTree_0__Lean_Meta_DiscrTree_insertAux___redArg___closed__8;
 LEAN_EXPORT lean_object* l___private_Lean_Meta_DiscrTree_0__Lean_Meta_DiscrTree_pushArgs___lam__0___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l___private_Lean_Meta_DiscrTree_0__Lean_Meta_DiscrTree_ignoreArg___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
+static lean_object* l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__7;
 static lean_object* l_Lean_Meta_DiscrTree_mkPath___closed__0;
 uint8_t lean_nat_dec_eq(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Meta_DiscrTree_instInhabitedTrie(lean_object*);
@@ -997,7 +999,6 @@ if (x_11 == 0)
 lean_object* x_12; lean_object* x_13; 
 x_12 = lean_ctor_get(x_4, 0);
 x_13 = l_String_quote(x_12);
-lean_dec_ref(x_12);
 lean_ctor_set_tag(x_4, 3);
 lean_ctor_set(x_4, 0, x_13);
 return x_4;
@@ -1009,7 +1010,6 @@ x_14 = lean_ctor_get(x_4, 0);
 lean_inc(x_14);
 lean_dec(x_4);
 x_15 = l_String_quote(x_14);
-lean_dec_ref(x_14);
 x_16 = lean_alloc_ctor(3, 1, 0);
 lean_ctor_set(x_16, 0, x_15);
 return x_16;
@@ -4340,12 +4340,21 @@ static lean_object* _init_l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
-x_1 = lean_unsigned_to_nat(1u);
-x_2 = l_instNatCastInt___lam__0(x_1);
+x_1 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__2;
+x_2 = lean_string_length(x_1);
 return x_2;
 }
 }
 static lean_object* _init_l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__5() {
+_start:
+{
+lean_object* x_1; lean_object* x_2; 
+x_1 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__4;
+x_2 = l_instNatCastInt___lam__0(x_1);
+return x_2;
+}
+}
+static lean_object* _init_l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__6() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -4355,7 +4364,7 @@ lean_ctor_set(x_2, 0, x_1);
 return x_2;
 }
 }
-static lean_object* _init_l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__6() {
+static lean_object* _init_l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__7() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -4385,12 +4394,12 @@ x_9 = l_Lean_Meta_DiscrTree_Trie_format___redArg(x_1, x_5);
 x_10 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_10, 0, x_2);
 lean_ctor_set(x_10, 1, x_9);
-x_11 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__4;
-x_12 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__5;
+x_11 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__5;
+x_12 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__6;
 x_13 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_13, 0, x_12);
 lean_ctor_set(x_13, 1, x_10);
-x_14 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__6;
+x_14 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__7;
 x_15 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_15, 0, x_13);
 lean_ctor_set(x_15, 1, x_14);
@@ -4424,12 +4433,12 @@ x_26 = l_Lean_Meta_DiscrTree_Trie_format___redArg(x_1, x_21);
 x_27 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_27, 0, x_25);
 lean_ctor_set(x_27, 1, x_26);
-x_28 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__4;
-x_29 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__5;
+x_28 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__5;
+x_29 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__6;
 x_30 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_30, 0, x_29);
 lean_ctor_set(x_30, 1, x_27);
-x_31 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__6;
+x_31 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__7;
 x_32 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_32, 0, x_30);
 lean_ctor_set(x_32, 1, x_31);
@@ -4565,12 +4574,12 @@ x_13 = l_Std_Format_join(x_12);
 x_14 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_14, 0, x_9);
 lean_ctor_set(x_14, 1, x_13);
-x_15 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__4;
-x_16 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__5;
+x_15 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__5;
+x_16 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__6;
 x_17 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_17, 0, x_16);
 lean_ctor_set(x_17, 1, x_14);
-x_18 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__6;
+x_18 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__7;
 x_19 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_19, 0, x_17);
 lean_ctor_set(x_19, 1, x_18);
@@ -4664,12 +4673,12 @@ x_14 = l_Lean_Meta_DiscrTree_Trie_format___redArg(x_1, x_4);
 x_15 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_15, 0, x_13);
 lean_ctor_set(x_15, 1, x_14);
-x_16 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__4;
-x_17 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__5;
+x_16 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__5;
+x_17 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__6;
 x_18 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_18, 0, x_17);
 lean_ctor_set(x_18, 1, x_15);
-x_19 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__6;
+x_19 = l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__7;
 x_20 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_20, 0, x_18);
 lean_ctor_set(x_20, 1, x_19);
@@ -17318,6 +17327,8 @@ l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__5 = _init_l_Lean_M
 lean_mark_persistent(l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__5);
 l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__6 = _init_l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__6();
 lean_mark_persistent(l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__6);
+l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__7 = _init_l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__7();
+lean_mark_persistent(l_Lean_Meta_DiscrTree_Trie_format___redArg___lam__0___closed__7);
 l_Lean_Meta_DiscrTree_Trie_format___redArg___closed__0 = _init_l_Lean_Meta_DiscrTree_Trie_format___redArg___closed__0();
 lean_mark_persistent(l_Lean_Meta_DiscrTree_Trie_format___redArg___closed__0);
 l_Lean_Meta_DiscrTree_Trie_format___redArg___closed__1 = _init_l_Lean_Meta_DiscrTree_Trie_format___redArg___closed__1();

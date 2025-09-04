@@ -172,7 +172,6 @@ lean_object* l_Id_instMonad___lam__4___boxed(lean_object*, lean_object*, lean_ob
 static lean_object* l_Lean_Elab_Tactic_Omega_initFn___closed__14____x40_Lean_Elab_Tactic_Omega_Core_3193685152____hygCtx___hyg_2_;
 static lean_object* l_Lean_Elab_Tactic_Omega_Justification_toString___closed__7;
 static lean_object* l_Lean_Elab_Tactic_Omega_instToExprLinearCombo___lam__0___closed__10;
-lean_object* lean_string_push(lean_object*, uint32_t);
 lean_object* l_Lean_Level_ofNat(lean_object*);
 static lean_object* l_Lean_Elab_Tactic_Omega_Problem_instToString___lam__3___closed__5;
 lean_object* l_ReaderT_instMonad___redArg(lean_object*);
@@ -286,6 +285,7 @@ lean_object* l_Lean_mkConst(lean_object*, lean_object*);
 static lean_object* l_Lean_Elab_Tactic_Omega_Problem_instToString___lam__3___closed__1;
 static lean_object* l_Lean_Elab_Tactic_Omega_Justification_bmodProof___closed__22;
 LEAN_EXPORT lean_object* l_Lean_isTracingEnabledFor___at___Lean_Elab_Tactic_Omega_Problem_fourierMotzkinSelect_spec__0___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
+lean_object* lean_string_push(lean_object*, uint32_t);
 LEAN_EXPORT lean_object* l_Lean_Elab_Tactic_Omega_Fact_combo(lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_addTrace___at___Lean_Elab_Tactic_Omega_Problem_runOmega_spec__1(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, uint8_t, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Elab_Tactic_Omega_Problem_replayEliminations(lean_object*, lean_object*);
@@ -479,6 +479,7 @@ lean_object* l_ReaderT_instApplicativeOfMonad___redArg___lam__4(lean_object*, le
 static lean_object* l_Lean_Elab_Tactic_Omega_Problem_instToString___lam__3___closed__3;
 LEAN_EXPORT lean_object* l_Lean_isTracingEnabledFor___at___Lean_Elab_Tactic_Omega_Problem_runOmega_spec__0___redArg___boxed(lean_object*, lean_object*, lean_object*);
 static lean_object* l_Lean_Elab_Tactic_Omega_instToExprLinearCombo___lam__0___closed__12;
+lean_object* lean_string_append(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Std_DHashMap_Internal_AssocList_foldlM___at___Lean_Elab_Tactic_Omega_Problem_selectEquality_spec__0(lean_object*, lean_object*);
 static lean_object* l_Lean_Elab_Tactic_Omega_Problem_fourierMotzkinSelect___closed__2;
 static lean_object* l_Lean_Elab_Tactic_Omega_Problem_proveFalse_x3f__spec___autoParam___closed__13;

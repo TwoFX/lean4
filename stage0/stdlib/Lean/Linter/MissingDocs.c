@@ -517,6 +517,7 @@ LEAN_EXPORT lean_object* l_Lean_throwError___at_____private_Lean_Elab_SetOption_
 LEAN_EXPORT lean_object* l_Std_DHashMap_Internal_AssocList_foldlM___at_____private_Std_Data_DHashMap_Internal_Defs_0__Std_DHashMap_Internal_Raw_u2080_expand_go___at___Std_DHashMap_Internal_Raw_u2080_expand___at___Std_DHashMap_Internal_Raw_u2080_insertIfNew___at___Lean_Linter_MissingDocs_checkDecl_spec__0_spec__1_spec__1_spec__1(lean_object*, lean_object*, lean_object*);
 uint8_t l_Lean_DataValue_sameCtor(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Linter_MissingDocs_lintDeclHead___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
+lean_object* lean_string_append(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Linter_MissingDocs_initFn___lam__2____x40_Lean_Linter_MissingDocs_103323494____hygCtx___hyg_2____boxed(lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_throwUnknownConstantAt___at___Lean_throwUnknownConstant___at___Lean_getConstInfo___at_____private_Lean_Linter_MissingDocs_0__Lean_Linter_MissingDocs_initFn____x40_Lean_Linter_MissingDocs_579962827____hygCtx___hyg_2__spec__2_spec__2_spec__2___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* l_Nat_nextPowerOfTwo(lean_object*);
@@ -11554,7 +11555,6 @@ if (x_35 == 0)
 lean_object* x_36; lean_object* x_37; 
 x_36 = lean_ctor_get(x_2, 0);
 x_37 = l_String_quote(x_36);
-lean_dec_ref(x_36);
 lean_ctor_set_tag(x_2, 3);
 lean_ctor_set(x_2, 0, x_37);
 x_10 = x_34;
@@ -11569,7 +11569,6 @@ x_38 = lean_ctor_get(x_2, 0);
 lean_inc(x_38);
 lean_dec(x_2);
 x_39 = l_String_quote(x_38);
-lean_dec_ref(x_38);
 x_40 = lean_alloc_ctor(3, 1, 0);
 lean_ctor_set(x_40, 0, x_39);
 x_10 = x_34;

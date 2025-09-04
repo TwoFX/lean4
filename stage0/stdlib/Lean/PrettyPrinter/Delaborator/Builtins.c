@@ -44187,7 +44187,6 @@ lean_inc_ref(x_79);
 lean_dec_ref(x_10);
 x_80 = lean_box(2);
 x_81 = l_Lean_Syntax_mkStrLit(x_79, x_80);
-lean_dec_ref(x_79);
 lean_ctor_set(x_8, 0, x_81);
 return x_8;
 }
@@ -44202,7 +44201,6 @@ lean_inc_ref(x_83);
 lean_dec_ref(x_10);
 x_84 = lean_box(2);
 x_85 = l_Lean_Syntax_mkStrLit(x_83, x_84);
-lean_dec_ref(x_83);
 x_86 = lean_alloc_ctor(0, 2, 0);
 lean_ctor_set(x_86, 0, x_85);
 lean_ctor_set(x_86, 1, x_82);

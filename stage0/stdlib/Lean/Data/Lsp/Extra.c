@@ -192,6 +192,7 @@ static lean_object* l_Lean_Lsp_fromJsonLeanModuleHierarchyImportsParams___closed
 LEAN_EXPORT uint8_t l_Lean_Lsp_instInhabitedDependencyBuildMode;
 static lean_object* l_Lean_Lsp_reprLineRange___redArg___closed__14____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_;
 static lean_object* l_Lean_Lsp_fromJsonRpcReleaseParams___closed__3____x40_Lean_Data_Lsp_Extra_2819556094____hygCtx___hyg_30_;
+lean_object* lean_string_length(lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Lsp_LeanFileProgressKind_processing_elim___redArg___boxed(lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Lsp_LeanModuleHierarchyImportedByParams_ctorIdx(lean_object*);
 static lean_object* l_Lean_Lsp_fromJsonPlainGoalParams___closed__0____x40_Lean_Data_Lsp_Extra_1640670504____hygCtx___hyg_13_;
@@ -620,6 +621,7 @@ static lean_object* l_Lean_Lsp_fromJsonPlainTermGoalParams___closed__7____x40_Le
 LEAN_EXPORT lean_object* l_Lean_Lsp_fromJsonRpcKeepAliveParams____x40_Lean_Data_Lsp_Extra_3356697051____hygCtx___hyg_21_(lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Lsp_ModuleHierarchyOptions_noConfusion___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 static lean_object* l_Lean_Lsp_fromJsonPlainTermGoal___closed__3____x40_Lean_Data_Lsp_Extra_599235548____hygCtx___hyg_21_;
+static lean_object* l_Lean_Lsp_reprLineRange___redArg___closed__17____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_;
 LEAN_EXPORT lean_object* l_Lean_Lsp_toJsonLeanImportMetaKind____x40_Lean_Data_Lsp_Extra_3426322505____hygCtx___hyg_23____boxed(lean_object*);
 static lean_object* l_Lean_Lsp_fromJsonLeanModuleHierarchyImportedByParams___closed__3____x40_Lean_Data_Lsp_Extra_1106778363____hygCtx___hyg_13_;
 lean_object* l_Lean_Lsp_toJsonTextDocumentIdentifier____x40_Lean_Data_Lsp_Basic_1517629300____hygCtx___hyg_13_(lean_object*);
@@ -11293,12 +11295,21 @@ static lean_object* _init_l_Lean_Lsp_reprLineRange___redArg___closed__14____x40_
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
-x_1 = lean_unsigned_to_nat(2u);
-x_2 = lean_nat_to_int(x_1);
+x_1 = l_Lean_Lsp_reprLineRange___redArg___closed__0____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_;
+x_2 = lean_string_length(x_1);
 return x_2;
 }
 }
 static lean_object* _init_l_Lean_Lsp_reprLineRange___redArg___closed__15____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_() {
+_start:
+{
+lean_object* x_1; lean_object* x_2; 
+x_1 = l_Lean_Lsp_reprLineRange___redArg___closed__14____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_;
+x_2 = lean_nat_to_int(x_1);
+return x_2;
+}
+}
+static lean_object* _init_l_Lean_Lsp_reprLineRange___redArg___closed__16____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -11308,7 +11319,7 @@ lean_ctor_set(x_2, 0, x_1);
 return x_2;
 }
 }
-static lean_object* _init_l_Lean_Lsp_reprLineRange___redArg___closed__16____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_() {
+static lean_object* _init_l_Lean_Lsp_reprLineRange___redArg___closed__17____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -11372,12 +11383,12 @@ lean_ctor_set_uint8(x_24, sizeof(void*)*1, x_10);
 x_25 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_25, 0, x_19);
 lean_ctor_set(x_25, 1, x_24);
-x_26 = l_Lean_Lsp_reprLineRange___redArg___closed__14____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_;
-x_27 = l_Lean_Lsp_reprLineRange___redArg___closed__15____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_;
+x_26 = l_Lean_Lsp_reprLineRange___redArg___closed__15____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_;
+x_27 = l_Lean_Lsp_reprLineRange___redArg___closed__16____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_;
 x_28 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_28, 0, x_27);
 lean_ctor_set(x_28, 1, x_25);
-x_29 = l_Lean_Lsp_reprLineRange___redArg___closed__16____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_;
+x_29 = l_Lean_Lsp_reprLineRange___redArg___closed__17____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_;
 x_30 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_30, 0, x_28);
 lean_ctor_set(x_30, 1, x_29);
@@ -11441,12 +11452,12 @@ lean_ctor_set_uint8(x_55, sizeof(void*)*1, x_41);
 x_56 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_56, 0, x_50);
 lean_ctor_set(x_56, 1, x_55);
-x_57 = l_Lean_Lsp_reprLineRange___redArg___closed__14____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_;
-x_58 = l_Lean_Lsp_reprLineRange___redArg___closed__15____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_;
+x_57 = l_Lean_Lsp_reprLineRange___redArg___closed__15____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_;
+x_58 = l_Lean_Lsp_reprLineRange___redArg___closed__16____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_;
 x_59 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_59, 0, x_58);
 lean_ctor_set(x_59, 1, x_56);
-x_60 = l_Lean_Lsp_reprLineRange___redArg___closed__16____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_;
+x_60 = l_Lean_Lsp_reprLineRange___redArg___closed__17____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_;
 x_61 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_61, 0, x_59);
 lean_ctor_set(x_61, 1, x_60);
@@ -12672,6 +12683,8 @@ l_Lean_Lsp_reprLineRange___redArg___closed__15____x40_Lean_Data_Lsp_Extra_295417
 lean_mark_persistent(l_Lean_Lsp_reprLineRange___redArg___closed__15____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_);
 l_Lean_Lsp_reprLineRange___redArg___closed__16____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_ = _init_l_Lean_Lsp_reprLineRange___redArg___closed__16____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_();
 lean_mark_persistent(l_Lean_Lsp_reprLineRange___redArg___closed__16____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_);
+l_Lean_Lsp_reprLineRange___redArg___closed__17____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_ = _init_l_Lean_Lsp_reprLineRange___redArg___closed__17____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_();
+lean_mark_persistent(l_Lean_Lsp_reprLineRange___redArg___closed__17____x40_Lean_Data_Lsp_Extra_2954174394____hygCtx___hyg_28_);
 l_Lean_Lsp_instReprLineRange___closed__0 = _init_l_Lean_Lsp_instReprLineRange___closed__0();
 lean_mark_persistent(l_Lean_Lsp_instReprLineRange___closed__0);
 l_Lean_Lsp_instReprLineRange = _init_l_Lean_Lsp_instReprLineRange();

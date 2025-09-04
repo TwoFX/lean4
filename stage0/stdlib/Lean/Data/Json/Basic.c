@@ -84,6 +84,7 @@ static lean_object* l___private_Lean_Data_Json_Basic_0__Lean_JsonNumber_fromPosi
 static lean_object* l_Lean_JsonNumber_fromFloat_x3f___closed__8;
 uint8_t lean_string_dec_eq(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Std_DTreeMap_Internal_Impl_insert___at___Lean_Json_mkObj_spec__0___redArg(lean_object*, lean_object*, lean_object*);
+lean_object* lean_string_length(lean_object*);
 uint8_t lean_int_dec_le(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l___private_Lean_Data_Json_Basic_0__Lean_JsonNumber_countDigits(lean_object*);
 double lean_float_negate(double);
@@ -113,6 +114,7 @@ LEAN_EXPORT lean_object* l_Lean_Json_str_elim___redArg(lean_object*, lean_object
 LEAN_EXPORT lean_object* l_Lean_JsonNumber_fromInt(lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Json_instHashable___private__1___boxed(lean_object*);
 LEAN_EXPORT lean_object* l_Lean_JsonNumber_shiftl___boxed(lean_object*, lean_object*);
+static lean_object* l_Lean_JsonNumber_instRepr___lam__0___closed__7;
 LEAN_EXPORT lean_object* l_Std_PRange_RangeIterator_instIteratorLoop_loop___at___Lean_JsonNumber_normalize_spec__0(lean_object*, uint8_t, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 static lean_object* l_Lean_JsonNumber_instRepr___lam__0___closed__2;
 LEAN_EXPORT lean_object* l_Lean_Json_instCoeRawStringStructured___lam__0(lean_object*);
@@ -1475,12 +1477,21 @@ static lean_object* _init_l_Lean_JsonNumber_instRepr___lam__0___closed__4() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
-x_1 = lean_unsigned_to_nat(1u);
-x_2 = l_instNatCastInt___lam__0(x_1);
+x_1 = l_Lean_JsonNumber_instRepr___lam__0___closed__0;
+x_2 = lean_string_length(x_1);
 return x_2;
 }
 }
 static lean_object* _init_l_Lean_JsonNumber_instRepr___lam__0___closed__5() {
+_start:
+{
+lean_object* x_1; lean_object* x_2; 
+x_1 = l_Lean_JsonNumber_instRepr___lam__0___closed__4;
+x_2 = l_instNatCastInt___lam__0(x_1);
+return x_2;
+}
+}
+static lean_object* _init_l_Lean_JsonNumber_instRepr___lam__0___closed__6() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -1490,7 +1501,7 @@ lean_ctor_set(x_2, 0, x_1);
 return x_2;
 }
 }
-static lean_object* _init_l_Lean_JsonNumber_instRepr___lam__0___closed__6() {
+static lean_object* _init_l_Lean_JsonNumber_instRepr___lam__0___closed__7() {
 _start:
 {
 lean_object* x_1; lean_object* x_2; 
@@ -1558,12 +1569,12 @@ lean_ctor_set(x_10, 0, x_9);
 x_11 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_11, 0, x_8);
 lean_ctor_set(x_11, 1, x_10);
-x_12 = l_Lean_JsonNumber_instRepr___lam__0___closed__4;
-x_13 = l_Lean_JsonNumber_instRepr___lam__0___closed__5;
+x_12 = l_Lean_JsonNumber_instRepr___lam__0___closed__5;
+x_13 = l_Lean_JsonNumber_instRepr___lam__0___closed__6;
 x_14 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_14, 0, x_13);
 lean_ctor_set(x_14, 1, x_11);
-x_15 = l_Lean_JsonNumber_instRepr___lam__0___closed__6;
+x_15 = l_Lean_JsonNumber_instRepr___lam__0___closed__7;
 x_16 = lean_alloc_ctor(5, 2, 0);
 lean_ctor_set(x_16, 0, x_14);
 lean_ctor_set(x_16, 1, x_15);
@@ -6853,6 +6864,8 @@ l_Lean_JsonNumber_instRepr___lam__0___closed__5 = _init_l_Lean_JsonNumber_instRe
 lean_mark_persistent(l_Lean_JsonNumber_instRepr___lam__0___closed__5);
 l_Lean_JsonNumber_instRepr___lam__0___closed__6 = _init_l_Lean_JsonNumber_instRepr___lam__0___closed__6();
 lean_mark_persistent(l_Lean_JsonNumber_instRepr___lam__0___closed__6);
+l_Lean_JsonNumber_instRepr___lam__0___closed__7 = _init_l_Lean_JsonNumber_instRepr___lam__0___closed__7();
+lean_mark_persistent(l_Lean_JsonNumber_instRepr___lam__0___closed__7);
 l_Lean_JsonNumber_instRepr = _init_l_Lean_JsonNumber_instRepr();
 lean_mark_persistent(l_Lean_JsonNumber_instRepr);
 l_Lean_JsonNumber_instOfScientific = _init_l_Lean_JsonNumber_instOfScientific();

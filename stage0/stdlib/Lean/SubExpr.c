@@ -78,7 +78,6 @@ LEAN_EXPORT lean_object* l_Lean_SubExpr_Pos_instDecidableEq___boxed(lean_object*
 lean_object* lean_nat_shiftr(lean_object*, lean_object*);
 static lean_object* l_Lean_SubExpr_fromJsonGoalsLocation___closed__3____x40_Lean_SubExpr_818559617____hygCtx___hyg_21_;
 LEAN_EXPORT lean_object* l_Lean_SubExpr_Pos_all___boxed(lean_object*, lean_object*);
-lean_object* lean_string_push(lean_object*, uint32_t);
 LEAN_EXPORT lean_object* l_Lean_SubExpr_Pos_pushNaryFn___boxed(lean_object*, lean_object*);
 lean_object* l_Function_comp(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_SubExpr_Pos_maxChildren;
@@ -138,6 +137,7 @@ LEAN_EXPORT lean_object* l_Lean_SubExpr_toJsonGoalsLocation____x40_Lean_SubExpr_
 LEAN_EXPORT lean_object* l_Lean_SubExpr_Pos_root;
 LEAN_EXPORT lean_object* l_Lean_SubExpr_GoalLocation_hyp_elim(lean_object*, lean_object*, lean_object*, lean_object*);
 static lean_object* l_Lean_SubExpr_fromJsonGoalsLocation___closed__13____x40_Lean_SubExpr_818559617____hygCtx___hyg_21_;
+lean_object* lean_string_push(lean_object*, uint32_t);
 LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at___Lean_SubExpr_Pos_ofArray_spec__0(lean_object*, size_t, size_t, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_SubExpr_Pos_pushLetValue___boxed(lean_object*);
 LEAN_EXPORT lean_object* l_Lean_SubExpr_fromJsonGoalLocation___lam__3____x40_Lean_SubExpr_568868101____hygCtx___hyg_77_(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
@@ -232,6 +232,7 @@ LEAN_EXPORT lean_object* l_Lean_SubExpr_fromJsonGoalsLocation____x40_Lean_SubExp
 LEAN_EXPORT lean_object* l_Lean_instInhabitedSubExpr;
 lean_object* lean_nat_mul(lean_object*, lean_object*);
 static lean_object* l_Lean_SubExpr_fromJsonGoalLocation___lam__1___closed__0____x40_Lean_SubExpr_568868101____hygCtx___hyg_77_;
+lean_object* lean_string_append(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_SubExpr_Pos_depth___lam__0___boxed(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_SubExpr_fromJsonGoalLocation____x40_Lean_SubExpr_568868101____hygCtx___hyg_77_(lean_object*);
 static lean_object* l_Lean_SubExpr_fromJsonGoalsLocation___closed__14____x40_Lean_SubExpr_818559617____hygCtx___hyg_21_;
@@ -2006,7 +2007,6 @@ lean_object* x_3; lean_object* x_4; lean_object* x_5; lean_object* x_6; lean_obj
 x_3 = l_Lean_SubExpr_Pos_instRepr___lam__0___closed__1;
 x_4 = l_Lean_SubExpr_Pos_toString(x_1);
 x_5 = l_String_quote(x_4);
-lean_dec_ref(x_4);
 x_6 = lean_alloc_ctor(3, 1, 0);
 lean_ctor_set(x_6, 0, x_5);
 x_7 = lean_alloc_ctor(5, 2, 0);

@@ -234,7 +234,6 @@ uint8_t l_Lean_Name_isPrefixOf(lean_object*, lean_object*);
 static lean_object* l_Lean_Elab_Command_elabInitialize___closed__13;
 static lean_object* l_Lean_Elab_Command_elabInitialize___closed__29;
 lean_object* l_Array_mkArray0(lean_object*);
-lean_object* lean_string_push(lean_object*, uint32_t);
 static lean_object* l_Lean_Elab_elabModifiers___at___Lean_Elab_Command_elabDeclaration_spec__0___closed__2;
 LEAN_EXPORT uint8_t l___private_Lean_Elab_Declaration_0__Lean_Elab_Command_isInstanceDecl(lean_object*);
 LEAN_EXPORT lean_object* l___private_Lean_Elab_Declaration_0__Lean_Elab_Command_elabMutual___regBuiltin_Lean_Elab_Command_elabMutual__5(lean_object*);
@@ -413,6 +412,7 @@ static lean_object* l___private_Lean_Elab_Declaration_0__Lean_Elab_Command_expan
 static lean_object* l_Lean_Elab_elabAttr___at___Lean_Elab_elabAttrs___at___Lean_Elab_elabDeclAttrs___at___Lean_Elab_elabModifiers___at___Lean_Elab_Command_elabDeclaration_spec__0_spec__0_spec__0_spec__6___lam__0___closed__2;
 LEAN_EXPORT lean_object* l_Lean_throwErrorAt___at___Lean_Elab_liftMacroM___at___Lean_Elab_elabAttr___at___Lean_Elab_elabAttrs___at___Lean_Elab_elabDeclAttrs___at___Lean_Elab_elabModifiers___at___Lean_Elab_Command_elabDeclaration_spec__0_spec__0_spec__0_spec__6_spec__6_spec__10___redArg___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 static lean_object* l___private_Init_Data_Array_Basic_0__Array_mapMUnsafe_map___at___Lean_Elab_Command_expandMutualNamespace_spec__2___closed__2;
+lean_object* lean_string_push(lean_object*, uint32_t);
 lean_object* l_Lean_Elab_expandDeclSig(lean_object*);
 static lean_object* l_Lean_Elab_Command_elabInitialize___closed__4;
 static lean_object* l___private_Lean_Elab_Declaration_0__Lean_Elab_Command_setDeclIdName___closed__3;
@@ -688,6 +688,7 @@ static lean_object* l___private_Lean_Elab_Declaration_0__Lean_Elab_Command_elabA
 LEAN_EXPORT lean_object* l_Lean_throwUnknownConstantAt___at___Lean_throwUnknownConstant___at___Lean_getConstVal___at___Lean_mkConstWithLevelParams___at___Lean_Elab_Command_elabAxiom_spec__0_spec__0_spec__0_spec__0___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* l_Lean_Syntax_getRange_x3f(lean_object*, uint8_t);
 uint8_t l_Lean_isPrivateName(lean_object*);
+lean_object* lean_string_append(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Elab_Command_findCommonPrefix(lean_object*);
 static lean_object* l_Lean_Elab_Command_elabDeclaration___lam__2___closed__1;
 LEAN_EXPORT lean_object* l_Lean_getConstVal___at___Lean_mkConstWithLevelParams___at___Lean_Elab_Command_elabAxiom_spec__0_spec__0___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
@@ -23968,7 +23969,6 @@ x_832 = l_Lean_Elab_elabAttr___at___Lean_Elab_elabAttrs___at___Lean_Elab_elabDec
 x_833 = l_Lean_Syntax_getArg(x_152, x_11);
 lean_dec(x_152);
 x_834 = l_Lean_Syntax_isToken(x_7, x_833);
-lean_dec(x_833);
 if (x_834 == 0)
 {
 lean_object* x_835; 

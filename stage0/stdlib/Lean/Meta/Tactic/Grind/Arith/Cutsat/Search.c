@@ -476,6 +476,7 @@ static lean_object* l_Lean_Meta_Grind_Arith_Cutsat_resolveConflict___closed__21;
 lean_object* l_Std_DTreeMap_Internal_Impl_maxView___redArg(lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_PersistentArray_forIn___at_____private_Lean_Meta_Tactic_Grind_Arith_Cutsat_Search_0__Lean_Meta_Grind_Arith_Cutsat_traceActiveCnstrs_spec__7___redArg___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 static lean_object* l_Lean_Meta_Grind_Arith_Cutsat_resolveRealLowerUpperConflict___closed__0;
+lean_object* lean_string_append(lean_object*, lean_object*);
 static lean_object* l_Lean_Meta_Grind_Arith_Cutsat_resolveRealLowerUpperConflict___closed__3;
 static lean_object* l_Lean_Meta_Grind_Arith_Cutsat_resolveConflict___closed__3;
 LEAN_EXPORT lean_object* l_Std_DTreeMap_Internal_Impl_Const_alter___at___Lean_Meta_Grind_Arith_Cutsat_resolveConflict_spec__3___redArg___lam__0___boxed(lean_object*, lean_object*);

@@ -518,7 +518,6 @@ LEAN_EXPORT lean_object* l_Lean_ensureNoOverload___at___Lean_resolveGlobalConstN
 static lean_object* l_Lean_Elab_Tactic_evalSubst___lam__0___closed__3;
 static lean_object* l___private_Lean_Elab_Tactic_BuiltinTactic_0__Lean_Elab_Tactic_evalClearValue___regBuiltin_Lean_Elab_Tactic_evalClearValue__1___closed__2;
 static lean_object* l___private_Lean_Elab_Tactic_BuiltinTactic_0__Lean_Elab_Tactic_evalDone___regBuiltin_Lean_Elab_Tactic_evalDone__1___closed__3;
-lean_object* lean_string_push(lean_object*, uint32_t);
 lean_object* l_Array_back_x21___redArg(lean_object*, lean_object*);
 static lean_object* l___private_Lean_Elab_Tactic_BuiltinTactic_0__Lean_Elab_Tactic_evalLeft___regBuiltin_Lean_Elab_Tactic_evalLeft__1___closed__1;
 static lean_object* l___private_Lean_Elab_Tactic_BuiltinTactic_0__Lean_Elab_Tactic_evalTacticCDot___regBuiltin_Lean_Elab_Tactic_evalTacticCDot_declRange__3___closed__1;
@@ -931,6 +930,7 @@ LEAN_EXPORT lean_object* l_Lean_Elab_Term_withoutTacticIncrementality___at___Lea
 lean_object* l_Std_PRange_instSupportsUpperBoundUnbounded(lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Elab_Term_withNarrowedArgTacticReuse___at___Lean_Elab_Tactic_evalWithAnnotateState_spec__0(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_getConstVal___at___Lean_mkConstWithLevelParams___at___Lean_Elab_addConstInfo___at___Lean_Elab_OpenDecl_elabOpenDecl___at___Lean_Elab_Tactic_evalOpen_spec__5_spec__31_spec__31_spec__31___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
+lean_object* lean_string_push(lean_object*, uint32_t);
 static lean_object* l_Lean_Elab_OpenDecl_elabOpenDecl___at___Lean_Elab_Tactic_evalOpen_spec__5___closed__9;
 LEAN_EXPORT lean_object* l___private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at___Lean_Elab_Tactic_evalClearValue_spec__2(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, uint8_t, lean_object*, lean_object*, lean_object*, size_t, size_t, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* l_Lean_MVarId_revert(lean_object*, lean_object*, uint8_t, uint8_t, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
@@ -1549,6 +1549,7 @@ static lean_object* l___private_Lean_Elab_Tactic_BuiltinTactic_0__Lean_Elab_Tact
 static lean_object* l___private_Lean_Elab_Tactic_BuiltinTactic_0__Lean_Elab_Tactic_evalIntro_introStep___lam__5___closed__3;
 uint8_t l_Lean_DataValue_sameCtor(lean_object*, lean_object*);
 static lean_object* l_Lean_Elab_OpenDecl_elabOpenDecl___at___Lean_Elab_Tactic_evalOpen_spec__5___closed__14;
+lean_object* lean_string_append(lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_PersistentHashMap_insert___at___Lean_MVarId_assign___at___Lean_Elab_Tactic_renameInaccessibles_spec__10_spec__10(lean_object*, lean_object*, lean_object*, lean_object*);
 LEAN_EXPORT lean_object* l_Lean_Elab_Tactic_evalIntros___lam__1___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 static lean_object* l___private_Lean_Elab_Tactic_BuiltinTactic_0__Lean_Elab_Tactic_evalChoice___regBuiltin_Lean_Elab_Tactic_evalChoice_declRange__3___closed__6;
@@ -20226,7 +20227,6 @@ if (x_41 == 0)
 lean_object* x_42; lean_object* x_43; 
 x_42 = lean_ctor_get(x_2, 0);
 x_43 = l_String_quote(x_42);
-lean_dec_ref(x_42);
 lean_ctor_set_tag(x_2, 3);
 lean_ctor_set(x_2, 0, x_43);
 x_16 = x_39;
@@ -20241,7 +20241,6 @@ x_44 = lean_ctor_get(x_2, 0);
 lean_inc(x_44);
 lean_dec(x_2);
 x_45 = l_String_quote(x_44);
-lean_dec_ref(x_44);
 x_46 = lean_alloc_ctor(3, 1, 0);
 lean_ctor_set(x_46, 0, x_45);
 x_16 = x_39;

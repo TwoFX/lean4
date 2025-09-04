@@ -4053,7 +4053,6 @@ lean_object* x_29; lean_object* x_30; lean_object* x_31; lean_object* x_32; lean
 x_29 = lean_ctor_get(x_3, 0);
 x_30 = l___private_Lake_Load_Materialize_0__Lake_pkgNotIndexed___closed__5;
 x_31 = l_String_quote(x_29);
-lean_dec(x_29);
 lean_ctor_set_tag(x_3, 3);
 lean_ctor_set(x_3, 0, x_31);
 x_32 = l___private_Lake_Load_Materialize_0__Lake_pkgNotIndexed___closed__6;
@@ -4075,7 +4074,6 @@ lean_inc(x_38);
 lean_dec(x_3);
 x_39 = l___private_Lake_Load_Materialize_0__Lake_pkgNotIndexed___closed__5;
 x_40 = l_String_quote(x_38);
-lean_dec(x_38);
 x_41 = lean_alloc_ctor(3, 1, 0);
 lean_ctor_set(x_41, 0, x_40);
 x_42 = l___private_Lake_Load_Materialize_0__Lake_pkgNotIndexed___closed__6;

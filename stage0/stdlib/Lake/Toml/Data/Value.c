@@ -139,6 +139,7 @@ lean_object* lean_nat_sub(lean_object*, lean_object*);
 static lean_object* l___private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at_____private_Init_Data_Array_Basic_0__Array_foldlMUnsafe_fold___at___Lake_Toml_ppTable_spec__3_spec__3___closed__0;
 LEAN_EXPORT lean_object* l_Lake_Toml_Value_ctorElim___boxed(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 static lean_object* l_Lake_Toml_Table_empty___closed__0;
+lean_object* lean_string_append(lean_object*, lean_object*);
 static lean_object* l_String_foldlAux___at___Lake_Toml_ppString_spec__0___closed__1;
 static lean_object* l_Lake_Toml_ppInlineArray___closed__0;
 LEAN_EXPORT lean_object* l_Lake_Toml_Value_integer_elim___redArg(lean_object*, lean_object*);
