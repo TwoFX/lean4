@@ -1072,7 +1072,6 @@ theorem insertMany_eq_insertListₘ_toListModel [BEq α] [Hashable α] (m m₂ :
     simp only [List.foldl_cons, insertListₘ]
     apply ih
 
-
 theorem insertManyIfNew_eq_insertListIfNewₘ_toListModel [BEq α] [Hashable α] (m m₂ : Raw₀ α β) :
     insertManyIfNew m m₂.1 = insertListIfNewₘ m (toListModel m₂.1.buckets) := by
   simp only [insertManyIfNew, bind_pure_comp, map_pure, bind_pure]
@@ -1100,7 +1099,8 @@ theorem union_eq_unionₘ [BEq α] [Hashable α] (m₁ m₂ : Raw₀ α β) :
 theorem toListModel_unionₘ [BEq α] [Hashable α] [EquivBEq α] [LawfulHashable α]
     {m₁ m₂ : Raw₀ α β} (h₁ : Raw.WFImp m₁.1) (h₂ : Raw.WFImp m₂.1) :
     Perm (toListModel (unionₘ m₁ m₂).1.buckets)
-      (List.insertSmallerList (toListModel m₁.1.buckets) (toListModel m₂.1.buckets)) := by
+      (List.insertList (toListModel m₁.1.buckets) (toListModel m₂.1.buckets)) := by
+  refine Perm.trans ?_ (List.insertSmallerList_perm_insertList h₁.distinct h₂.distinct)
   rw [unionₘ, insertSmallerList, h₁.size_eq, h₂.size_eq]
   split
   · exact toListModel_insertListIfNewₘ ‹_›
@@ -1279,7 +1279,7 @@ theorem wf_union₀ [BEq α] [Hashable α] [EquivBEq α] [LawfulHashable α]
 theorem toListModel_union [BEq α] [Hashable α] [EquivBEq α] [LawfulHashable α] {m₁ m₂ : Raw₀ α β}
     (h₁ : Raw.WFImp m₁.1) (h₂ : Raw.WFImp m₂.1) :
     Perm (toListModel (m₁.union m₂).1.buckets)
-      (List.insertSmallerList (toListModel m₁.1.buckets) (toListModel m₂.1.buckets)) := by
+      (List.insertList (toListModel m₁.1.buckets) (toListModel m₂.1.buckets)) := by
   rw [union_eq_unionₘ]
   exact toListModel_unionₘ h₁ h₂
 

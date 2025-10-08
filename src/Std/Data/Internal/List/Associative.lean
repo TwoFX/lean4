@@ -3024,6 +3024,35 @@ theorem insertListIfNew_perm_of_perm_first [BEq α] [EquivBEq α] {l1 l2 toInser
     simp only [insertListIfNew]
     apply ih (insertEntryIfNew_of_perm distinct h) (DistinctKeys.insertEntryIfNew distinct)
 
+theorem _root_.Option.or_eq_left_of_isSome {o o' : Option α} : o.isSome = true → o.or o' = o := by
+  cases o <;> simp
+
+theorem insertListIfNew_perm_insertList [BEq α] [EquivBEq α] {l₁ l₂ : List ((a : α) × β a)}
+    (hd₁ : DistinctKeys l₁) (hd₂ : DistinctKeys l₂) :
+    List.Perm (insertListIfNew l₁ l₂) (insertList l₂ l₁) := by
+  induction l₂ using assoc_induction generalizing l₁ with
+  | nil =>
+    simp only [insertListIfNew]
+    exact Perm.trans (by simp) (perm_insertList hd₂ (pairwise_fst_eq_false hd₁) (by simp)).symm
+  | cons k v l ih =>
+    simp only [insertListIfNew]
+    refine Perm.trans (ih hd₁.insertEntryIfNew hd₂.tail) ?_
+    refine getEntry?_ext hd₂.tail.insertList hd₂.insertList (fun k' => ?_)
+    rw [getEntry?_insertList hd₂.tail (pairwise_fst_eq_false hd₁.insertEntryIfNew),
+      getEntry?_insertList hd₂ (pairwise_fst_eq_false hd₁), getEntry?_insertEntryIfNew]
+    simp only [Bool.and_eq_true, Bool.not_eq_eq_eq_not, Bool.not_true]
+    split
+    · rename_i h
+      rw [Option.some_or, Option.or_eq_right_of_none, getEntry?_cons_of_true h.1]
+      rw [← getEntry?_congr h.1, getEntry?_eq_none, h.2]
+    · rename_i h
+      rw [getEntry?_cons]
+      by_cases hk : k == k'
+      · simp only [hk, true_and, Bool.not_eq_false] at h
+        suffices (getEntry? k' l₁).isSome by simp [Option.or_eq_left_of_isSome this]
+        rwa [← containsKey_eq_isSome_getEntry?, ← containsKey_congr hk]
+      · simp [hk]
+
 theorem containsKey_insertListIfNew [BEq α] [PartialEquivBEq α] {l toInsert : List ((a : α) × β a)}
     {k : α} : containsKey k (List.insertListIfNew l toInsert) =
     (containsKey k l || (toInsert.map Sigma.fst).contains k) := by
@@ -3041,6 +3070,14 @@ theorem containsKey_insertListIfNew [BEq α] [PartialEquivBEq α] {l toInsert : 
 /-- Internal implementation detail of the hash map -/
 def insertSmallerList [BEq α] (l₁ l₂ : List ((a : α) × β a)) : List ((a : α) × β a) :=
   if l₁.length ≤ l₂.length then insertListIfNew l₂ l₁ else insertList l₁ l₂
+
+theorem insertSmallerList_perm_insertList [BEq α] [EquivBEq α] {l₁ l₂ : List ((a : α) × β a)}
+    (hd₁ : DistinctKeys l₁) (hd₂ : DistinctKeys l₂) :
+    List.Perm (insertSmallerList l₁ l₂) (insertList l₁ l₂) := by
+  rw [insertSmallerList]
+  split
+  · exact insertListIfNew_perm_insertList hd₂ hd₁
+  · exact Perm.refl _
 
 theorem DistinctKeys.insertSmallerList [BEq α] [PartialEquivBEq α] {l₁ l₂ : List ((a : α) × β a)}
     (h₁ : DistinctKeys l₁) (h₂ : DistinctKeys l₂) : DistinctKeys (insertSmallerList l₁ l₂) := by
