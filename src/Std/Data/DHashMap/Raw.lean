@@ -9,6 +9,7 @@ prelude
 public import Init.Data.BEq
 public import Init.Data.Hashable
 public import Std.Data.DHashMap.Internal.Defs
+import all Std.Data.DHashMap.Internal.Defs
 
 public section
 
@@ -705,9 +706,11 @@ theorem WF.Const.unitOfList [BEq α] [Hashable α] {l : List α} :
     (Const.unitOfList l : Raw α (fun _ => Unit)).WF :=
   Const.insertManyIfNewUnit WF.empty
 
-theorem WF.union [BEq α] [Hashable α] {m₁ m₂ : Raw α β} (h₁ : m₁.WF) (h₂ : m₂.WF) : (m₁.union m₂ : Raw α β).WF := by
-  simp [Std.DHashMap.Raw.union, h₁.size_buckets_pos, h₂.size_buckets_pos]
-  sorry
+theorem WF.union [BEq α] [Hashable α] {m₁ m₂ : Raw α β} (h₁ : m₁.WF) (h₂ : m₂.WF) : (m₁.union m₂).WF := by
+  simp [Std.DHashMap.Raw.union, h₁.size_buckets_pos, h₂.size_buckets_pos, Raw₀.union]
+  split
+  · exact (Raw₀.insertManyIfNew ⟨m₂, h₂.size_buckets_pos⟩ m₁).2 _ WF.insertIfNew₀ h₂
+  · exact (Raw₀.insertMany ⟨m₁, h₁.size_buckets_pos⟩ m₂).2 _ WF.insert₀ h₁
 
 end WF
 
