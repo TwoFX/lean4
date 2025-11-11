@@ -448,24 +448,15 @@ def insertMany {ρ : Type w} [ForIn Id ρ ((a : α) × β a)] [BEq α] [Hashable
   return r
 
 /-- Internal implementation detail of the hash map -/
-@[inline] def foldl {δ : Type w} (f : δ → (a : α) → β a → δ) (init : δ)
-    (m : Raw₀ α β) : { d : δ // ∀ (P : δ → Prop),
-      (∀ {d' a b}, P d' → P (f d' a b)) → P init → P d } := Id.run do
-  let mut r : { d : δ // ∀ (P : δ → Prop),
-      (∀ {d' a b}, P d' → P (f d' a b)) → P init → P d } := ⟨init, fun _ _ => id⟩
-  for ⟨a, b⟩ in m.1 do
-    r := ⟨f r.1 a b, fun _ h hm => h (r.2 _ h hm)⟩
-  return r
-
-/-- Internal implementation detail of the hash map -/
+@[inline]
 def interSmallerFn [BEq α] [Hashable α] (m sofar : Raw₀ α β) (k : α) : Raw₀ α β :=
   match m.getEntry? k with
   | some kv' => sofar.insert kv'.1 kv'.2
   | none => sofar
 
 /-- Internal implementation detail of the hash map -/
-def interSmaller [BEq α] [Hashable α] (m₁ m₂ : Raw₀ α β) : Raw₀ α β :=
-  (m₂.foldl (fun sofar k _ => interSmallerFn m₁ sofar k) emptyWithCapacity).1
+def interSmaller [BEq α] [Hashable α] (m₁ : Raw₀ α β) (m₂ : Raw α β) : Raw₀ α β :=
+  m₂.fold (fun sofar k _ => interSmallerFn m₁ sofar k) emptyWithCapacity
 
 /-- Internal implementation detail of the hash map -/
 @[inline] def union [BEq α] [Hashable α] (m₁ m₂ : Raw₀ α β) : Raw₀ α β :=
