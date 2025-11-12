@@ -2833,7 +2833,7 @@ theorem get?_inter_of_not_contains_right [LawfulBEq α] (h₁ : m₁.val.WF) (h�
 theorem get_inter [LawfulBEq α] (h₁ : m₁.val.WF) (h₂ : m₂.val.WF)
     {k : α} {h_contains : (m₁.inter m₂).contains k} :
     (m₁.inter m₂).get k h_contains =
-    m₁.get k (((@contains_inter_iff α β _ _ m₁ m₂ _ _ h₁ h₂ k).1 h_contains).1) := by
+    m₁.get k ((contains_inter_iff h₁ h₂).1 h_contains).1 := by
   simp_to_model [inter, get, contains] using List.getValueCast_filter_containsKey
 
 /- getD -/
