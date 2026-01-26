@@ -47,16 +47,16 @@ instance (s : Slice) : Std.Iterator (ForwardCharPredSearcher p s) Id (SearchStep
           ¬ p (it.internalState.currPos.get h1)
     | .skip _ => False
     | .done => it.internalState.currPos = s.endPos
-  step := fun ⟨⟨currPos⟩⟩ =>
-    if h1 : currPos = s.endPos then
+  step := fun st =>
+    if h1 : st.internalState.currPos = s.endPos then
       pure (.deflate ⟨.done, by simp [h1]⟩)
     else
-      let nextPos := currPos.next h1
+      let nextPos := st.internalState.currPos.next h1
       let nextIt := ⟨⟨nextPos⟩⟩
-      if h2 : p <| currPos.get h1 then
-        pure (.deflate ⟨.yield nextIt (.matched currPos nextPos), by simp [h1, h2, nextPos, nextIt]⟩)
+      if h2 : p <| st.internalState.currPos.get h1 then
+        pure (.deflate ⟨.yield nextIt (.matched st.internalState.currPos nextPos), by simp [h1, h2, nextPos, nextIt]⟩)
       else
-        pure (.deflate ⟨.yield nextIt (.rejected currPos nextPos), by simp [h1, h2, nextPos, nextIt]⟩)
+        pure (.deflate ⟨.yield nextIt (.rejected st.internalState.currPos nextPos), by simp [h1, h2, nextPos, nextIt]⟩)
 
 
 def finitenessRelation : Std.Iterators.FinitenessRelation (ForwardCharPredSearcher p s) Id where

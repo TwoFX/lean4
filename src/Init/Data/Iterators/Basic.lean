@@ -397,6 +397,14 @@ theorem internalState_toIterM {α m β} (it : α) :
     (IterM.mk it m β).internalState = it :=
   rfl
 
+@[simp]
+theorem Iter.internalState_toIterM {α β} (it : Std.Iter (α := α) β) :
+    it.toIterM.internalState = it.internalState := rfl
+
+@[simp]
+theorem IterM.toIter_mk' {α β} (it : α) :
+    (Std.IterM.mk' (β := β) it).toIter = ⟨it⟩ := rfl
+
 /--
 Asserts that certain step is plausibly the successor of a given iterator. What "plausible" means
 is up to the `Iterator` instance but it should be strong enough to allow termination proofs.
