@@ -12,6 +12,13 @@ import Init.Data.String.Lemmas.Basic
 
 public section
 
+namespace Std
+
+theorem lt_irrefl {α : Type u} [LT α] [Std.Irrefl (α := α) (· < ·)] {a : α} : ¬ a < a :=
+  Std.Irrefl.irrefl a
+
+end Std
+
 namespace String
 
 @[simp]
@@ -28,6 +35,10 @@ theorem Slice.Pos.le_startPos {s : Slice} (p : s.Pos) : p ≤ s.startPos ↔ p =
   ⟨fun h => Std.le_antisymm h (startPos_le _), by simp +contextual⟩
 
 @[simp]
+theorem Slice.Pos.startPos_lt_iff {s : Slice} (p : s.Pos) : s.startPos < p ↔ p ≠ s.startPos := by
+  simp [← le_startPos, Std.not_le]
+
+@[simp]
 theorem Slice.Pos.endPos_le {s : Slice} (p : s.Pos) : s.endPos ≤ p ↔ p = s.endPos :=
   ⟨fun h => Std.le_antisymm (le_endPos _) h, by simp +contextual⟩
 
@@ -38,5 +49,17 @@ theorem Pos.le_startPos {s : String} (p : s.Pos) : p ≤ s.startPos ↔ p = s.st
 @[simp]
 theorem Pos.endPos_le {s : String} (p : s.Pos) : s.endPos ≤ p ↔ p = s.endPos :=
   ⟨fun h => Std.le_antisymm (le_endPos _) h, by simp +contextual⟩
+
+@[simp]
+theorem Slice.Pos.not_lt_startPos {s : Slice} {p : s.Pos} : ¬ p < s.startPos :=
+  fun h => Std.lt_irrefl (Std.lt_of_lt_of_le h (Slice.Pos.startPos_le _))
+
+theorem Slice.Pos.ne_startPos_of_lt {s : Slice} {p q : s.Pos} : p < q → q ≠ s.startPos := by
+  rintro h rfl
+  simp at h
+
+theorem Slice.Pos.ofSliceFrom_lt_ofSliceFrom_iff {s : Slice} {p : s.Pos}
+    {q r : (s.sliceFrom p).Pos} : Slice.Pos.ofSliceFrom q < Slice.Pos.ofSliceFrom r ↔ q < r := by
+  simp [Slice.Pos.lt_iff, Pos.Raw.lt_iff]
 
 end String
