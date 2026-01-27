@@ -133,7 +133,7 @@ variable (pat : ρ) [ToForwardSearcher pat σ]
 def defaultStartsWith (s : Slice) [Std.IteratorLoop (σ s) Id Id] : Bool :=
   let searcher := ToForwardSearcher.toSearcher pat s
   match searcher.first? with
-  | some (.matched start ..) => s.startPos = start
+  | some (.matched ..) => true
   | _ => false
 
 @[specialize pat]
@@ -193,7 +193,7 @@ variable (pat : ρ) [ToBackwardSearcher pat σ]
 def defaultEndsWith (s : Slice) [Std.IteratorLoop (σ s) Id Id] : Bool :=
   let searcher := ToBackwardSearcher.toSearcher pat s
   match searcher.first? with
-  | some (.matched _ endPos) => s.endPos = endPos
+  | some (.matched ..) => true
   | _ => false
 
 @[specialize pat]
