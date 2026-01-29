@@ -97,6 +97,55 @@ theorem PosIterator.toList_eq_cons {s : Slice}
   rw [Std.Iter.toList_eq_match_step]
   simp [PosIterator.step_eq_if, h]
 
+namespace Subslice
+
+def ofSliceFrom {s : Slice} {p : s.Pos} (sl : (s.sliceFrom p).Subslice) : s.Subslice where
+  startInclusive := Slice.Pos.ofSliceFrom sl.startInclusive
+  endExclusive := Slice.Pos.ofSliceFrom sl.endExclusive
+  startInclusive_le_endExclusive := Slice.Pos.ofSliceFrom_le_ofSliceFrom_iff.2 sl.startInclusive_le_endExclusive
+
+@[simp]
+theorem startInclusive_ofSliceFrom {s : Slice} {p : s.Pos} {sl : (s.sliceFrom p).Subslice} :
+    sl.ofSliceFrom.startInclusive = Slice.Pos.ofSliceFrom sl.startInclusive := (rfl)
+
+@[simp]
+theorem endExclusive_ofSliceFrom {s : Slice} {p : s.Pos} {sl : (s.sliceFrom p).Subslice} :
+    sl.ofSliceFrom.endExclusive = Slice.Pos.ofSliceFrom sl.endExclusive := (rfl)
+
+@[simp]
+
+def extendLeft {s : Slice} {sl : s.Subslice} (newStart : s.Pos) (h : newStart ≤ sl.startInclusive) : s.Subslice where
+  startInclusive := newStart
+  endExclusive := sl.endExclusive
+  startInclusive_le_endExclusive := Std.le_trans h sl.startInclusive_le_endExclusive
+
+@[simp]
+theorem startInclusive_extendLeft {s : Slice} {sl : s.Subslice} {newStart : s.Pos} {h} :
+    (sl.extendLeft newStart h).startInclusive = newStart := (rfl)
+
+@[simp]
+theorem endExclusive_extendLeft {s : Slice} {sl : s.Subslice} {newStart : s.Pos} {h} :
+    (sl.extendLeft newStart h).endExclusive = sl.endExclusive := (rfl)
+
+def cast {s t : Slice} (h : s = t) (sl : s.Subslice) : t.Subslice where
+  startInclusive := sl.startInclusive.cast h
+  endExclusive := sl.endExclusive.cast h
+  startInclusive_le_endExclusive := sorry
+
+@[simp]
+theorem startInclusive_cast {s t : Slice} {h : s = t} {sl : s.Subslice} :
+    (sl.cast h).startInclusive = sl.startInclusive.cast h := (rfl)
+
+@[simp]
+theorem endExclusive_cast {s t : Slice} {h : s = t} {sl : s.Subslice} :
+    (sl.cast h).endExclusive = sl.endExclusive.cast h := (rfl)
+
+@[simp]
+theorem cast_rfl {s : Slice} : Subslice.cast (s := s) rfl = id := by
+  ext <;> simp
+
+end Subslice
+
 namespace Pattern
 
 namespace SearchStep
@@ -128,6 +177,17 @@ def ofSliceFrom {s : Slice} {p : s.Pos} (st : SearchStep (s.sliceFrom p)) : Sear
   | .rejected l r => .rejected (Slice.Pos.ofSliceFrom l) (Slice.Pos.ofSliceFrom r)
   | .matched l r => .matched (Slice.Pos.ofSliceFrom l) (Slice.Pos.ofSliceFrom r)
 
+@[simp]
+theorem startPos_ofSliceFrom {s : Slice} {p : s.Pos} {st : SearchStep (s.sliceFrom p)} :
+    st.ofSliceFrom.startPos = Slice.Pos.ofSliceFrom st.startPos := by
+  cases st <;>  simp [ofSliceFrom]
+
+@[simp]
+theorem endPos_ofSliceFrom {s : Slice} {p : s.Pos} {st : SearchStep (s.sliceFrom p)} :
+    st.ofSliceFrom.endPos = Slice.Pos.ofSliceFrom st.endPos := by
+  cases st <;> simp [ofSliceFrom]
+
+
 end SearchStep
 
 -- structure IsMatchList (s : Slice) (l : List (SearchStep s)) : Prop where
@@ -151,14 +211,69 @@ end SearchStep
 --     [∀ s, Std.Iterator (σ s) Id (SearchStep s)] [∀ s, Std.Iterators.Finite (σ s) Id] where
 --   isMatchList (s : Slice) : IsMatchList s (ToForwardSearcher.toSearcher pat s).toList
 
+theorem sliceFrom_induction (P : Slice → Prop) (s : Slice)
+    (ih : (s : Slice) → ((p : s.Pos) → (hp : p ≠ s.startPos) → P (s.sliceFrom p)) → P s) :
+    P s := by
+  induction s using WellFounded.induction (InvImage.wf Slice.utf8ByteSize Nat.lt_wfRel.wf) with | h s ih'
+  refine ih _ (fun p hp => ih' _ ?_)
+  change (s.sliceFrom p).utf8ByteSize < s.utf8ByteSize
+  simp only [utf8ByteSize_sliceFrom]
+  have := p.le_endPos
+  simp [Slice.Pos.ext_iff, Slice.Pos.le_iff, Pos.Raw.le_iff] at hp this
+  omega
+
+inductive IsMatchListAt {s : Slice} : (pos : s.Pos) → (l : List (SearchStep s)) → Prop where
+  | atEnd : IsMatchListAt s.endPos []
+  | notAtEnd (st : SearchStep s) (hst : st.startPos < st.endPos)
+      (l : List (SearchStep s)) (hl : IsMatchListAt st.endPos l) : IsMatchListAt st.startPos (st::l)
+
+theorem isMatchListAt_iff_match_head? {s : Slice} {pos : s.Pos} {l : List (SearchStep s)} :
+    IsMatchListAt pos l ↔
+      match l.head? with
+      | some st => pos = st.startPos ∧ st.startPos < st.endPos ∧ IsMatchListAt st.endPos l.tail
+      | none => pos = s.endPos := by
+  refine ⟨fun h => ?_, ?_⟩
+  · cases h <;> simp_all
+  · cases l
+    · simp +contextual [IsMatchListAt.atEnd]
+    · simp only [List.head?_cons, List.tail_cons, and_imp]
+      rintro rfl h₁ h₂
+      exact IsMatchListAt.notAtEnd _ h₁ _ h₂
+
 class LawfulToForwardSearcher₂ {ρ : Type} {σ : Slice → Type} (pat : ρ) [ToForwardSearcher pat σ]
-    [∀ s, Std.Iterator (σ s) Id (SearchStep s)] [∀ s, Std.Iterators.Finite (σ s) Id] where
+    [∀ s, Std.Iterator (σ s) Id (SearchStep s)] [∀ s, Std.Iterators.Finite (σ s) Id] : Prop where
   toList_eq_of_isEmpty (s : Slice) (h : s.isEmpty = true) :
       (ToForwardSearcher.toSearcher pat s).toList = []
   toList_eq_of_isEmpty_eq_false (s : Slice) (h : s.isEmpty = false) : ∃ (st : SearchStep s),
-      st.startPos = s.startPos ∧ st.endPos ≠ s.endPos ∧
+      st.startPos = s.startPos ∧ st.endPos ≠ s.startPos ∧
       (ToForwardSearcher.toSearcher pat s).toList = st ::
         (ToForwardSearcher.toSearcher pat (s.sliceFrom st.endPos)).toList.map SearchStep.ofSliceFrom
+
+-- class LawfulToForwardSearcher₃ {ρ : Type} {σ : Slice → Type} (pat : ρ) [ToForwardSearcher pat σ]
+--     [∀ s, Std.Iterator (σ s) Id (SearchStep s)] [∀ s, Std.Iterators.Finite (σ s) Id] : Prop where
+--   isMatchListAt (s : Slice) : IsMatchListAt s.startPos (ToForwardSearcher.toSearcher pat s).toList
+
+theorem IsMatchListAt.map_ofSliceFrom {s : Slice} {p₀ : s.Pos} {pos : (s.sliceFrom p₀).Pos} {l : List (SearchStep (s.sliceFrom p₀))}
+    (h : IsMatchListAt pos l) : IsMatchListAt (Slice.Pos.ofSliceFrom pos) (l.map SearchStep.ofSliceFrom) := by
+  induction h
+  · simpa using IsMatchListAt.atEnd
+  · simp only [← SearchStep.startPos_ofSliceFrom, List.map_cons]
+    apply IsMatchListAt.notAtEnd
+    · simpa [Pos.ofSliceFrom_lt_ofSliceFrom_iff]
+    · simpa
+
+theorem LawfulToForwardSearcher₂.isMatchListAt
+    {ρ : Type} {σ : Slice → Type} (pat : ρ) [ToForwardSearcher pat σ]
+    [∀ s, Std.Iterator (σ s) Id (SearchStep s)] [∀ s, Std.Iterators.Finite (σ s) Id]
+    [hx : LawfulToForwardSearcher₂ pat] (s : Slice) : IsMatchListAt s.startPos (ToForwardSearcher.toSearcher pat s).toList := by
+  induction s using sliceFrom_induction with | ih s ih
+  by_cases h : s.isEmpty
+  · simpa [LawfulToForwardSearcher₂.toList_eq_of_isEmpty _ h, startPos_eq_endPos_iff.2 h] using IsMatchListAt.atEnd
+  · obtain ⟨st, h₁, h₂, h₃⟩ := hx.toList_eq_of_isEmpty_eq_false _ (Bool.not_eq_true _ ▸ h)
+    rw [h₃, ← h₁]
+    apply IsMatchListAt.notAtEnd
+    · rwa [h₁, Pos.startPos_lt_iff]
+    · simpa using (ih _ h₂).map_ofSliceFrom
 
 -- theorem toList_toSearcher_eq_nil_iff {ρ : Type} {σ : Slice → Type} {pat : ρ}
 --     [ToForwardSearcher pat σ]
@@ -181,7 +296,7 @@ class LawfulForwardPattern {ρ : Type} (pat : ρ) [ForwardPattern pat] : Prop wh
 
 class LawfulToForwardSearcherForwardPattern₂ {ρ : Type} {σ : Slice → Type} (pat : ρ)
     [ToForwardSearcher pat σ] [∀ s, Std.Iterator (σ s) Id (SearchStep s)]
-    [∀ s, Std.Iterators.Finite (σ s) Id] [∀ s, Std.IteratorLoop (σ s) Id Id] [ForwardPattern pat] where
+    [∀ s, Std.Iterators.Finite (σ s) Id] [∀ s, Std.IteratorLoop (σ s) Id Id] [ForwardPattern pat] : Prop where
   dropPrefix?_eq s : ForwardPattern.dropPrefix? pat s = ForwardPattern.defaultDropPrefix? pat s
   startsWith_eq s : ForwardPattern.startsWith pat s = ForwardPattern.defaultStartsWith pat s
 
@@ -197,15 +312,152 @@ theorem ForwardPattern.dropPrefix?_defaultImplementation {ρ : Type} {σ : Slice
     letI := ForwardPattern.defaultImplementation (pat := pat)
     ForwardPattern.dropPrefix? pat s = ForwardPattern.defaultDropPrefix? pat s := rfl
 
-theorem toList_splitIterator {ρ : Type} {σ : Slice → Type}
+-- theorem LawfulForwardPattern.defaultImplementation {ρ : Type} {σ : Slice → Type}
+--     [∀ s, Std.Iterator (σ s) Id (SearchStep s)] {pat : ρ} [ToForwardSearcher pat σ]
+--     [∀ s, Std.Iterators.Finite (σ s) Id] [hx : LawfulToForwardSearcher₂ pat]
+--     [∀ s, Std.IteratorLoop (σ s) Id Id] [∀ s, Std.LawfulIteratorLoop (σ s) Id Id] :
+--     letI : ForwardPattern pat := ForwardPattern.defaultImplementation (pat := pat)
+--     LawfulForwardPattern pat := by
+--   letI : ForwardPattern pat := ForwardPattern.defaultImplementation (pat := pat)
+--   refine ⟨fun s => ?_, fun s p => ?_⟩
+--   · rw [ForwardPattern.dropPrefix?_defaultImplementation,
+--       ForwardPattern.startsWith_defaultImplementation,
+--       ForwardPattern.defaultStartsWith, ForwardPattern.defaultDropPrefix?]
+--     split <;> simp
+--   · rw [ForwardPattern.dropPrefix?_defaultImplementation, ForwardPattern.defaultDropPrefix?]
+--     rw [Std.Iter.first?_eq_head?_toList]
+--     split
+--     · rename_i o start stop h
+--       simp only [Option.some.injEq]
+--       rintro rfl
+--       have := hx.isMatchListAt pat s
+--       rw [isMatchListAt_iff_match_head?] at this
+--       simp [h] at this
+--       rcases this with ⟨rfl, h, -⟩
+--       exact Ne.symm (Std.ne_of_lt h)
+--     · simp
+
+-- theorem LawfulToForwardSearcherForwardPattern.defaultImplementation {ρ : Type} {σ : Slice → Type}
+--     [∀ s, Std.Iterator (σ s) Id (SearchStep s)] {pat : ρ} [ToForwardSearcher pat σ]
+--     [∀ s, Std.Iterators.Finite (σ s) Id] [LawfulToForwardSearcher₂ pat]
+--     [∀ s, Std.IteratorLoop (σ s) Id Id] [∀ s, Std.LawfulIteratorLoop (σ s) Id Id] :
+--     letI : ForwardPattern pat := ForwardPattern.defaultImplementation (pat := pat)
+--     LawfulToForwardSearcherForwardPattern pat := by
+--   letI : ForwardPattern pat := ForwardPattern.defaultImplementation (pat := pat)
+--   refine ⟨fun {s} l r h q => ?_, ?_⟩
+--   · rw [ForwardPattern.startsWith_defaultImplementation,
+--       ForwardPattern.defaultStartsWith]
+
+
+--   · sorry
+
+instance {ρ : Type} {σ : Slice → Type} (pat : ρ)
+    [ToForwardSearcher pat σ] [∀ s, Std.Iterator (σ s) Id (SearchStep s)]
+    [∀ s, Std.Iterators.Finite (σ s) Id] [∀ s, Std.IteratorLoop (σ s) Id Id]
+    [∀ s, Std.LawfulIteratorLoop (σ s) Id Id] [ForwardPattern pat]
+    [hx : LawfulToForwardSearcher₂ pat] [h : LawfulToForwardSearcherForwardPattern₂ pat] :
+    LawfulForwardPattern pat where
+  isSome_dropPrefix? s := by
+    rw [h.dropPrefix?_eq, h.startsWith_eq, ForwardPattern.defaultDropPrefix?,
+      ForwardPattern.defaultStartsWith]
+    split <;> simp
+  dropPrefix?_ne_startPos s p := by
+    rw [h.dropPrefix?_eq, ForwardPattern.defaultDropPrefix?]
+    rw [Std.Iter.first?_eq_head?_toList]
+    split
+    · rename_i o start stop h
+      simp only [Option.some.injEq]
+      rintro rfl
+      have := hx.isMatchListAt pat s
+      rw [isMatchListAt_iff_match_head?] at this
+      simp [h] at this
+      rcases this with ⟨rfl, h, -⟩
+      exact Ne.symm (Std.ne_of_lt h)
+    · simp
+
+def collectMismatches {ρ : Type} (pat : ρ) [ForwardPattern pat] (s : Slice) (pos : s.Pos) : Option s.Pos :=
+  if h : pos.IsAtEnd then
+    none
+  else if ForwardPattern.startsWith pat (s.sliceFrom pos) then
+    none
+  else
+    some ((collectMismatches pat s (pos.next h)).getD (pos.next h))
+termination_by pos
+
+-- theorem collectMismatches_eq_match {ρ : Type} {σ : Slice → Type}
+--     [∀ s, Std.Iterator (σ s) Id (SearchStep s)] [∀ s, Std.Iterators.Finite (σ s) Id]
+--     [∀ s, Std.IteratorLoop (σ s) Id Id] [∀ s, Std.LawfulIteratorLoop (σ s) Id Id]
+--     {pat : ρ} [ToForwardSearcher pat σ]
+--     [ForwardPattern pat] [LawfulToForwardSearcher₂ pat] [LawfulToForwardSearcherForwardPattern₂ pat]
+--     (s : Slice) (pos : s.Pos) :
+--     collectMismatches =
+
+def stupidSplit {ρ : Type} (pat : ρ) [ForwardPattern pat] [LawfulForwardPattern pat] (s : Slice)
+    (pos : s.Pos) : { l : List s.Subslice // l.head?.any (·.startInclusive = pos) } :=
+  match h : ForwardPattern.dropPrefix? pat (s.sliceFrom pos) with
+  | some endPos =>
+    have : pos < Slice.Pos.ofSliceFrom endPos :=
+      Std.lt_of_le_of_lt (Slice.Pos.le_ofSliceFrom (pos := Slice.startPos _))
+        (Slice.Pos.ofSliceFrom_lt_ofSliceFrom_iff.2 (by simpa using LawfulForwardPattern.dropPrefix?_ne_startPos _ _ h))
+    ⟨s.subslice pos pos (Std.le_refl _) :: (stupidSplit pat s (Slice.Pos.ofSliceFrom endPos)), by simp⟩
+  | none =>
+    if h : pos.IsAtEnd then
+      ⟨[s.subsliceFrom pos], by simp⟩
+    else
+      match stupidSplit pat s (pos.next h) with
+      | ⟨st::sts, h⟩ => ⟨st.extendLeft pos (by simp_all) :: sts, by simp⟩
+termination_by pos
+
+theorem stupidSplit_eq_aggregate {ρ : Type} (pat : ρ) [ForwardPattern pat] [LawfulForwardPattern pat] (s : Slice)
+    (pos pos' : s.Pos) (h₁ : pos ≤ pos') (h₂ : ∀ p, pos ≤ p → p < pos' → ForwardPattern.startsWith pat (s.sliceFrom p) = false) :
+    stupidSplit pat s pos = match stupidSplit pat s pos' with
+    | ⟨st::sts, h⟩ => ⟨st.extendLeft pos (by simp_all) :: sts, by simp⟩ := sorry
+
+-- theorem toList {ρ : Type} {σ : Slice → Type} [∀ s, Std.Iterator (σ s) Id (SearchStep s)]
+--     [∀ s, Std.Iterators.Finite (σ s) Id]
+--     [∀ s, Std.IteratorLoop (σ s) Id Id] [∀ s, Std.LawfulIteratorLoop (σ s) Id Id]
+--     {pat : ρ} [ToForwardSearcher pat σ] [ForwardPattern pat] [LawfulToForwardSearcher₂ pat]
+--     [LawfulToForwardSearcherForwardPattern₂ pat] (s : Slice) (pos : s.Pos) :
+
+theorem toList_splitToSubslice_sliceFrom {ρ : Type} {σ : Slice → Type}
     [∀ s, Std.Iterator (σ s) Id (SearchStep s)] [∀ s, Std.Iterators.Finite (σ s) Id]
-    [∀ s, Std.IteratorLoop (σ s) Id Id]
+    [∀ s, Std.IteratorLoop (σ s) Id Id] [∀ s, Std.LawfulIteratorLoop (σ s) Id Id]
+    {pat : ρ} [ToForwardSearcher pat σ]
+    [ForwardPattern pat] [LawfulToForwardSearcher₂ pat] [LawfulToForwardSearcherForwardPattern₂ pat]
+    (s : Slice) (pos : s.Pos) :
+    ((s.sliceFrom pos).splitToSubslice pat).toList.map Subslice.ofSliceFrom = (stupidSplit pat s pos).1 := by
+  
+  induction pos using WellFounded.induction Pos.wellFounded_lt with | h pos ih
+  rw [Std.Iter.toList_eq_match_step]
+  sorry
+
+theorem cast_lemma {ρ : Type} {σ : Slice → Type} [∀ s, Std.Iterator (σ s) Id (SearchStep s)] [∀ s, Std.Iterators.Finite (σ s) Id]
+    [∀ s, Std.IteratorLoop (σ s) Id Id] (pat : ρ) [ToForwardSearcher pat σ] (s t : Slice) (h : s = t) :
+    (s.splitToSubslice pat).toList = (t.splitToSubslice pat).toList.map (Subslice.cast h.symm) := by
+  cases h
+  simp
+
+theorem toList_splitToSubslice {ρ : Type} {σ : Slice → Type}
+    [∀ s, Std.Iterator (σ s) Id (SearchStep s)] [∀ s, Std.Iterators.Finite (σ s) Id]
+    [∀ s, Std.IteratorLoop (σ s) Id Id] [∀ s, Std.LawfulIteratorLoop (σ s) Id Id]
     {pat : ρ} [ToForwardSearcher pat σ]
     [ForwardPattern pat] [LawfulToForwardSearcher₂ pat] [LawfulToForwardSearcherForwardPattern₂ pat]
     (s : Slice) :
-    (s.split pat).toList =
-      match s.dropPrefix? pat with
-      | some
+    (s.splitToSubslice pat).toList = (stupidSplit pat s s.startPos).1 := by
+  have : s.sliceFrom s.startPos = s := rfl
+  rw [← toList_splitToSubslice_sliceFrom, cast_lemma _ _ _ this]
+  rw [List.map_map]
+  have : Subslice.ofSliceFrom ∘ Subslice.cast this.symm = id := by
+    ext <;> simp
+  rw [this, List.map_id]
+  -- have : Subslice.ofSliceFrom (p := s.startPos) = id := by ext; simp
+      -- match ForwardPattern.dropPrefix? pat s with
+      -- | some endPos => (s.subslice s.startPos s.startPos (Slice.Pos.startPos_le _)) ::
+      --     ((s.sliceFrom endPos).splitToSubslice pat).toList.map Subslice.ofSliceFrom
+      -- | none =>
+      --   if h : s.isEmpty then [s.toSubslice]
+      --   else sorry
+      --   := sorry
 
 -- theorem LawfulForwardPattern.defaultImplementation {ρ : Type} {σ : Slice → Type}
 --     [∀ s, Std.Iterator (σ s) Id (SearchStep s)] {pat : ρ} [ToForwardSearcher pat σ]

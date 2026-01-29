@@ -17,6 +17,7 @@ namespace String.Slice
 /--
 A region or slice of a slice.
 -/
+@[ext]
 structure Subslice (s : Slice) where
   /-- The byte position of the start of the subslice. -/
   startInclusive : s.Pos
@@ -59,6 +60,14 @@ def subslice (s : Slice) (newStart newEnd : s.Pos) (h : newStart ≤ newEnd) : s
 theorem toSlice_subslice {s : Slice} {newStart newEnd h} :
     (s.subslice newStart newEnd h).toSlice = s.slice newStart newEnd h := (rfl)
 
+@[simp]
+theorem startInclusive_subslice {s : Slice} {newStart newEnd : s.Pos} {h} :
+    (s.subslice newStart newEnd h).startInclusive = newStart := (rfl)
+
+@[simp]
+theorem endExclusive_subslice {s : Slice} {newStart newEnd : s.Pos} {h} :
+    (s.subslice newStart newEnd h).endExclusive = newEnd := (rfl)
+
 @[inline]
 def subslice! (s : Slice) (newStart newEnd : s.Pos) : s.Subslice :=
   if h : newStart ≤ newEnd then s.subslice _ _ h else panic! "Trying to construct a degenerate subslice"
@@ -67,6 +76,14 @@ def subslice! (s : Slice) (newStart newEnd : s.Pos) : s.Subslice :=
 @[inline]
 def subsliceFrom (s : Slice) (newStart : s.Pos) : s.Subslice :=
   s.subslice newStart s.endPos (Slice.Pos.le_endPos _)
+
+@[simp]
+theorem startInclusive_subsliceFrom {s : Slice} {newStart : s.Pos} :
+    (s.subsliceFrom newStart).startInclusive = newStart := (rfl)
+
+@[simp]
+theorem endExclusive_subsliceFrom {s : Slice} {newStart : s.Pos} :
+    (s.subsliceFrom newStart).endExclusive = s.endPos := (rfl)
 
 /-- The entire slice, as a subslice of itself. -/
 @[inline]

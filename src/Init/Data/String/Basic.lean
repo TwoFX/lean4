@@ -957,7 +957,7 @@ theorem Slice.Pos.isUTF8FirstByte_byte {s : Slice} {pos : s.Pos} {h : pos ≠ s.
 
 /-- Given a valid position on a slice `s`, obtains the corresponding valid position on the
 underlying string `s.str`. -/
-@[inline]
+@[inline, expose]
 def Slice.Pos.str {s : Slice} (pos : s.Pos) : s.str.Pos where
   offset := pos.offset.offsetBy s.startInclusive.offset
   isValid := pos.isValidForSlice.isValid_offsetBy

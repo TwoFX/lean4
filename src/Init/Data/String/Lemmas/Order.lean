@@ -17,6 +17,9 @@ namespace Std
 theorem lt_irrefl {α : Type u} [LT α] [Std.Irrefl (α := α) (· < ·)] {a : α} : ¬ a < a :=
   Std.Irrefl.irrefl a
 
+theorem ne_of_lt {α : Type u} [LT α] [Std.Irrefl (α := α) (· < ·)] {a b : α} : a < b → a ≠ b :=
+  fun h h' => absurd (h' ▸ h) (h' ▸ lt_irrefl)
+
 end Std
 
 namespace String
@@ -61,5 +64,9 @@ theorem Slice.Pos.ne_startPos_of_lt {s : Slice} {p q : s.Pos} : p < q → q ≠ 
 theorem Slice.Pos.ofSliceFrom_lt_ofSliceFrom_iff {s : Slice} {p : s.Pos}
     {q r : (s.sliceFrom p).Pos} : Slice.Pos.ofSliceFrom q < Slice.Pos.ofSliceFrom r ↔ q < r := by
   simp [Slice.Pos.lt_iff, Pos.Raw.lt_iff]
+
+theorem Slice.Pos.ofSliceFrom_le_ofSliceFrom_iff {s : Slice} {p : s.Pos}
+    {q r : (s.sliceFrom p).Pos} : Slice.Pos.ofSliceFrom q ≤ Slice.Pos.ofSliceFrom r ↔ q ≤ r := by
+  simp [Slice.Pos.le_iff, Pos.Raw.le_iff]
 
 end String
