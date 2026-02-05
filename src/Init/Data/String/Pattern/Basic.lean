@@ -382,7 +382,7 @@ variable {ρ : Type} (pat : ρ)
 
 @[inline]
 def iter (s : Slice) : Std.Iter (α := DefaultBackwardSearcher pat s) (SearchStep s) :=
-  ⟨⟨s.startPos⟩⟩
+  ⟨⟨s.endPos⟩⟩
 
 instance (s : Slice) [BackwardPattern pat] :
     Std.Iterator (DefaultBackwardSearcher pat s) Id (SearchStep s) where
@@ -393,7 +393,7 @@ instance (s : Slice) [BackwardPattern pat] :
       it'.internalState.currPos = it.internalState.currPos.prev h
     | .yield it' (.matched p₁ p₂) => ∃ (h : it.internalState.currPos ≠ s.startPos), ∃ pos,
       BackwardPattern.dropSuffixOfNonempty? pat (s.sliceTo it.internalState.currPos) (by simpa) = some pos ∧
-      p₁ = Slice.Pos.ofSliceTo pos  ∧ p₂ = it.internalState.currPos  ∧
+      p₁ = Slice.Pos.ofSliceTo pos ∧ p₂ = it.internalState.currPos  ∧
       it'.internalState.currPos = Slice.Pos.ofSliceTo pos
     | .done => it.internalState.currPos = s.startPos
     | .skip _ => False
@@ -404,7 +404,7 @@ instance (s : Slice) [BackwardPattern pat] :
       match h' : BackwardPattern.dropSuffixOfNonempty? pat (s.sliceTo it.internalState.currPos) (by simpa) with
       | some pos =>
         pure (.deflate ⟨.yield ⟨⟨Slice.Pos.ofSliceTo pos⟩⟩
-          (.matched (Slice.Pos.ofSliceTo pos) it.internalState.currPos ), by simp [h, h']⟩)
+          (.matched (Slice.Pos.ofSliceTo pos) it.internalState.currPos), by simp [h, h']⟩)
       | none =>
         pure (.deflate ⟨.yield ⟨⟨it.internalState.currPos.prev h⟩⟩
           (.rejected (it.internalState.currPos.prev h) it.internalState.currPos), by simp [h, h']⟩)
