@@ -1847,6 +1847,151 @@ end Const
 
 end monadic
 
+theorem any_toList {p : (a : α) → β a → Bool} :
+    t.toList.any (fun x => p x.1 x.2) = t.any p := by
+  rw [toList_eq_toListModel, any_eq_any_toListModel]
+
+theorem all_toList {p : (a : α) → β a → Bool} :
+    t.toList.all (fun x => p x.1 x.2) = t.all p := by
+  rw [toList_eq_toListModel, all_eq_all_toListModel]
+
+theorem all_eq_not_any_not {p : (a : α) → β a → Bool} :
+    t.all p = ! t.any (fun a b => ! p a b) := by
+  rw [← all_toList, ← any_toList, List.all_eq_not_any_not]
+
+theorem any_eq_not_all_not {p : (a : α) → β a → Bool} :
+    t.any p = ! t.all (fun a b => ! p a b) := by
+  rw [← all_toList, ← any_toList, List.any_eq_not_all_not]
+
+theorem any_eq_true [TransOrd α] [LawfulEqOrd α] {p : (a : α) → β a → Bool} (h : t.WF) :
+    t.any p = true ↔ ∃ (a : α) (h : t.contains a), p a (t.get a h) := by
+  simp only [← any_toList, List.any_eq_true, mem_toList_iff_get?_eq_some h,
+    get?_eq_some_iff h]
+  constructor
+  · intro h'
+    rcases h' with ⟨a, h', hp⟩
+    rcases h' with ⟨h', ha⟩
+    exists a.1
+    exists h'
+    simp [ha, hp]
+  · intro h'
+    rcases h' with ⟨a, h', hp⟩
+    exact ⟨⟨a, t.get a h'⟩, ⟨h', rfl⟩, hp⟩
+
+theorem any_eq_false [TransOrd α] [LawfulEqOrd α] {p : (a : α) → β a → Bool} (h : t.WF) :
+    t.any p = false ↔ ∀ (a : α) (h : t.contains a), p a (t.get a h) = false := by
+  simp only [← any_toList, List.any_eq_false, Bool.not_eq_true]
+  constructor
+  · intro h' k hk
+    have := h' ⟨k, t.get k hk⟩
+    simp only [mem_toList_iff_get?_eq_some h] at this
+    exact this ((get?_eq_some_iff h).mpr ⟨hk, rfl⟩)
+  · intro h' x hx
+    rw [mem_toList_iff_get?_eq_some h, get?_eq_some_iff h] at hx
+    rcases hx with ⟨h₂, hx⟩
+    rw [← hx]
+    exact h' x.1 h₂
+
+theorem all_eq_true [TransOrd α] [LawfulEqOrd α] {p : (a : α) → β a → Bool} (h : t.WF) :
+    t.all p = true ↔ ∀ (a : α) (h : t.contains a), p a (t.get a h) := by
+  simp [all_eq_not_any_not, any_eq_false h]
+
+theorem all_eq_false [TransOrd α] [LawfulEqOrd α] {p : (a : α) → β a → Bool} (h : t.WF) :
+    t.all p = false ↔ ∃ (a : α) (h : t.contains a), p a (t.get a h) = false := by
+  simp [all_eq_not_any_not, any_eq_true h]
+
+namespace Const
+
+variable {β : Type v} {t : Impl α β}
+
+theorem any_toList {p : (_ : α) → β → Bool} :
+    (Const.toList t).any (fun x => p x.1 x.2) = t.any p := by
+  rw [Const.toList_eq_toListModel_map, List.any_map]
+  exact any_eq_any_toListModel.symm
+
+theorem any_eq_true [TransOrd α] {p : (_ : α) → β → Bool} (h : t.WF) :
+    t.any p = true ↔ ∃ (a : α) (h : t.contains a), p (t.getKey a h) (Const.get t a h) := by
+  simp only [← any_toList, List.any_eq_true, Prod.exists,
+    mem_toList_iff_getKey?_eq_some_and_get?_eq_some h, getKey?_eq_some_iff h,
+    get?_eq_some_iff h]
+  constructor
+  · intro h'
+    rcases h' with ⟨a, b, h', hp⟩
+    rcases h' with ⟨ha, h₁, hb⟩
+    rcases ha with ⟨h₂, ha⟩
+    exists a; exists h₁
+    simp [ha, hb, hp]
+  · intro h'
+    rcases h' with ⟨a, h', hp⟩
+    exists t.getKey a h'; exists Const.get t a h'
+    simp only [hp, and_true]
+    have ha : (t.getKey a h') ∈ t :=
+      (mem_congr h (compare_getKey_self h h')).mpr h'
+    exact ⟨⟨ha, getKey_congr h (compare_getKey_self h h') ha⟩,
+           ha, get_congr h (compare_getKey_self h h')⟩
+
+theorem any_eq_true' [TransOrd α] [LawfulEqOrd α] {p : (_ : α) → β → Bool} (h : t.WF) :
+    t.any p = true ↔ ∃ (a : α) (h : t.contains a), p a (Const.get t a h) := by
+  simp [any_eq_true h, getKey_eq h]
+
+theorem any_eq_false [TransOrd α] {p : (_ : α) → β → Bool} (h : t.WF) :
+    t.any p = false ↔
+      ∀ (a : α) (h : t.contains a), p (t.getKey a h) (Const.get t a h) = false := by
+  simp only [← any_toList, List.any_eq_false, Bool.not_eq_true, Prod.forall,
+    mem_toList_iff_getKey?_eq_some_and_get?_eq_some h, getKey?_eq_some_iff h,
+    get?_eq_some_iff h, and_imp, forall_exists_index]
+  constructor
+  · intro h' k hk
+    have ha : (t.getKey k hk) ∈ t :=
+      (mem_congr h (compare_getKey_self h hk)).mpr hk
+    exact h' _ _ ha (getKey_congr h (compare_getKey_self h hk) ha) ha
+      (get_congr h (compare_getKey_self h hk))
+  · intro h' a b ha hka hb hgb
+    rw [← hka, ← hgb]
+    exact h' a ha
+
+theorem any_eq_false' [TransOrd α] [LawfulEqOrd α] {p : (_ : α) → β → Bool} (h : t.WF) :
+    t.any p = false ↔
+      ∀ (a : α) (h : t.contains a), p a (Const.get t a h) = false := by
+  simp [any_eq_false h, getKey_eq h]
+
+theorem all_toList {p : (_ : α) → β → Bool} :
+    (Const.toList t).all (fun x => p x.1 x.2) = t.all p := by
+  rw [Const.toList_eq_toListModel_map, List.all_map]
+  exact all_eq_all_toListModel.symm
+
+theorem all_eq_true [TransOrd α] {p : (a : α) → β → Bool} (h : t.WF) :
+    t.all p = true ↔ ∀ (a : α) (h : t.contains a), p (t.getKey a h) (Const.get t a h) := by
+  simp [all_eq_not_any_not, any_eq_false h]
+
+theorem all_eq_true' [TransOrd α] [LawfulEqOrd α] {p : (_ : α) → β → Bool} (h : t.WF) :
+    t.all p = true ↔ ∀ (a : α) (h : t.contains a), p a (Const.get t a h) := by
+  simp [all_eq_true h, getKey_eq h]
+
+theorem all_eq_false [TransOrd α] {p : (a : α) → β → Bool} (h : t.WF) :
+    t.all p = false ↔ ∃ (a : α) (h : t.contains a), p (t.getKey a h) (Const.get t a h) = false := by
+  simp [all_eq_not_any_not, any_eq_true h]
+
+theorem all_eq_false' [TransOrd α] [LawfulEqOrd α] {p : (_ : α) → β → Bool} (h : t.WF) :
+    t.all p = false ↔ ∃ (a : α) (h : t.contains a), p a (Const.get t a h) = false := by
+  simp [all_eq_false h, getKey_eq h]
+
+theorem any_keys {p : α → Bool} :
+    t.keys.any p = t.any (fun a _ => p a) := by
+  simp only [← any_toList, ← map_fst_toList_eq_keys, List.any_map]
+  induction (Const.toList t) with
+  | nil => simp
+  | cons hd tl ih => simp [ih]
+
+theorem all_keys {p : α → Bool} :
+    t.keys.all p = t.all (fun a _ => p a) := by
+  simp only [← all_toList, ← map_fst_toList_eq_keys, List.all_map]
+  induction (Const.toList t) with
+  | nil => simp
+  | cons hd tl ih => simp [ih]
+
+end Const
+
 theorem insertMany_cons (h : t.WF) {l : List ((a : α) × β a)} {k : α} {v : β k} :
     (t.insertMany (⟨k, v⟩ :: l) h.balanced).1 =
       ((t.insert k v h.balanced).impl.insertMany l h.insert.balanced).1 := by

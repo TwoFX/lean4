@@ -1339,6 +1339,172 @@ end Const
 
 end monadic
 
+@[simp]
+theorem any_toList {p : (a : α) → β a → Bool} :
+    t.toList.any (fun x => p x.1 x.2) = t.any p :=
+  Impl.any_toList
+
+@[simp]
+theorem all_toList {p : (a : α) → β a → Bool} :
+    t.toList.all (fun x => p x.1 x.2) = t.all p :=
+  Impl.all_toList
+
+theorem all_eq_not_any_not {p : (a : α) → β a → Bool} :
+    t.all p = ! t.any (fun a b => ! p a b) :=
+  Impl.all_eq_not_any_not
+
+theorem any_eq_not_all_not {p : (a : α) → β a → Bool} :
+    t.any p = ! t.all (fun a b => ! p a b) :=
+  Impl.any_eq_not_all_not
+
+theorem any_eq_true_iff_exists_contains_get [TransCmp cmp] [LawfulEqCmp cmp]
+    {p : (a : α) → β a → Bool} (h : t.WF) :
+    t.any p = true ↔ ∃ (a : α) (h : t.contains a), p a (t.get a h) :=
+  Impl.any_eq_true h
+
+theorem any_eq_true_iff_exists_mem_get [TransCmp cmp] [LawfulEqCmp cmp]
+    {p : (a : α) → β a → Bool} (h : t.WF) :
+    t.any p = true ↔ ∃ (a : α) (h : a ∈ t), p a (t.get a h) :=
+  any_eq_true_iff_exists_contains_get h
+
+theorem any_eq_false_iff_forall_contains_get [TransCmp cmp] [LawfulEqCmp cmp]
+    {p : (a : α) → β a → Bool} (h : t.WF) :
+    t.any p = false ↔ ∀ (a : α) (h : t.contains a), p a (t.get a h) = false :=
+  Impl.any_eq_false h
+
+theorem any_eq_false_iff_forall_mem_get [TransCmp cmp] [LawfulEqCmp cmp]
+    {p : (a : α) → β a → Bool} (h : t.WF) :
+    t.any p = false ↔ ∀ (a : α) (h : a ∈ t), p a (t.get a h) = false :=
+  any_eq_false_iff_forall_contains_get h
+
+theorem all_eq_true_iff_forall_contains_get [TransCmp cmp] [LawfulEqCmp cmp]
+    {p : (a : α) → β a → Bool} (h : t.WF) :
+    t.all p = true ↔ ∀ (a : α) (h : t.contains a), p a (t.get a h) :=
+  Impl.all_eq_true h
+
+theorem all_eq_true_iff_forall_mem_get [TransCmp cmp] [LawfulEqCmp cmp]
+    {p : (a : α) → β a → Bool} (h : t.WF) :
+    t.all p = true ↔ ∀ (a : α) (h : a ∈ t), p a (t.get a h) :=
+  all_eq_true_iff_forall_contains_get h
+
+theorem all_eq_false_iff_exists_contains_get [TransCmp cmp] [LawfulEqCmp cmp]
+    {p : (a : α) → β a → Bool} (h : t.WF) :
+    t.all p = false ↔ ∃ (a : α) (h : t.contains a), p a (t.get a h) = false :=
+  Impl.all_eq_false h
+
+theorem all_eq_false_iff_exists_mem_get [TransCmp cmp] [LawfulEqCmp cmp]
+    {p : (a : α) → β a → Bool} (h : t.WF) :
+    t.all p = false ↔ ∃ (a : α) (h : a ∈ t), p a (t.get a h) = false :=
+  all_eq_false_iff_exists_contains_get h
+
+namespace Const
+
+variable {β : Type v} {t : Raw α β cmp}
+
+@[simp]
+theorem any_toList {p : (_ : α) → β → Bool} :
+    (Const.toList t).any (fun x => p x.1 x.2) = t.any p :=
+  Impl.Const.any_toList
+
+theorem any_eq_true_iff_exists_contains_getKey_get [TransCmp cmp]
+    {p : (_ : α) → β → Bool} (h : t.WF) :
+    t.any p = true ↔ ∃ (a : α) (h : t.contains a), p (t.getKey a h) (Const.get t a h) :=
+  Impl.Const.any_eq_true h
+
+theorem any_eq_true_iff_exists_mem_getKey_get [TransCmp cmp]
+    {p : (_ : α) → β → Bool} (h : t.WF) :
+    t.any p = true ↔ ∃ (a : α) (h : a ∈ t), p (t.getKey a h) (Const.get t a h) :=
+  any_eq_true_iff_exists_contains_getKey_get h
+
+theorem any_eq_true_iff_exists_contains_get [TransCmp cmp] [LawfulEqCmp cmp]
+    {p : (_ : α) → β → Bool} (h : t.WF) :
+    t.any p = true ↔ ∃ (a : α) (h : t.contains a), p a (Const.get t a h) :=
+  Impl.Const.any_eq_true' h
+
+theorem any_eq_true_iff_exists_mem_get [TransCmp cmp] [LawfulEqCmp cmp]
+    {p : (_ : α) → β → Bool} (h : t.WF) :
+    t.any p = true ↔ ∃ (a : α) (h : a ∈ t), p a (Const.get t a h) :=
+  any_eq_true_iff_exists_contains_get h
+
+theorem any_eq_false_iff_forall_contains_getKey_get [TransCmp cmp]
+    {p : (_ : α) → β → Bool} (h : t.WF) :
+    t.any p = false ↔
+      ∀ (a : α) (h : t.contains a), p (t.getKey a h) (Const.get t a h) = false :=
+  Impl.Const.any_eq_false h
+
+theorem any_eq_false_iff_forall_mem_getKey_get [TransCmp cmp]
+    {p : (_ : α) → β → Bool} (h : t.WF) :
+    t.any p = false ↔
+      ∀ (a : α) (h : a ∈ t), p (t.getKey a h) (Const.get t a h) = false :=
+  any_eq_false_iff_forall_contains_getKey_get h
+
+theorem any_eq_false_iff_forall_contains_get [TransCmp cmp] [LawfulEqCmp cmp]
+    {p : (_ : α) → β → Bool} (h : t.WF) :
+    t.any p = false ↔
+      ∀ (a : α) (h : t.contains a), p a (Const.get t a h) = false :=
+  Impl.Const.any_eq_false' h
+
+theorem any_eq_false_iff_forall_mem_get [TransCmp cmp] [LawfulEqCmp cmp]
+    {p : (_ : α) → β → Bool} (h : t.WF) :
+    t.any p = false ↔
+      ∀ (a : α) (h : a ∈ t), p a (Const.get t a h) = false :=
+  any_eq_false_iff_forall_contains_get h
+
+@[simp]
+theorem all_toList {p : (_ : α) → β → Bool} :
+    (Const.toList t).all (fun x => p x.1 x.2) = t.all p :=
+  Impl.Const.all_toList
+
+theorem all_eq_true_iff_forall_contains_getKey_get [TransCmp cmp]
+    {p : (a : α) → β → Bool} (h : t.WF) :
+    t.all p = true ↔ ∀ (a : α) (h : t.contains a), p (t.getKey a h) (Const.get t a h) :=
+  Impl.Const.all_eq_true h
+
+theorem all_eq_true_iff_forall_mem_getKey_get [TransCmp cmp]
+    {p : (a : α) → β → Bool} (h : t.WF) :
+    t.all p = true ↔ ∀ (a : α) (h : a ∈ t), p (t.getKey a h) (Const.get t a h) :=
+  all_eq_true_iff_forall_contains_getKey_get h
+
+theorem all_eq_true_iff_forall_contains_get [TransCmp cmp] [LawfulEqCmp cmp]
+    {p : (_ : α) → β → Bool} (h : t.WF) :
+    t.all p = true ↔ ∀ (a : α) (h : t.contains a), p a (Const.get t a h) :=
+  Impl.Const.all_eq_true' h
+
+theorem all_eq_true_iff_forall_mem_get [TransCmp cmp] [LawfulEqCmp cmp]
+    {p : (_ : α) → β → Bool} (h : t.WF) :
+    t.all p = true ↔ ∀ (a : α) (h : a ∈ t), p a (Const.get t a h) :=
+  all_eq_true_iff_forall_contains_get h
+
+theorem all_eq_false_iff_exists_contains_getKey_get [TransCmp cmp]
+    {p : (a : α) → β → Bool} (h : t.WF) :
+    t.all p = false ↔ ∃ (a : α) (h : t.contains a), p (t.getKey a h) (Const.get t a h) = false :=
+  Impl.Const.all_eq_false h
+
+theorem all_eq_false_iff_exists_mem_getKey_get [TransCmp cmp]
+    {p : (a : α) → β → Bool} (h : t.WF) :
+    t.all p = false ↔ ∃ (a : α) (h : a ∈ t), p (t.getKey a h) (Const.get t a h) = false :=
+  all_eq_false_iff_exists_contains_getKey_get h
+
+theorem all_eq_false_iff_exists_contains_get [TransCmp cmp] [LawfulEqCmp cmp]
+    {p : (_ : α) → β → Bool} (h : t.WF) :
+    t.all p = false ↔ ∃ (a : α) (h : t.contains a), p a (Const.get t a h) = false :=
+  Impl.Const.all_eq_false' h
+
+theorem all_eq_false_iff_exists_mem_get [TransCmp cmp] [LawfulEqCmp cmp]
+    {p : (_ : α) → β → Bool} (h : t.WF) :
+    t.all p = false ↔ ∃ (a : α) (h : a ∈ t), p a (Const.get t a h) = false :=
+  all_eq_false_iff_exists_contains_get h
+
+theorem any_keys {p : α → Bool} :
+    t.keys.any p = t.any (fun a _ => p a) :=
+  Impl.Const.any_keys
+
+theorem all_keys {p : α → Bool} :
+    t.keys.all p = t.all (fun a _ => p a) :=
+  Impl.Const.all_keys
+
+end Const
+
 @[simp, grind =]
 theorem insertMany_nil :
     t.insertMany [] = t :=

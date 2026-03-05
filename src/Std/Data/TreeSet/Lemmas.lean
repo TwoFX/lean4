@@ -978,6 +978,66 @@ theorem forIn_eq_forIn_toList [Monad m] [LawfulMonad m] {f : α → δ → m (Fo
 
 end monadic
 
+@[simp]
+theorem any_toList {p : α → Bool} :
+    t.toList.any p = t.any p :=
+  TreeMap.any_keys
+
+@[simp]
+theorem all_toList {p : α → Bool} :
+    t.toList.all p = t.all p :=
+  TreeMap.all_keys
+
+theorem all_eq_not_any_not {p : α → Bool} :
+    t.all p = ! t.any (fun a => ! p a) :=
+  TreeMap.all_eq_not_any_not
+
+theorem any_eq_not_all_not {p : α → Bool} :
+    t.any p = ! t.all (fun a => ! p a) :=
+  TreeMap.any_eq_not_all_not
+
+theorem any_eq_true_iff_exists_mem_get [TransCmp cmp]
+    {p : α → Bool} :
+    t.any p = true ↔ ∃ (a : α) (h : a ∈ t), p (t.get a h) :=
+  TreeMap.any_eq_true_iff_exists_mem_getKey_getElem
+
+theorem any_eq_true_iff_exists_mem [TransCmp cmp] [LawfulEqCmp cmp]
+    {p : α → Bool} :
+    t.any p = true ↔ ∃ (a : α), a ∈ t ∧ p a := by
+  simpa using @TreeMap.any_eq_true_iff_exists_mem_getElem _ _ _ _ _ _ (fun a _ => p a)
+
+theorem any_eq_false_iff_forall_mem_get [TransCmp cmp]
+    {p : α → Bool} :
+    t.any p = false ↔
+      ∀ (a : α) (h : a ∈ t), p (t.get a h) = false :=
+  TreeMap.any_eq_false_iff_forall_mem_getKey_getElem
+
+theorem any_eq_false_iff_forall_mem [TransCmp cmp] [LawfulEqCmp cmp]
+    {p : α → Bool} :
+    t.any p = false ↔
+      ∀ (a : α), a ∈ t → p a = false := by
+  simpa using @TreeMap.any_eq_false_iff_forall_mem_getElem _ _ _ _ _ _ (fun a _ => p a)
+
+theorem all_eq_true_iff_forall_mem_get [TransCmp cmp]
+    {p : α → Bool} :
+    t.all p = true ↔ ∀ (a : α) (h : a ∈ t), p (t.get a h) :=
+  TreeMap.all_eq_true_iff_forall_mem_getKey_getElem
+
+theorem all_eq_true_iff_forall_mem [TransCmp cmp] [LawfulEqCmp cmp]
+    {p : α → Bool} :
+    t.all p = true ↔ ∀ (a : α), a ∈ t → p a := by
+  simpa using @TreeMap.all_eq_true_iff_forall_mem_getElem _ _ _ _ _ _ (fun a _ => p a)
+
+theorem all_eq_false_iff_exists_mem_get [TransCmp cmp]
+    {p : α → Bool} :
+    t.all p = false ↔ ∃ (a : α) (h : a ∈ t), p (t.get a h) = false :=
+  TreeMap.all_eq_false_iff_exists_mem_getKey_getElem
+
+theorem all_eq_false_iff_exists_mem [TransCmp cmp] [LawfulEqCmp cmp]
+    {p : α → Bool} :
+    t.all p = false ↔ ∃ (a : α), a ∈ t ∧ p a = false := by
+  simpa using @TreeMap.all_eq_false_iff_exists_mem_getElem _ _ _ _ _ _ (fun a _ => p a)
+
 @[simp, grind =]
 theorem insertMany_nil :
     t.insertMany [] = t :=
