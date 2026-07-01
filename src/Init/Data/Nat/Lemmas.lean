@@ -14,7 +14,6 @@ public import Init.Data.Nat.Div.Basic
 public import Init.PropLemmas
 import Init.ByCases
 import Init.Data.Nat.Dvd
-import Init.Data.Nat.Linear
 import Init.Data.Nat.MinMax
 import Init.Data.Nat.Mod
 import Init.Omega
