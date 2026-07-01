@@ -16,7 +16,7 @@ namespace Lean.Meta
 
 register_builtin_option debug.terminalTacticsAsSorry : Bool := {
   defValue := false
-  descr    := "when enabled, terminal tactics such as `grind` and `omega` are replaced with `sorry`. Useful for debugging and fixing bootstrapping issues"
+  descr    := "when enabled, terminal tactics such as `grind` and `omega`, as well as `simp +arith`, are replaced with `sorry`. Useful for debugging and fixing bootstrapping issues"
 }
 
 /-- Get the user name of the given metavariable. -/

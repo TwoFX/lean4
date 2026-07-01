@@ -124,11 +124,15 @@ structure Context where
 
 /--
 Helper method for bootstrapping purposes.
-It disables `arith` if support theorems have not been defined yet.
+It disables `arith` if support theorems have not been defined yet, unless
+`debug.terminalTacticsAsSorry` is set: then `arith` is kept enabled so that
+`checkArithAsSorry` can close the goal with `sorry` before the theorems are needed.
 -/
 private def updateArith (c : Config) : CoreM Config := do
   if c.arith then
     if (← getEnv).contains ``Nat.Linear.ExprCnstr.eq_of_toNormPoly_eq then
+      return c
+    else if debug.terminalTacticsAsSorry.get (← getOptions) then
       return c
     else
       return { c with arith := false }

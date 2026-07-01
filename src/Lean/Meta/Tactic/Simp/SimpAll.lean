@@ -150,6 +150,8 @@ end SimpAll
 
 def simpAll (mvarId : MVarId) (ctx : Simp.Context) (simprocs : SimprocsArray := #[]) (stats : Stats := {}) : MetaM (Option MVarId × Stats) := do
   mvarId.withContext do
+    if (← checkArithAsSorry mvarId ctx) then
+      return (none, stats)
     let (r, s) ← SimpAll.main.run { stats with mvarId, ctx, simprocs }
     if let .some mvarIdNew := r then
       if ctx.config.failIfUnchanged && mvarId == mvarIdNew then

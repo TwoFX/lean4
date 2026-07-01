@@ -871,11 +871,26 @@ def simpLocalDecl (mvarId : MVarId) (fvarId : FVarId) (ctx : Simp.Context) (simp
     let (r, stats) ← simpStep mvarId (mkFVar fvarId) type ctx simprocs discharge? mayCloseGoal stats
     return (← applySimpResultToLocalDeclCore mvarId fvarId r, stats)
 
+/--
+When `debug.terminalTacticsAsSorry` is enabled and `simp` is running with `+arith`, close `mvarId`
+with `sorry` instead of running `simp`, returning `true`. This mirrors the treatment of `omega` and
+`grind`, and is useful for bootstrapping changes to the arithmetic simprocs. See
+`debug.terminalTacticsAsSorry`.
+-/
+def checkArithAsSorry (mvarId : MVarId) (ctx : Simp.Context) : MetaM Bool := do
+  if ctx.config.arith && debug.terminalTacticsAsSorry.get (← getOptions) then
+    mvarId.admit
+    return true
+  else
+    return false
+
 def simpGoal (mvarId : MVarId) (ctx : Simp.Context) (simprocs : SimprocsArray := #[]) (discharge? : Option Simp.Discharge := none)
     (simplifyTarget : Bool := true) (fvarIdsToSimp : Array FVarId := #[])
     (stats : Stats := {}) : MetaM (Option (Array FVarId × MVarId) × Stats) := do
   mvarId.withContext do
     mvarId.checkNotAssigned `simp
+    if (← checkArithAsSorry mvarId ctx) then
+      return (none, stats)
     let mut mvarIdNew := mvarId
     let mut toAssert := #[]
     let mut replaced := #[]
