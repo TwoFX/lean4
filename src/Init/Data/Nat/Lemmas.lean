@@ -16,6 +16,7 @@ import Init.ByCases
 import Init.Data.Nat.Dvd
 import Init.Data.Nat.MinMax
 import Init.Data.Nat.Mod
+import Init.Data.Nat.Internal.Linear
 import Init.Omega
 import Init.RCases
 

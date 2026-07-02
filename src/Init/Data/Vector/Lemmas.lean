@@ -23,8 +23,6 @@ import Init.TacticsExtra
 
 public section
 
-set_option debug.byAsSorry true
-
 /-!
 ## Vectors
 Lemmas about `Vector α n`
@@ -396,7 +394,7 @@ private theorem toArray_mapM_go [Monad m] [LawfulMonad m] {f : α → m β} {xs 
 @[simp, grind =] theorem toArray_singleton {x : α} : (Vector.singleton x).toArray = #[x] := rfl
 
 @[simp, grind =] theorem toArray_swap {xs : Vector α n} {i j} (hi : i < n) (hj : j < n) : (xs.swap i j).toArray =
-    xs.toArray.swap i j (by simp [hj]) (by simp [hi]) := rfl
+    xs.toArray.swap i j (by simp [hi]) (by simp [hj]) := rfl
 
 @[simp, grind =] theorem toArray_swapIfInBounds {xs : Vector α n} {i j} :
     (xs.swapIfInBounds i j).toArray = xs.toArray.swapIfInBounds i j := rfl
