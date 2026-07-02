@@ -124,10 +124,13 @@ set(LEANC_CC ${CMAKE_C_COMPILER} CACHE STRING "C compiler to use in `leanc`")
 
 # option used by the CI to fail on warnings
 option(WFAIL "Fail build if warnings are emitted by Lean" ON)
-if(WFAIL MATCHES "ON")
-  string(APPEND LEAN_EXTRA_LAKE_OPTS " --wfail")
-  string(APPEND LEAN_EXTRA_MAKE_OPTS " -DwarningAsError=true")
-endif()
+# Temporarily disabled while `debug.terminalTacticsAsSorry` is enabled in stage0:
+# the stage 1 build emits `declaration uses sorry` and follow-up linter warnings
+# that must not fail the build. Restore after the bootstrap dance is complete.
+#if(WFAIL MATCHES "ON")
+#  string(APPEND LEAN_EXTRA_LAKE_OPTS " --wfail")
+#  string(APPEND LEAN_EXTRA_MAKE_OPTS " -DwarningAsError=true")
+#endif()
 
 if(LAZY_RC MATCHES "ON")
   set(LEAN_LAZY_RC "#define LEAN_LAZY_RC")
