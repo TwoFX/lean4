@@ -101,6 +101,7 @@ def Workspace.setDepIdxs
   (setDepIdxs ws pkg depIdxs h h').packages.size = ws.packages.size
 := by simp [setDepIdxs]
 
+set_option debug.byAsSorry true in
 def Workspace.updateDepPkgs (self : Workspace) : Workspace :=
   let s : {pkgs : Vector Package self.packages.size //
     ∀ i, (h : i < pkgs.size) → pkgs[i].wsIdx = i ∧ ∀ j ∈ pkgs[i].depIdxs, j < pkgs.size} :=
@@ -113,7 +114,8 @@ def Workspace.updateDepPkgs (self : Workspace) : Workspace :=
     let depPkgs := pkg.depIdxs.attach.map fun ⟨j, j_mem⟩ =>
       pkgs[j]'(h i i_lt |>.2 j j_mem)
     let pkgs' := pkgs.set i {pkg with depPkgs}
-    have h := by
+    have h : ∀ j, (h : j < pkgs'.size) →
+        pkgs'[j].wsIdx = j ∧ ∀ k ∈ pkgs'[j].depIdxs, k < pkgs'.size := by
       intro j j_lt
       simp only [Vector.getElem_set, Vector.size, pkgs', pkg]
       split

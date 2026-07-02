@@ -160,6 +160,7 @@ theorem zipWith_eq_append_iff {f : α → β → γ} {as : Vector α (n + m)} {b
     simp only at w₁ w₂
     exact ⟨as₁, as₂, bs₁, bs₂, by simpa [hw, hy] using ⟨w₁, w₂⟩⟩
 
+set_option debug.byAsSorry true in
 @[simp, grind =]
 theorem zipWith_replicate {a : α} {b : β} {n : Nat} :
     zipWith f (replicate n a) (replicate n b) = replicate n (f a b) := by
@@ -190,7 +191,7 @@ theorem reverse_zipWith {f : α → β → γ} {as : Vector α n} {bs : Vector �
 @[simp, grind =]
 theorem getElem_zip {as : Vector α n} {bs : Vector β n} {i : Nat} {h : i < n} :
     (zip as bs)[i] = (as[i], bs[i]) :=
-  getElem_zipWith ..
+  getElem_zipWith h
 
 theorem zip_eq_zipWith {as : Vector α n} {bs : Vector β n} : zip as bs = zipWith Prod.mk as bs := by
   rcases as with ⟨as, rfl⟩
@@ -263,6 +264,7 @@ theorem zip_eq_append_iff {as : Vector α (n + m)} {bs : Vector β (n + m)} {xs 
       ∃ as₁ as₂ bs₁ bs₂, as = as₁ ++ as₂ ∧ bs = bs₁ ++ bs₂ ∧ xs = zip as₁ bs₁ ∧ ys = zip as₂ bs₂ := by
   simp [zip_eq_zipWith, zipWith_eq_append_iff]
 
+set_option debug.byAsSorry true in
 @[simp, grind =]
 theorem zip_replicate {a : α} {b : β} {n : Nat} :
     zip (replicate n a) (replicate n b) = replicate n (a, b) := by

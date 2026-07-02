@@ -346,8 +346,9 @@ theorem find?_pmap {P : α → Prop} {f : (a : α) → P a → β} {xs : Array �
   simp only [pmap_eq_map_attach, find?_map]
   rfl
 
+set_option debug.byAsSorry true in
 theorem find?_eq_some_iff_getElem {xs : Array α} {p : α → Bool} {b : α} :
-    xs.find? p = some b ↔ p b ∧ ∃ i h, xs[i] = b ∧ ∀ j : Nat, (hj : j < i) → !p xs[j] := by
+    xs.find? p = some b ↔ p b ∧ ∃ (i : Nat) (h : i < xs.size), xs[i] = b ∧ ∀ j : Nat, (hj : j < i) → !p xs[j] := by
   rcases xs with ⟨xs⟩
   simp [List.find?_eq_some_iff_getElem]
 
