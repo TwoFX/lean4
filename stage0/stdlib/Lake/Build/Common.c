@@ -23124,11 +23124,12 @@ lean_object* v_path_7753_; lean_object* v___x_7754_; lean_object* v___x_7756_;
 v_path_7753_ = lean_ctor_get(v_a_7748_, 1);
 lean_inc_ref(v_path_7753_);
 lean_dec(v_a_7748_);
-v___x_7754_ = lean_alloc_ctor(0, 3, 1);
+v___x_7754_ = lean_alloc_ctor(0, 4, 1);
 lean_ctor_set(v___x_7754_, 0, v_path_7753_);
 lean_ctor_set(v___x_7754_, 1, v_libName_7693_);
 lean_ctor_set(v___x_7754_, 2, v_libs_7695_);
-lean_ctor_set_uint8(v___x_7754_, sizeof(void*)*3, v_plugin_7694_);
+lean_ctor_set(v___x_7754_, 3, v___x_7714_);
+lean_ctor_set_uint8(v___x_7754_, sizeof(void*)*4, v_plugin_7694_);
 if (v_isShared_7752_ == 0)
 {
 lean_ctor_set(v___x_7751_, 0, v___x_7754_);
@@ -23838,11 +23839,12 @@ lean_object* v_path_8055_; lean_object* v___x_8056_; lean_object* v___x_8058_;
 v_path_8055_ = lean_ctor_get(v_a_8050_, 1);
 lean_inc_ref(v_path_8055_);
 lean_dec(v_a_8050_);
-v___x_8056_ = lean_alloc_ctor(0, 3, 1);
+v___x_8056_ = lean_alloc_ctor(0, 4, 1);
 lean_ctor_set(v___x_8056_, 0, v_path_8055_);
 lean_ctor_set(v___x_8056_, 1, v_libName_8008_);
 lean_ctor_set(v___x_8056_, 2, v_libs_8010_);
-lean_ctor_set_uint8(v___x_8056_, sizeof(void*)*3, v_plugin_8009_);
+lean_ctor_set(v___x_8056_, 3, v___x_8038_);
+lean_ctor_set_uint8(v___x_8056_, sizeof(void*)*4, v_plugin_8009_);
 if (v_isShared_8054_ == 0)
 {
 lean_ctor_set(v___x_8053_, 0, v___x_8056_);
