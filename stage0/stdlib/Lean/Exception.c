@@ -928,7 +928,7 @@ _start:
 lean_object* v___x_216_; lean_object* v___x_217_; lean_object* v___x_218_; 
 v___x_216_ = lean_obj_once(&l_Lean_mkUnknownIdentifierMessageCore___redArg___lam__0___closed__1, &l_Lean_mkUnknownIdentifierMessageCore___redArg___lam__0___closed__1_once, _init_l_Lean_mkUnknownIdentifierMessageCore___redArg___lam__0___closed__1);
 v___x_217_ = lean_unsigned_to_nat(0u);
-v___x_218_ = lean_alloc_ctor(0, 10, 0);
+v___x_218_ = lean_alloc_ctor(0, 11, 0);
 lean_ctor_set(v___x_218_, 0, v___x_217_);
 lean_ctor_set(v___x_218_, 1, v___x_217_);
 lean_ctor_set(v___x_218_, 2, v___x_217_);
@@ -939,6 +939,7 @@ lean_ctor_set(v___x_218_, 6, v___x_216_);
 lean_ctor_set(v___x_218_, 7, v___x_216_);
 lean_ctor_set(v___x_218_, 8, v___x_216_);
 lean_ctor_set(v___x_218_, 9, v___x_216_);
+lean_ctor_set(v___x_218_, 10, v___x_216_);
 return v___x_218_;
 }
 }
@@ -2592,11 +2593,13 @@ return v_res_1134_;
 }
 lean_object* runtime_initialize_Lean_InternalExceptionId(uint8_t builtin);
 lean_object* runtime_initialize_Lean_ErrorExplanation(uint8_t builtin);
+void lean_initialize_runtime_module();
 static bool _G_runtime_initialized = false;
 LEAN_EXPORT lean_object* runtime_initialize_Lean_Exception(uint8_t builtin) {
 lean_object * res;
 if (_G_runtime_initialized) return lean_io_result_mk_ok(lean_box(0));
 _G_runtime_initialized = true;
+lean_initialize_runtime_module();
 res = runtime_initialize_Lean_InternalExceptionId(builtin);
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);

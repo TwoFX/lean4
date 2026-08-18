@@ -16,7 +16,7 @@ extern "C" {
 lean_object* lean_mk_empty_array_with_capacity(lean_object*);
 extern lean_object* l_Lean_searchPathRef;
 lean_object* l_Lake_Env_leanSearchPath(lean_object*);
-lean_object* lean_st_ref_set(lean_object*, lean_object*);
+lean_object* lean_st_ref_swap(lean_object*, lean_object*);
 lean_object* l_Lake_loadLakeConfig(lean_object*, lean_object*);
 lean_object* l_Lake_resolveConfigFile(lean_object*, lean_object*, lean_object*);
 lean_object* l_Lake_loadConfigFile___redArg(lean_object*, lean_object*);
@@ -1498,7 +1498,8 @@ v_resetjp_332_:
 lean_object* v___x_335_; lean_object* v___x_336_; lean_object* v___x_337_; lean_object* v___x_338_; 
 v___x_335_ = l_Lean_searchPathRef;
 v___x_336_ = l_Lake_Env_leanSearchPath(v_lakeEnv_314_);
-v___x_337_ = lean_st_ref_set(v___x_335_, v___x_336_);
+v___x_337_ = lean_st_ref_swap(v___x_335_, v___x_336_);
+lean_dec(v___x_337_);
 lean_inc_ref(v_lakeEnv_314_);
 v___x_338_ = l_Lake_loadLakeConfig(v_lakeEnv_314_, v_a_312_);
 if (lean_obj_tag(v___x_338_) == 0)
@@ -2361,6 +2362,7 @@ else
 {
 lean_dec(v_a_560_);
 lean_dec_ref(v_leanOpts_555_);
+lean_dec(v_toUpdate_549_);
 return v___x_587_;
 }
 }
@@ -2381,6 +2383,7 @@ else
 {
 lean_dec(v_a_560_);
 lean_dec_ref(v_leanOpts_555_);
+lean_dec(v_toUpdate_549_);
 return v___x_590_;
 }
 }
@@ -2480,6 +2483,7 @@ else
 {
 lean_object* v_a_591_; lean_object* v___x_592_; uint8_t v___x_593_; 
 lean_dec_ref(v_leanOpts_555_);
+lean_dec(v_toUpdate_549_);
 v_a_591_ = lean_ctor_get(v___x_559_, 1);
 lean_inc(v_a_591_);
 lean_dec_ref_known(v___x_559_, 2);
@@ -2559,7 +2563,6 @@ _start:
 lean_object* v_res_608_; 
 v_res_608_ = l_Lake_updateManifest(v_config_604_, v_toUpdate_605_, v_a_606_);
 lean_dec_ref(v_a_606_);
-lean_dec(v_toUpdate_605_);
 return v_res_608_;
 }
 }
@@ -2570,11 +2573,13 @@ lean_object* runtime_initialize_Lake_Load_Package(uint8_t builtin);
 lean_object* runtime_initialize_Lake_Load_Lean_Eval(uint8_t builtin);
 lean_object* runtime_initialize_Lake_Load_Toml(uint8_t builtin);
 lean_object* runtime_initialize_Lake_Build_InitFacets(uint8_t builtin);
+void lean_initialize();
 static bool _G_runtime_initialized = false;
 LEAN_EXPORT lean_object* runtime_initialize_Lake_Load_Workspace(uint8_t builtin) {
 lean_object * res;
 if (_G_runtime_initialized) return lean_io_result_mk_ok(lean_box(0));
 _G_runtime_initialized = true;
+lean_initialize();
 res = runtime_initialize_Lake_Load_Config(builtin);
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);

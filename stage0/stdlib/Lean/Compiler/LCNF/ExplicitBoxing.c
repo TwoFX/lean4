@@ -79,7 +79,7 @@ lean_object* lean_name_append_index_after(lean_object*, lean_object*);
 lean_object* l_Lean_Name_append(lean_object*, lean_object*);
 lean_object* l_Lean_Compiler_LCNF_cacheAuxDecl___redArg(uint8_t, lean_object*, lean_object*, lean_object*);
 lean_object* lean_st_ref_take(lean_object*);
-lean_object* lean_st_ref_set(lean_object*, lean_object*);
+lean_object* lean_st_ref_put(lean_object*, lean_object*);
 lean_object* l_Lean_Compiler_LCNF_eraseDecl(uint8_t, lean_object*, lean_object*, lean_object*, lean_object*, lean_object*);
 lean_object* l___private_Lean_Compiler_LCNF_Basic_0__Lean_Compiler_LCNF_LetValue_updateArgsImp(uint8_t, lean_object*, lean_object*);
 lean_object* l_Lean_Compiler_LCNF_LitValue_impureTypeScalarNumLit(lean_object*, lean_object*);
@@ -2525,7 +2525,7 @@ goto v_reusejp_662_;
 v_reusejp_662_:
 {
 lean_object* v___x_664_; lean_object* v___x_665_; 
-v___x_664_ = lean_st_ref_set(v_a_601_, v___x_663_);
+v___x_664_ = lean_st_ref_put(v_a_601_, v___x_663_);
 v___x_665_ = l_Lean_Compiler_LCNF_Decl_saveImpure___redArg(v___x_650_, v_a_605_);
 if (lean_obj_tag(v___x_665_) == 0)
 {
@@ -9468,8 +9468,8 @@ return v___x_2586_;
 else
 {
 lean_object* v_a_2596_; lean_object* v___x_2598_; uint8_t v_isShared_2599_; uint8_t v_isSharedCheck_2603_; 
-lean_dec_ref_known(v_code_2397_, 1);
 lean_dec(v_fvarId_2574_);
+lean_dec_ref_known(v_code_2397_, 1);
 v_a_2596_ = lean_ctor_get(v___x_2583_, 0);
 v_isSharedCheck_2603_ = !lean_is_exclusive(v___x_2583_);
 if (v_isSharedCheck_2603_ == 0)
@@ -9512,8 +9512,8 @@ return v___x_2601_;
 else
 {
 lean_object* v_a_2604_; lean_object* v___x_2606_; uint8_t v_isShared_2607_; uint8_t v_isSharedCheck_2611_; 
-lean_dec_ref_known(v_code_2397_, 1);
 lean_dec(v_fvarId_2574_);
+lean_dec_ref_known(v_code_2397_, 1);
 v_a_2604_ = lean_ctor_get(v___x_2579_, 0);
 v_isSharedCheck_2611_ = !lean_is_exclusive(v___x_2579_);
 if (v_isSharedCheck_2611_ == 0)
@@ -9566,8 +9566,8 @@ return v___x_2612_;
 else
 {
 lean_object* v_a_2613_; lean_object* v___x_2615_; uint8_t v_isShared_2616_; uint8_t v_isSharedCheck_2620_; 
-lean_dec_ref_known(v_code_2397_, 1);
 lean_dec(v_fvarId_2574_);
+lean_dec_ref_known(v_code_2397_, 1);
 v_a_2613_ = lean_ctor_get(v___x_2575_, 0);
 v_isSharedCheck_2620_ = !lean_is_exclusive(v___x_2575_);
 if (v_isSharedCheck_2620_ == 0)
@@ -9934,8 +9934,8 @@ else
 lean_dec_ref(v_k_2639_);
 lean_dec(v_y_2638_);
 lean_dec(v_i_2637_);
-lean_dec_ref_known(v_code_2397_, 4);
 lean_dec(v_fvarId_2636_);
+lean_dec_ref_known(v_code_2397_, 4);
 return v___x_2640_;
 }
 }
@@ -10057,8 +10057,8 @@ lean_dec_ref(v_ty_2692_);
 lean_dec(v_y_2691_);
 lean_dec(v_offset_2690_);
 lean_dec(v_i_2689_);
-lean_dec_ref_known(v_code_2397_, 6);
 lean_dec(v_fvarId_2688_);
+lean_dec_ref_known(v_code_2397_, 6);
 v_a_2716_ = lean_ctor_get(v___x_2703_, 0);
 v_isSharedCheck_2723_ = !lean_is_exclusive(v___x_2703_);
 if (v_isSharedCheck_2723_ == 0)
@@ -10107,8 +10107,8 @@ lean_dec_ref(v_ty_2692_);
 lean_dec(v_y_2691_);
 lean_dec(v_offset_2690_);
 lean_dec(v_i_2689_);
-lean_dec_ref_known(v_code_2397_, 6);
 lean_dec(v_fvarId_2688_);
+lean_dec_ref_known(v_code_2397_, 6);
 v_a_2724_ = lean_ctor_get(v___x_2699_, 0);
 v_isSharedCheck_2731_ = !lean_is_exclusive(v___x_2699_);
 if (v_isSharedCheck_2731_ == 0)
@@ -10168,8 +10168,8 @@ lean_dec_ref(v_ty_2692_);
 lean_dec(v_y_2691_);
 lean_dec(v_offset_2690_);
 lean_dec(v_i_2689_);
-lean_dec_ref_known(v_code_2397_, 6);
 lean_dec(v_fvarId_2688_);
+lean_dec_ref_known(v_code_2397_, 6);
 v_a_2733_ = lean_ctor_get(v___x_2696_, 0);
 v_isSharedCheck_2740_ = !lean_is_exclusive(v___x_2696_);
 if (v_isSharedCheck_2740_ == 0)
@@ -10216,8 +10216,8 @@ lean_dec_ref(v_ty_2692_);
 lean_dec(v_y_2691_);
 lean_dec(v_offset_2690_);
 lean_dec(v_i_2689_);
-lean_dec_ref_known(v_code_2397_, 6);
 lean_dec(v_fvarId_2688_);
+lean_dec_ref_known(v_code_2397_, 6);
 return v___x_2694_;
 }
 }
@@ -10768,11 +10768,13 @@ lean_object* runtime_initialize_Lean_Compiler_LCNF_ElimDead(uint8_t builtin);
 lean_object* runtime_initialize_Lean_Compiler_LCNF_PhaseExt(uint8_t builtin);
 lean_object* runtime_initialize_Lean_Compiler_LCNF_AuxDeclCache(uint8_t builtin);
 lean_object* runtime_initialize_Lean_Runtime(uint8_t builtin);
+void lean_initialize_runtime_module();
 static bool _G_runtime_initialized = false;
 LEAN_EXPORT lean_object* runtime_initialize_Lean_Compiler_LCNF_ExplicitBoxing(uint8_t builtin) {
 lean_object * res;
 if (_G_runtime_initialized) return lean_io_result_mk_ok(lean_box(0));
 _G_runtime_initialized = true;
+lean_initialize_runtime_module();
 res = runtime_initialize_Lean_Compiler_LCNF_CompilerM(builtin);
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
