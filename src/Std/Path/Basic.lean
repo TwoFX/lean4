@@ -496,37 +496,43 @@ structure ParentsIterator where
   -/
   current : Path
 
-  /--
-  Remaining budget; equals the component count of the initial path.
-  -/
-  fuel : Nat
-
 namespace ParentsIterator
 
-abbrev stateOf (it : IterM (α := ParentsIterator) m Path) : ParentsIterator :=
-  match it with | ⟨s⟩ => s
-
 instance instIterator [Pure m] : Iterator ParentsIterator m Path where
-  IsPlausibleStep it
-    | .yield it' out =>
-        (stateOf it).fuel = (stateOf it').fuel + 1 ∧
-        (stateOf it).current.parent = some out ∧
-        (out == (stateOf it).current) = false ∧
-        (stateOf it').current = out
-    | .skip _ => False
-    | .done => True
+  IsPlausibleStep
+    | it, .yield it' out =>
+        it.internalState.current.parent = some out ∧
+        (out == it.internalState.current) = false ∧
+        it'.internalState.current = out
+    | _, .skip _ => False
+    | _, .done => True
   step it :=
     pure (match it with
-    | ⟨⟨_, 0⟩⟩ => .deflate ⟨.done, trivial⟩
-    | ⟨⟨cur, fuel + 1⟩⟩ =>
-      match cur.parent with
+    | ⟨⟨cur⟩⟩ =>
+      match hcur : cur.parent with
       | none => .deflate ⟨.done, trivial⟩
       | some par =>
         match h : (par == cur) with
         | true  => .deflate ⟨.done, trivial⟩
-        | false => .deflate ⟨.yield ⟨⟨par, fuel⟩⟩ par, rfl, rfl, h, rfl⟩)
+        | false => .deflate ⟨.yield ⟨⟨par⟩⟩ par, hcur, h, rfl⟩)
 
 instance [Monad n] : IteratorLoop ParentsIterator Id n := .defaultImplementation
+
+private def finitenessRelation : Iterators.FinitenessRelation ParentsIterator Id where
+  Rel := InvImage (· < ·) (·.internalState.current.components.size)
+  wf := InvImage.wf _ Nat.lt_wfRel.wf
+  subrelation {it it'} h := by
+    simp_wf
+    rcases h with ⟨(⟨s, out⟩|s|s), ⟨h, h'⟩⟩
+    · cases h
+      obtain ⟨h₁, h₂, rfl⟩ := h'
+      -- Now use a lemma about `parent`.
+      sorry
+    · cases h'
+    · cases h
+
+instance : Std.Iterators.Finite ParentsIterator Id :=
+  .of_finitenessRelation finitenessRelation
 
 end ParentsIterator
 
@@ -537,7 +543,7 @@ For `ofPosixString "/a/b/c"` this yields an iterator over the paths
 `["/a/b", "/a", "/"]`.
 -/
 def parents (p : Path) : Iter (α := ParentsIterator) Path :=
-  (IterM.mk (m := Id) (β := Path) ⟨p, p.components.size⟩).toIter
+  (IterM.mk (m := Id) (β := Path) ⟨p⟩).toIter
 
 /--
 True if `p` starts with `prefix` (component-wise, not as a raw string prefix).
@@ -545,7 +551,7 @@ True if `p` starts with `prefix` (component-wise, not as a raw string prefix).
 `ofPosixString "/usr/local"` starts with `ofPosixString "/usr"` but not with `ofPosixString "/us"`.
 -/
 def startsWith (p prefx : Path) : Bool :=
-  p.components.extract 0 prefx.components.size == prefx.components
+  prefx.components.isPrefixOf p.components
 
 /--
 True if `p` ends with `suffix` (component-wise), matching Rust's `Path::ends_with`.
